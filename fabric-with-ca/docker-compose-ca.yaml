@@ -1,0 +1,119 @@
+version: '2'
+
+networks:
+  fabric-ca:
+
+services:
+
+  rca:
+    container_name: rca
+    image: hyperledger/fabric-ca
+    command: /bin/bash -c '/scripts/start-root-ca.sh 2>&1 | tee /data/logs/rca.log'
+    environment:
+      - FABRIC_CA_SERVER_HOME=/etc/hyperledger/fabric-ca
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_CSR_CN=rca
+      - FABRIC_CA_SERVER_CSR_HOSTS=rca
+      - FABRIC_CA_SERVER_DEBUG=true
+      - BOOTSTRAP_USER_PASS=rca-admin:rca-adminpw
+      - TARGET_CERTFILE=/data/rca-cert.pem
+      - FABRIC_ORGS=org-order org-rockontrol org-weihai
+    volumes:
+      - ./scripts:/scripts
+      - ./data:/data
+    networks:
+      - fabric-ca
+
+  ica-org-order:
+    container_name: ica-org-order
+    image: hyperledger/fabric-ca
+    command: /bin/bash -c '/scripts/start-intermediate-ca.sh org-order 2>&1 | tee /data/logs/ica-org-order.log'
+    environment:
+      - FABRIC_CA_SERVER_HOME=/etc/hyperledger/fabric-ca
+      - FABRIC_CA_SERVER_CA_NAME=ica-org-order
+      - FABRIC_CA_SERVER_INTERMEDIATE_TLS_CERTFILES=/data/rca-cert.pem
+      - FABRIC_CA_SERVER_CSR_HOSTS=ica-org-order
+      - FABRIC_CA_SERVER_TLS_ENABLED=false
+      - FABRIC_CA_SERVER_DEBUG=true
+      - BOOTSTRAP_USER_PASS=order-admin:order-adminpw
+      - PARENT_URL=https://rca-admin:rca-adminpw@rca:7054
+      - TARGET_CHAINFILE=/data/org-order-ca-chain.pem
+      - ORG=org-order
+      - FABRIC_ORGS=org-order org-rockontrol org-weihai
+    volumes:
+      - ./scripts:/scripts
+      - ./data:/data
+    networks:
+      - fabric-ca
+    depends_on:
+      - rca
+
+  ica-org-rockontrol:
+    container_name: ica-org-rockontrol
+    image: hyperledger/fabric-ca
+    command: /bin/bash -c '/scripts/start-intermediate-ca.sh org-rockontrol 2>&1 | tee /data/logs/ica-org-rockontrol.log'
+    environment:
+      - FABRIC_CA_SERVER_HOME=/etc/hyperledger/fabric-ca
+      - FABRIC_CA_SERVER_CA_NAME=ica-org-rockontrol
+      - FABRIC_CA_SERVER_INTERMEDIATE_TLS_CERTFILES=/data/rca-cert.pem
+      - FABRIC_CA_SERVER_CSR_HOSTS=ica-org-rockontrol
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_DEBUG=true
+      - BOOTSTRAP_USER_PASS=rockontrol-admin:rockontrol-adminpw
+      - PARENT_URL=https://rca-admin:rca-adminpw@rca:7054
+      - TARGET_CHAINFILE=/data/org-rockontrol-ca-chain.pem
+      - ORG=org-rockontrol
+      - FABRIC_ORGS=org-order org-rockontrol org-weihai
+    volumes:
+      - ./scripts:/scripts
+      - ./data:/data
+    networks:
+      - fabric-ca
+    depends_on:
+      - rca
+
+  ica-org-weihai:
+    container_name: ica-org-weihai
+    image: hyperledger/fabric-ca
+    command: /bin/bash -c '/scripts/start-intermediate-ca.sh org-weihai 2>&1 | tee /data/logs/ica-org-weihai.log'
+    environment:
+      - FABRIC_CA_SERVER_HOME=/etc/hyperledger/fabric-ca
+      - FABRIC_CA_SERVER_CA_NAME=ica-org-weihai
+      - FABRIC_CA_SERVER_INTERMEDIATE_TLS_CERTFILES=/data/rca-cert.pem
+      - FABRIC_CA_SERVER_CSR_HOSTS=ica-org-weihai
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_DEBUG=true
+      - BOOTSTRAP_USER_PASS=weihai-admin:weihai-adminpw
+      - PARENT_URL=https://rca-admin:rca-adminpw@rca:7054
+      - TARGET_CHAINFILE=/data/org-weihai-ca-chain.pem
+      - ORG=org-weihai
+      - FABRIC_ORGS=org-order org-rockontrol org-weihai
+    volumes:
+      - ./scripts:/scripts
+      - ./data:/data
+    networks:
+      - fabric-ca
+    depends_on:
+      - rca
+
+  setup:
+    container_name: setup
+    image: hyperledger/fabric-ca-tools
+    command: /bin/bash -c '/scripts/setup-fabric.sh 2>&1 | tee /data/logs/setup.log; sleep 99999'
+    volumes:
+      - ./scripts:/scripts
+      - ./data:/data
+    networks:
+      - fabric-ca
+    depends_on:
+      - ica-org-order
+      - ica-org-rockontrol
+      - ica-org-weihai
+
+
+
+
+
+
+
+
