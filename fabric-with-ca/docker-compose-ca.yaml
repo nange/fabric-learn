@@ -201,3 +201,84 @@ services:
     depends_on:
       - setup
 
+  peer1-org-weihai:
+    container_name: peer1-org-weihai
+    image: hyperledger/fabric-ca-peer
+    environment:
+      - ENROLLMENT_URL=http://peer1-org-weihai:peer1-org-weihaipw@ca-org-weihai:7054
+      - PEER_NAME=peer1-org-weihai
+      - PEER_HOME=/etc/hyperledger/peer
+      - PEER_HOST=peer1-org-weihai
+      - PEER_NAME_PASS=peer1-org-weihai:peer1-org-weihaipw
+      - CORE_PEER_ID=peer1-org-weihai
+      - CORE_PEER_ADDRESS=peer1-org-weihai:7051
+      - CORE_PEER_LOCALMSPID=org-weihaiMSP
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/peer/msp
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=fabric-with-ca_fabric-ca
+      - CORE_LOGGING_LEVEL=DEBUG
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/peer/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/peer/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/data/ca-org-weihai-cert.pem
+      - CORE_PEER_TLS_CLIENTAUTHREQUIRED=true
+      - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/data/ca-org-weihai-cert.pem
+      - CORE_PEER_TLS_CLIENTCERT_FILE=/etc/hyperledger/peer/tls/server.crt
+      - CORE_PEER_TLS_CLIENTKEY_FILE=/etc/hyperledger/peer/tls/server.key
+      - CORE_PEER_GOSSIP_USELEADERELECTION=true
+      - CORE_PEER_GOSSIP_ORGLEADER=false
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1-org-weihai:7051
+      - CORE_PEER_GOSSIP_SKIPHANDSHAKE=true
+      - ORG=org-weihai
+      - ORG_ADMIN_CERT=/data/orgs/org-weihai/msp/admincerts/cert.pem
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+    command: /bin/bash -c '/scripts/start-peer.sh 2>&1 | tee /data/logs/peer1-org-weihai.log'
+    volumes:
+      - ./scripts:/scripts
+      - ./data:/data
+      - /var/run:/host/var/run
+    networks:
+      - fabric-ca
+    depends_on:
+      - setup
+
+  peer2-org-weihai:
+    container_name: peer2-org-weihai
+    image: hyperledger/fabric-ca-peer
+    environment:
+      - ENROLLMENT_URL=http://peer2-org-weihai:peer2-org-weihaipw@ca-org-weihai:7054
+      - PEER_NAME=peer2-org-weihai
+      - PEER_HOME=/etc/hyperledger/peer
+      - PEER_HOST=peer2-org-weihai
+      - PEER_NAME_PASS=peer2-org-weihai:peer2-org-weihaipw
+      - CORE_PEER_ID=peer2-org-weihai
+      - CORE_PEER_ADDRESS=peer2-org-weihai:7051
+      - CORE_PEER_LOCALMSPID=org-weihaiMSP
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/peer/msp
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=fabric-with-ca_fabric-ca
+      - CORE_LOGGING_LEVEL=DEBUG
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/peer/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/peer/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/data/ca-org-weihai-cert.pem
+      - CORE_PEER_TLS_CLIENTAUTHREQUIRED=true
+      - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/data/ca-org-weihai-cert.pem
+      - CORE_PEER_TLS_CLIENTCERT_FILE=/etc/hyperledger/peer/tls/server.crt
+      - CORE_PEER_TLS_CLIENTKEY_FILE=/etc/hyperledger/peer/tls/server.key
+      - CORE_PEER_GOSSIP_USELEADERELECTION=true
+      - CORE_PEER_GOSSIP_ORGLEADER=false
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer2-org-weihai:7051
+      - CORE_PEER_GOSSIP_SKIPHANDSHAKE=true
+      - ORG=org-weihai
+      - ORG_ADMIN_CERT=/data/orgs/org-weihai/msp/admincerts/cert.pem
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+    command: /bin/bash -c '/scripts/start-peer.sh 2>&1 | tee /data/logs/peer2-org-weihai.log'
+    volumes:
+      - ./scripts:/scripts
+      - ./data:/data
+      - /var/run:/host/var/run
+    networks:
+      - fabric-ca
+    depends_on:
+      - setup
