@@ -21,7 +21,6 @@ services:
     volumes:
       - ./scripts:/scripts
       - ./data:/data
-      #- ./fabric-ca-server-config-order.yaml:/etc/hyperledger/fabric-ca/fabric-ca-server-config.yaml
     networks:
       - fabric-ca
 
@@ -42,7 +41,6 @@ services:
     volumes:
       - ./scripts:/scripts
       - ./data:/data
-      #- ./fabric-ca-server-config-rockontrol.yaml:/etc/hyperledger/fabric-ca/fabric-ca-server-config.yaml
     networks:
       - fabric-ca
 
@@ -63,7 +61,6 @@ services:
     volumes:
       - ./scripts:/scripts
       - ./data:/data
-      #- ./fabric-ca-server-config-weihai.yaml:/etc/hyperledger/fabric-ca/fabric-ca-server-config.yaml
     networks:
       - fabric-ca
 
@@ -282,3 +279,23 @@ services:
       - fabric-ca
     depends_on:
       - setup
+
+  run:
+    container_name: run
+    image: hyperledger/fabric-ca-tools
+    environment:
+      - GOPATH=/opt/gopath
+    command: /bin/bash -c 'sleep 3;/scripts/run-fabric.sh 2>&1 | tee /data/logs/run.log; sleep 99999'
+    volumes:
+      - ./scripts:/scripts
+      - ./data:/data
+      #- /root/go/src/github.com/hyperledger/fabric-samples:/opt/gopath/src/github.com/hyperledger/fabric-samples
+      #- /src/github.com/hyperledger/fabric:/opt/gopath/src/github.com/hyperledger/fabric
+    networks:
+      - fabric-ca
+    depends_on:
+      - orderer1-org-order
+      - peer1-org-rockontrol
+      - peer2-org-rockontrol
+      - peer1-org-weihai
+      - peer2-org-weihai

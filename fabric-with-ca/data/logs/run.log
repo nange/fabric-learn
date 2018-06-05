@@ -1,0 +1,37 @@
+
+Creating channel 'mychannel' on orderer1-org-order ...
+[33m2018-06-05 14:33:17.605 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
+[36m2018-06-05 14:33:17.626 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-05 14:33:17.626 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-05 14:33:17.640 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
+[36m2018-06-05 14:33:17.644 UTC [msp] GetLocalMSP -> DEBU 005[0m Returning existing local MSP
+[36m2018-06-05 14:33:17.644 UTC [msp] GetDefaultSigningIdentity -> DEBU 006[0m Obtaining default signing identity
+[36m2018-06-05 14:33:17.645 UTC [msp] GetLocalMSP -> DEBU 007[0m Returning existing local MSP
+[36m2018-06-05 14:33:17.646 UTC [msp] GetDefaultSigningIdentity -> DEBU 008[0m Obtaining default signing identity
+[36m2018-06-05 14:33:17.646 UTC [msp/identity] Sign -> DEBU 009[0m Sign: plaintext: 0AED080A116F72672D726F636B6F6E74...53616D706C65436F6E736F727469756D 
+[36m2018-06-05 14:33:17.646 UTC [msp/identity] Sign -> DEBU 00a[0m Sign: digest: A733DE4A516D66374C65A9FA159435A72BA83F7DD4113C7449F9D541CCD3CA6F 
+[36m2018-06-05 14:33:17.647 UTC [msp] GetLocalMSP -> DEBU 00b[0m Returning existing local MSP
+[36m2018-06-05 14:33:17.647 UTC [msp] GetDefaultSigningIdentity -> DEBU 00c[0m Obtaining default signing identity
+[36m2018-06-05 14:33:17.648 UTC [msp] GetLocalMSP -> DEBU 00d[0m Returning existing local MSP
+[36m2018-06-05 14:33:17.648 UTC [msp] GetDefaultSigningIdentity -> DEBU 00e[0m Obtaining default signing identity
+[36m2018-06-05 14:33:17.648 UTC [msp/identity] Sign -> DEBU 00f[0m Sign: plaintext: 0AA4090A1508021A0608ADBEDAD80522...F3F03E92A9B4B9AEBAEEFC11F1DCC760 
+[36m2018-06-05 14:33:17.648 UTC [msp/identity] Sign -> DEBU 010[0m Sign: digest: 9595BBE95BC7D674A121B29750C009F932E88A32B43AACA75A6F6EFE196C8F3F 
+[36m2018-06-05 14:33:17.904 UTC [msp] GetLocalMSP -> DEBU 011[0m Returning existing local MSP
+[36m2018-06-05 14:33:17.904 UTC [msp] GetDefaultSigningIdentity -> DEBU 012[0m Obtaining default signing identity
+[36m2018-06-05 14:33:17.907 UTC [msp] GetLocalMSP -> DEBU 013[0m Returning existing local MSP
+[36m2018-06-05 14:33:17.908 UTC [msp] GetDefaultSigningIdentity -> DEBU 014[0m Obtaining default signing identity
+[36m2018-06-05 14:33:17.911 UTC [msp/identity] Sign -> DEBU 015[0m Sign: plaintext: 0AC6090A3708021A0608ADBEDAD80522...E1B98346B77812080A021A0012021A00 
+[36m2018-06-05 14:33:17.911 UTC [msp/identity] Sign -> DEBU 016[0m Sign: digest: CA2F7AA079F8D1333EC01976EC04DDCF70E1953ACDBFC00176FF62865A2F9133 
+[36m2018-06-05 14:33:17.913 UTC [channelCmd] readBlock -> DEBU 017[0m Got status: &{NOT_FOUND}
+[36m2018-06-05 14:33:17.915 UTC [msp] GetLocalMSP -> DEBU 018[0m Returning existing local MSP
+[36m2018-06-05 14:33:17.915 UTC [msp] GetDefaultSigningIdentity -> DEBU 019[0m Obtaining default signing identity
+2018-06-05 14:33:17.939 UTC [channelCmd] InitCmdFactory -> INFO 01a[0m Endorser and orderer connections initialized
+[36m2018-06-05 14:33:18.140 UTC [msp] GetLocalMSP -> DEBU 01b[0m Returning existing local MSP
+[36m2018-06-05 14:33:18.141 UTC [msp] GetDefaultSigningIdentity -> DEBU 01c[0m Obtaining default signing identity
+[36m2018-06-05 14:33:18.142 UTC [msp] GetLocalMSP -> DEBU 01d[0m Returning existing local MSP
+[36m2018-06-05 14:33:18.142 UTC [msp] GetDefaultSigningIdentity -> DEBU 01e[0m Obtaining default signing identity
+[36m2018-06-05 14:33:18.142 UTC [msp/identity] Sign -> DEBU 01f[0m Sign: plaintext: 0AC6090A3708021A0608AEBEDAD80522...69333408F50312080A021A0012021A00 
+[36m2018-06-05 14:33:18.142 UTC [msp/identity] Sign -> DEBU 020[0m Sign: digest: 2F8B013C0A67BC6FDFF75E2CD6B7BA92F0A6ED0BED3D30A4F7CA6B8E84575270 
+[36m2018-06-05 14:33:18.157 UTC [channelCmd] readBlock -> DEBU 021[0m Received block: 0
+2018-06-05 14:33:18.158 UTC [main] main -> INFO 022[0m Exiting.....
+create channel completed.......

@@ -34,6 +34,15 @@ SETUP_SUCCESS_FILE=${LOGDIR}/setup.successful
 # The setup container's log file
 SETUP_LOGFILE=${LOGDIR}/setup.log
 
+# The run container's log file
+RUN_LOGFILE=${LOGDIR}/run.log
+# The run container's summary log file
+RUN_SUMFILE=${LOGDIR}/run.sum
+RUN_SUMPATH=/${RUN_SUMFILE}
+# Run success and failure files
+RUN_SUCCESS_FILE=${LOGDIR}/run.success
+RUN_FAIL_FILE=${LOGDIR}/run.fail
+
 # Names of the orderer organizations
 ORDERER_ORGS="org-order"
 
@@ -82,12 +91,16 @@ function initOrdererVars {
         echo "Usage: initOrdererVars <ORG> <NUM>"
         exit 1
     fi
-
+    ORG=$1
     initOrgVars $1
     NUM=$2
 
+    ORDERER_HOST=orderer${NUM}-${ORG}
     ORDERER_NAME=orderer${NUM}-${ORG}
     ORDERER_PASS=${ORDERER_NAME}pw
+    ORDERER_NAME_PASS=${ORDERER_NAME}:${ORDERER_PASS}
+
+    CA_CHAINFILE=/$DATA/ca-${ORG}-cert.pem
 
     MYHOME=/etc/hyperledger/orderer
 }
@@ -107,8 +120,33 @@ function initPeerVars {
     PEER_NAME_PASS=${PEER_NAME}:${PEER_PASS}
     PEER_LOGFILE=$LOGDIR/${PEER_NAME}.log
 
+    export FABRIC_CA_CLIENT=$MYHOME
+    export CORE_PEER_ID=$PEER_HOST
+    export CORE_PEER_ADDRESS=$PEER_HOST:7051
+    export CORE_PEER_LOCALMSPID=$ORG_MSP_ID
+    export CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
 
+    export CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=fabric-with-ca_fabric-ca
 
+    export CORE_LOGGING_LEVEL=DEBUG
+    export CORE_PEER_TLS_ENABLED=true
+    export CORE_PEER_TLS_CLIENTAUTHREQUIRED=true
+    export CORE_PEER_TLS_ROOTCERT_FILE=$CA_CHAINFILE
+    export CORE_PEER_TLS_CLIENTCERT_FILE=/$DATA/tls/$PEER_NAME-cli-client.crt
+    export CORE_PEER_TLS_CLIENTKEY_FILE=/$DATA/tls/$PEER_NAME-cli-client.key
+    export CORE_PEER_PROFILE_ENABLED=true
+
+   # gossip variables
+   export CORE_PEER_GOSSIP_USELEADERELECTION=true
+   export CORE_PEER_GOSSIP_ORGLEADER=false
+   export CORE_PEER_GOSSIP_EXTERNALENDPOINT=$PEER_HOST:7051
+
+   if [ $NUM -gt 1 ]; then
+      # Point the non-anchor peers to the anchor peer, which is always the 1st peer
+      export CORE_PEER_GOSSIP_BOOTSTRAP=peer1-${ORG}:7051
+   fi
+
+   export ORDERER_CONN_ARGS="$ORDERER_PORT_ARGS --keyfile $CORE_PEER_TLS_CLIENTKEY_FILE --certfile $CORE_PEER_TLS_CLIENTCERT_FILE"
 }
 
 # Create the TLS directories of the MSP folder if they don't exist.
@@ -151,7 +189,7 @@ function copyAdminCert {
 # Switch to the current org's admin identity.  Enroll if not previously enrolled.
 function switchToAdminIdentity {
    if [ ! -d $ORG_ADMIN_HOME ]; then
-#      dowait "$CA_NAME to start" 60 $CA_LOGFILE $CA_CHAINFILE
+      dowait "$CA_NAME to start" 60 $CA_LOGFILE $CA_CHAINFILE
       echo "Enrolling admin '$ADMIN_NAME' with $CA_HOST ..."
       export FABRIC_CA_CLIENT_HOME=$ORG_ADMIN_HOME
 #      export FABRIC_CA_CLIENT_TLS_CERTFILES=$CA_CHAINFILE
