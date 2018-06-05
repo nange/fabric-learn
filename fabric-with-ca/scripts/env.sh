@@ -1,13 +1,28 @@
 #!/bin/bash
 
 # Set to true to enable use of intermediate CAs
-USE_INTERMEDIATE_CA=true
+USE_INTERMEDIATE_CA=false
 
 # Number of orderer nodes
 NUM_ORDERERS=1
 
+# Number of peers in each peer organization
+NUM_PEERS=2
+
 # The volume mount to share data between containers
 DATA=data
+
+# The path to the genesis block
+GENESIS_BLOCK_FILE=/$DATA/genesis.block
+
+# The path to a channel transaction
+CHANNEL_TX_FILE=/$DATA/channel.tx
+
+# Name of test channel
+CHANNEL_NAME=mychannel
+
+# Setup timeout in seconds (for setup container to complete)
+SETUP_TIMEOUT=120
 
 # Log directory
 LOGDIR=$DATA/logs
@@ -16,46 +31,48 @@ LOGPATH=/$LOGDIR
 # Name of a the file to create when setup is successful
 SETUP_SUCCESS_FILE=${LOGDIR}/setup.successful
 
+# The setup container's log file
+SETUP_LOGFILE=${LOGDIR}/setup.log
+
 # Names of the orderer organizations
 ORDERER_ORGS="org-order"
+
+# Names of the peer organizations
+PEER_ORGS="org-rockontrol org-weihai"
+
+# All org names
+ORGS="$ORDERER_ORGS $PEER_ORGS"
+
+# Set to true to populate the "admincerts" folder of MSPs
+ADMINCERTS=true
+
 
 # initOrgVars <ORG>
 function initOrgVars {
     ORG=$1
 
-    ROOT_CA_HOST=rca
-    ROOT_CA_NAME=rca
-    ROOT_CA_LOGFILE=$LOGDIR/${ROOT_CA_NAME}.log
-
-    INT_CA_HOST=ica-${ORG}
-    INT_CA_NAME=ica-${ORG}
-    INT_CA_LOGFILE=${LOGDIR}/${INT_CA_NAME}.log
+    CA_HOST=ca-${ORG}
+    CA_NAME=ca-${ORG}
+    CA_LOGFILE=${LOGDIR}/${CA_NAME}.log
 
     ROOT_CA_CERTFILE=/${DATA}/${ORG}-ca-cert.pem
-    INT_CA_CHAINFILE=/${DATA}/${ORG}-ca-chain.pem
 
     # Admin identity for the org
-    ADMIN_NAME=admin-${ORG}
-    ADMIN_PASS=${ADMIN_NAME}pw
+    ADMIN_NAME=${ORG}-admin
+    ADMIN_PASS=${ADMIN_NAME}-pw
 
-    if test "$ORG" = "org-order"; then
-        INT_CA_ADMIN_USER_PASS="order-admin:order-adminpw"
-    elif test "$ORG" = "org-rockontrol"; then
-        INT_CA_ADMIN_USER_PASS="rockontrol-admin:rockontrol-adminpw"
-    elif test "$ORG" = "org-weihai"; then
-        INT_CA_ADMIN_USER_PASS="weihai-admin:weihai-adminpw"
-    fi
+    # Typical user identity for the org
+    USER_NAME=user-${ORG}
+    USER_PASS=${USER_NAME}pw
 
-    if test "$USE_INTERMEDIATE_CA" = "true"; then
-        CA_NAME=$INT_CA_NAME
-        CA_HOST=$INT_CA_HOST
-        CA_CHAINFILE=$INT_CA_CHAINFILE
-        CA_LOGFILE=$INT_CA_LOGFILE
-        CA_ADMIN_USER_PASS=$INT_CA_ADMIN_USER_PASS
-    else
-        echo "should set USE_INTERMEDIATE_CA to true"
-        exit 1
-    fi
+    CA_ADMIN_USER_PASS="ca-${ORG}-admin:ca-${ORG}-admin-pw"
+
+    ORG_MSP_ID=${ORG}MSP
+    ORG_MSP_DIR=/${DATA}/orgs/${ORG}/msp
+    ORG_ADMIN_CERT=${ORG_MSP_DIR}/admincerts/cert.pem
+    ORG_ADMIN_HOME=/${DATA}/orgs/$ORG/admin
+
+    ANCHOR_TX_FILE=/${DATA}/orgs/${ORG}/anchors.tx
 
 }
 
@@ -75,6 +92,130 @@ function initOrdererVars {
     MYHOME=/etc/hyperledger/orderer
 }
 
+# initPeerVars <ORG> <NUM>
+function initPeerVars {
+    if [ $# -ne 2 ]; then
+        echo "Usage: initPeerVars <ORG> <NUM>: $*"
+        exit 1
+    fi
+
+    initOrgVars $1
+    NUM=$2
+    PEER_HOST=peer${NUM}-${ORG}
+    PEER_NAME=peer${NUM}-${ORG}
+    PEER_PASS=${PEER_NAME}pw
+    PEER_NAME_PASS=${PEER_NAME}:${PEER_PASS}
+    PEER_LOGFILE=$LOGDIR/${PEER_NAME}.log
+
+
+
+}
+
+# Create the TLS directories of the MSP folder if they don't exist.
+# The fabric-ca-client should do this.
+function finishMSPSetup {
+   if [ $# -ne 1 ]; then
+      echo "Usage: finishMSPSetup <targetMSPDIR>"
+      exit 1
+   fi
+   if [ ! -d $1/tlscacerts ]; then
+      mkdir $1/tlscacerts
+      cp $1/cacerts/* $1/tlscacerts
+   fi
+
+   if $USE_INTERMEDIATE_CA; then
+       if [ -d $1/intermediatecerts ]; then
+           mkdir $1/tlsintermediatecerts
+           cp $1/intermediatecerts/* $1/tlsintermediatecerts
+       fi
+   else
+       rm -r $1/intermediatecerts
+   fi
+}
+
+# Copy the org's admin cert into some target MSP directory
+# This is only required if ADMINCERTS is enabled.
+function copyAdminCert {
+   if [ $# -ne 1 ]; then
+      echo "Usage: copyAdminCert <targetMSPDIR>"
+      exit 1
+   fi
+   if $ADMINCERTS; then
+      dstDir=$1/admincerts
+      mkdir -p $dstDir
+      dowait "$ORG administator to enroll" 60 $SETUP_LOGFILE $ORG_ADMIN_CERT
+      cp $ORG_ADMIN_CERT $dstDir
+   fi
+}
+
+# Switch to the current org's admin identity.  Enroll if not previously enrolled.
+function switchToAdminIdentity {
+   if [ ! -d $ORG_ADMIN_HOME ]; then
+#      dowait "$CA_NAME to start" 60 $CA_LOGFILE $CA_CHAINFILE
+      echo "Enrolling admin '$ADMIN_NAME' with $CA_HOST ..."
+      export FABRIC_CA_CLIENT_HOME=$ORG_ADMIN_HOME
+#      export FABRIC_CA_CLIENT_TLS_CERTFILES=$CA_CHAINFILE
+      fabric-ca-client enroll -d -u http://$ADMIN_NAME:$ADMIN_PASS@$CA_HOST:7054
+      # If admincerts are required in the MSP, copy the cert there now and to my local MSP also
+      if [ $ADMINCERTS ]; then
+         mkdir -p $(dirname "${ORG_ADMIN_CERT}")
+         cp $ORG_ADMIN_HOME/msp/signcerts/* $ORG_ADMIN_CERT
+         mkdir $ORG_ADMIN_HOME/msp/admincerts
+         cp $ORG_ADMIN_HOME/msp/signcerts/* $ORG_ADMIN_HOME/msp/admincerts
+      fi
+   fi
+   export CORE_PEER_MSPCONFIGPATH=$ORG_ADMIN_HOME/msp
+}
+
+function genClientTLSCert {
+   if [ $# -ne 3 ]; then
+      echo "Usage: genClientTLSCert <host name> <cert file> <key file>: $*"
+      exit 1
+   fi
+
+   HOST_NAME=$1
+   CERT_FILE=$2
+   KEY_FILE=$3
+
+   # Get a client cert
+   fabric-ca-client enroll -d --enrollment.profile tls -u $ENROLLMENT_URL -M /tmp/tls --csr.hosts $HOST_NAME
+
+   mkdir /$DATA/tls || true
+   cp /tmp/tls/signcerts/* $CERT_FILE
+   cp /tmp/tls/keystore/* $KEY_FILE
+   rm -rf /tmp/tls
+}
+
+# Wait for one or more files to exist
+# Usage: dowait <what> <timeoutInSecs> <errorLogFile> <file> [<file> ...]
+function dowait {
+   if [ $# -lt 4 ]; then
+      echo "Usage: dowait: $*"
+      exit 1
+   fi
+   local what=$1
+   local secs=$2
+   local logFile=$3
+   shift 3
+   local logit=true
+   local starttime=$(date +%s)
+   for file in $*; do
+      until [ -f $file ]; do
+         if [ "$logit" = true ]; then
+            echo  "Waiting for $what ..."
+            logit=false
+         fi
+         sleep 1
+         if [ "$(($(date +%s)-starttime))" -gt "$secs" ]; then
+            echo ""
+            echo "Failed waiting for $what ($file not found); see $logFile"
+            exit 1
+         fi
+         echo -n "."
+      done
+   done
+   echo ""
+}
 
 # Wait for a process to begin to listen on a particular host and port
 # Usage: waitPort <what> <timeoutInSecs> <errorLogFile> <host> <port>
@@ -105,4 +246,8 @@ function waitPort {
       echo ""
    fi
    set -e
+}
+
+function awaitSetup {
+   dowait "the 'setup' container to finish registering identities, creating the genesis block and other artifacts" $SETUP_TIMEOUT $SETUP_LOGFILE /$SETUP_SUCCESS_FILE
 }

@@ -3,7 +3,7 @@
 set -e
 
 # Initialize the root CA
-fabric-ca-server init -b $BOOTSTRAP_USER_PASS
+fabric-ca-server init -b $BOOTSTRAP_USER_PASS -c /etc/hyperledger/fabric-ca/fabric-ca-server-config.yaml
 
 # Copy the root CA's signing certificate to the data directory to be used by others
 cp $FABRIC_CA_SERVER_HOME/ca-cert.pem $TARGET_CERTFILE

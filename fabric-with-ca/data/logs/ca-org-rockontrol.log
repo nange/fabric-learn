@@ -1,0 +1,423 @@
+2018/06/05 09:45:08 [INFO] Created default configuration file at /etc/hyperledger/fabric-ca/fabric-ca-server-config.yaml
+2018/06/05 09:45:08 [INFO] Server Version: 1.1.0
+2018/06/05 09:45:08 [INFO] Server Levels: &{Identity:1 Affiliation:1 Certificate:1}
+2018/06/05 09:45:08 [DEBUG] Making server filenames absolute
+2018/06/05 09:45:08 [DEBUG] Initializing default CA in directory /etc/hyperledger/fabric-ca
+2018/06/05 09:45:08 [DEBUG] Init CA with home /etc/hyperledger/fabric-ca and config {Version:1.1.0 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile: Certfile:ca-cert.pem Chainfile:ca-chain.pem} Signing:0xc42032a9a0 CSR:{CN:ca-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[ca-org-rockontrol] KeyRequest:<nil> CA:0xc420334400 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc42031c9c0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/06/05 09:45:08 [DEBUG] CA Home Directory: /etc/hyperledger/fabric-ca
+2018/06/05 09:45:08 [DEBUG] Checking configuration file version '1.1.0' against server version: '1.1.0'
+2018/06/05 09:45:08 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc42031ca20 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/06/05 09:45:08 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc420338390 DummyKeystore:<nil>}
+2018/06/05 09:45:08 [DEBUG] Initialize key material
+2018/06/05 09:45:08 [DEBUG] Making CA filenames absolute
+2018/06/05 09:45:08 [DEBUG] Root CA certificate request: {CN:ca-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[ca-org-rockontrol] KeyRequest:0xc420334c80 CA:0xc420334400 SerialNumber:}
+2018/06/05 09:45:08 [INFO] generating key: &{A:ecdsa S:256}
+2018/06/05 09:45:08 [DEBUG] generate key from request: algo=ecdsa, size=256
+2018/06/05 09:45:08 [INFO] encoded CSR
+2018/06/05 09:45:08 [DEBUG] validating configuration
+2018/06/05 09:45:08 [DEBUG] validate local profile
+2018/06/05 09:45:08 [DEBUG] profile is valid
+2018/06/05 09:45:08 [INFO] signed certificate with serial number 251580643588740610674556218071361790141216044580
+2018/06/05 09:45:08 [INFO] The CA key and certificate were generated for CA 
+2018/06/05 09:45:08 [INFO] The key was stored by BCCSP provider 'SW'
+2018/06/05 09:45:08 [INFO] The certificate is at: /etc/hyperledger/fabric-ca/ca-cert.pem
+2018/06/05 09:45:08 [DEBUG] Initializing DB
+2018/06/05 09:45:08 [DEBUG] Initializing 'sqlite3' database at '/etc/hyperledger/fabric-ca/fabric-ca-server.db'
+2018/06/05 09:45:08 [DEBUG] Using sqlite database, connect to database in home (/etc/hyperledger/fabric-ca/fabric-ca-server.db) directory
+2018/06/05 09:45:08 [DEBUG] Creating SQLite database (/etc/hyperledger/fabric-ca/fabric-ca-server.db) if it does not exist...
+2018/06/05 09:45:08 [DEBUG] Creating users table if it does not exist
+2018/06/05 09:45:08 [DEBUG] Creating affiliations table if it does not exist
+2018/06/05 09:45:08 [DEBUG] Creating certificates table if it does not exist
+2018/06/05 09:45:08 [DEBUG] Creating properties table if it does not exist
+2018/06/05 09:45:08 [DEBUG] Successfully opened sqlite3 DB
+2018/06/05 09:45:08 [DEBUG] Checking database schema...
+2018/06/05 09:45:08 [DEBUG] Update SQLite schema, if using outdated schema
+2018/06/05 09:45:08 [DEBUG] Upgrade identities table
+2018/06/05 09:45:08 [DEBUG] Creating users table if it does not exist
+2018/06/05 09:45:08 [DEBUG] Upgrade affiliation table
+2018/06/05 09:45:08 [DEBUG] Creating affiliations table if it does not exist
+2018/06/05 09:45:08 [DEBUG] Upgrade certificates table
+2018/06/05 09:45:08 [DEBUG] Creating certificates table if it does not exist
+2018/06/05 09:45:08 [DEBUG] Initializing identity registry
+2018/06/05 09:45:08 [DEBUG] Initialized DB identity registry
+2018/06/05 09:45:08 [DEBUG] DB: Get properties [identity.level affiliation.level certificate.level]
+2018/06/05 09:45:08 [DEBUG] Checking database levels 'map[affiliation.level:0 certificate.level:0 identity.level:0]' against server levels '&{Identity:1 Affiliation:1 Certificate:1}'
+2018/06/05 09:45:08 [DEBUG] Loading identity table
+2018/06/05 09:45:08 [DEBUG] Loading identity 'ca-org-rockontrol-admin'
+2018/06/05 09:45:08 [DEBUG] DB: Getting identity ca-org-rockontrol-admin
+2018/06/05 09:45:08 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/06/05 09:45:08 [DEBUG] DB: Add identity ca-org-rockontrol-admin
+2018/06/05 09:45:08 [DEBUG] Successfully added identity ca-org-rockontrol-admin to the database
+2018/06/05 09:45:08 [DEBUG] Registered identity: { Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:-1 Attrs:map[hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user]  }
+2018/06/05 09:45:08 [DEBUG] Successfully loaded identity table
+2018/06/05 09:45:08 [DEBUG] Loading affiliations table
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org2
+2018/06/05 09:45:08 [DEBUG] Affiliation 'org2' added
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org2.department1
+2018/06/05 09:45:08 [DEBUG] Affiliation 'org2.department1' added
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org1
+2018/06/05 09:45:08 [DEBUG] Affiliation 'org1' added
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org1.department1
+2018/06/05 09:45:08 [DEBUG] Affiliation 'org1.department1' added
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org1.department2
+2018/06/05 09:45:08 [DEBUG] Affiliation 'org1.department2' added
+2018/06/05 09:45:08 [DEBUG] Successfully loaded affiliations table
+2018/06/05 09:45:08 [DEBUG] Checking and performing migration, if needed
+2018/06/05 09:45:08 [DEBUG] Updating database level to &{Identity:1 Affiliation:1 Certificate:1}
+2018/06/05 09:45:08 [INFO] Initialized sqlite3 database at /etc/hyperledger/fabric-ca/fabric-ca-server.db
+2018/06/05 09:45:08 [DEBUG] Initializing enrollment signer
+2018/06/05 09:45:08 [DEBUG] validating configuration
+2018/06/05 09:45:08 [DEBUG] validate local profile
+2018/06/05 09:45:08 [DEBUG] profile is valid
+2018/06/05 09:45:08 [DEBUG] validate local profile
+2018/06/05 09:45:08 [DEBUG] profile is valid
+2018/06/05 09:45:08 [DEBUG] validate local profile
+2018/06/05 09:45:08 [DEBUG] profile is valid
+2018/06/05 09:45:08 [DEBUG] CA initialization successful
+2018/06/05 09:45:08 [INFO] Home directory for default CA: /etc/hyperledger/fabric-ca
+2018/06/05 09:45:08 [DEBUG] Closing server DBs
+2018/06/05 09:45:08 [INFO] Initialization was successful
+aff: \n   org-order: []\n   org-rockontrol: []\n   org-weihai: []
+2018/06/05 09:45:08 [INFO] Configuration file location: /etc/hyperledger/fabric-ca/fabric-ca-server-config.yaml
+2018/06/05 09:45:08 [INFO] Starting server in home directory: /etc/hyperledger/fabric-ca
+2018/06/05 09:45:08 [INFO] Server Version: 1.1.0
+2018/06/05 09:45:08 [INFO] Server Levels: &{Identity:1 Affiliation:1 Certificate:1}
+2018/06/05 09:45:08 [DEBUG] Making server filenames absolute
+2018/06/05 09:45:08 [DEBUG] Initializing default CA in directory /etc/hyperledger/fabric-ca
+2018/06/05 09:45:08 [DEBUG] Init CA with home /etc/hyperledger/fabric-ca and config {Version:1.1.0 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile: Certfile:ca-cert.pem Chainfile:ca-chain.pem} Signing:0xc420306180 CSR:{CN:ca-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[ca-org-rockontrol] KeyRequest:<nil> CA:0xc4202837c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1]  }]} Affiliations:map[org-weihai:[] org-order:[] org1:[department1 department2] org-rockontrol:[] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202ec870 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/06/05 09:45:08 [DEBUG] CA Home Directory: /etc/hyperledger/fabric-ca
+2018/06/05 09:45:08 [DEBUG] Checking configuration file version '1.1.0' against server version: '1.1.0'
+2018/06/05 09:45:08 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4202ec8d0 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/06/05 09:45:08 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4202f9ad0 DummyKeystore:<nil>}
+2018/06/05 09:45:08 [DEBUG] Initialize key material
+2018/06/05 09:45:08 [DEBUG] Making CA filenames absolute
+2018/06/05 09:45:08 [INFO] The CA key and certificate already exist
+2018/06/05 09:45:08 [INFO] The key is stored by BCCSP provider 'SW'
+2018/06/05 09:45:08 [INFO] The certificate is at: /etc/hyperledger/fabric-ca/ca-cert.pem
+2018/06/05 09:45:08 [DEBUG] Loading CN from existing enrollment information
+2018/06/05 09:45:08 [DEBUG] Initializing DB
+2018/06/05 09:45:08 [DEBUG] Initializing 'sqlite3' database at '/etc/hyperledger/fabric-ca/fabric-ca-server.db'
+2018/06/05 09:45:08 [DEBUG] Using sqlite database, connect to database in home (/etc/hyperledger/fabric-ca/fabric-ca-server.db) directory
+2018/06/05 09:45:08 [DEBUG] Creating SQLite database (/etc/hyperledger/fabric-ca/fabric-ca-server.db) if it does not exist...
+2018/06/05 09:45:08 [DEBUG] Creating users table if it does not exist
+2018/06/05 09:45:08 [DEBUG] Creating affiliations table if it does not exist
+2018/06/05 09:45:08 [DEBUG] Creating certificates table if it does not exist
+2018/06/05 09:45:08 [DEBUG] Creating properties table if it does not exist
+2018/06/05 09:45:08 [DEBUG] Successfully opened sqlite3 DB
+2018/06/05 09:45:08 [DEBUG] Checking database schema...
+2018/06/05 09:45:08 [DEBUG] Update SQLite schema, if using outdated schema
+2018/06/05 09:45:08 [DEBUG] Initializing identity registry
+2018/06/05 09:45:08 [DEBUG] Initialized DB identity registry
+2018/06/05 09:45:08 [DEBUG] DB: Get properties [identity.level affiliation.level certificate.level]
+2018/06/05 09:45:08 [DEBUG] Checking database levels 'map[affiliation.level:1 certificate.level:1 identity.level:1]' against server levels '&{Identity:1 Affiliation:1 Certificate:1}'
+2018/06/05 09:45:08 [DEBUG] Loading identity table
+2018/06/05 09:45:08 [DEBUG] Loading identity 'ca-org-rockontrol-admin'
+2018/06/05 09:45:08 [DEBUG] DB: Getting identity ca-org-rockontrol-admin
+2018/06/05 09:45:08 [DEBUG] Identity 'ca-org-rockontrol-admin' already registered, loaded identity
+2018/06/05 09:45:08 [DEBUG] Successfully loaded identity table
+2018/06/05 09:45:08 [DEBUG] Loading affiliations table
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org-order
+2018/06/05 09:45:08 [DEBUG] Affiliation 'org-order' added
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org1
+2018/06/05 09:45:08 [DEBUG] Affiliation 'org1' already exists
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org1.department1
+2018/06/05 09:45:08 [DEBUG] Affiliation 'org1.department1' already exists
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org1.department2
+2018/06/05 09:45:08 [DEBUG] Affiliation 'org1.department2' already exists
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org-rockontrol
+2018/06/05 09:45:08 [DEBUG] Affiliation 'org-rockontrol' added
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org2
+2018/06/05 09:45:08 [DEBUG] Affiliation 'org2' already exists
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org2.department1
+2018/06/05 09:45:08 [DEBUG] Affiliation 'org2.department1' already exists
+2018/06/05 09:45:08 [DEBUG] DB: Add affiliation org-weihai
+2018/06/05 09:45:09 [DEBUG] Affiliation 'org-weihai' added
+2018/06/05 09:45:09 [DEBUG] Successfully loaded affiliations table
+2018/06/05 09:45:09 [DEBUG] Checking and performing migration, if needed
+2018/06/05 09:45:09 [DEBUG] Updating database level to &{Identity:1 Affiliation:1 Certificate:1}
+2018/06/05 09:45:09 [INFO] Initialized sqlite3 database at /etc/hyperledger/fabric-ca/fabric-ca-server.db
+2018/06/05 09:45:09 [DEBUG] Initializing enrollment signer
+2018/06/05 09:45:09 [DEBUG] validating configuration
+2018/06/05 09:45:09 [DEBUG] validate local profile
+2018/06/05 09:45:09 [DEBUG] profile is valid
+2018/06/05 09:45:09 [DEBUG] validate local profile
+2018/06/05 09:45:09 [DEBUG] profile is valid
+2018/06/05 09:45:09 [DEBUG] validate local profile
+2018/06/05 09:45:09 [DEBUG] profile is valid
+2018/06/05 09:45:09 [DEBUG] CA initialization successful
+2018/06/05 09:45:09 [INFO] Home directory for default CA: /etc/hyperledger/fabric-ca
+2018/06/05 09:45:09 [DEBUG] 1 CA instance(s) running on server
+2018/06/05 09:45:09 [INFO] Listening on http://0.0.0.0:7054
+2018/06/05 09:45:11 [DEBUG] Received request for /enroll
+2018/06/05 09:45:11 [DEBUG] ca.Config: &{Version:1.1.0 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/etc/hyperledger/fabric-ca/ca-key.pem Certfile:/etc/hyperledger/fabric-ca/ca-cert.pem Chainfile:/etc/hyperledger/fabric-ca/ca-chain.pem} Signing:0xc420306180 CSR:{CN:ca-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[ca-org-rockontrol] KeyRequest:<nil> CA:0xc4202837c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user]  }]} Affiliations:map[org-order:[] org1:[department1 department2] org-rockontrol:[] org2:[department1] org-weihai:[]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/etc/hyperledger/fabric-ca/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202ec870 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/06/05 09:45:11 [DEBUG] DB: Getting identity ca-org-rockontrol-admin
+2018/06/05 09:45:11 [DEBUG] DB: Login user ca-org-rockontrol-admin with max enrollments of -1 and state of 0
+2018/06/05 09:45:11 [DEBUG] DB: identity ca-org-rockontrol-admin successfully logged in
+2018/06/05 09:45:11 [DEBUG] Processing sign request: id=ca-org-rockontrol-admin, CommonName=ca-org-rockontrol-admin, Subject=<nil>
+2018/06/05 09:45:11 [DEBUG] Request is not for a CA signing certificate
+2018/06/05 09:45:11 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/06/05 09:45:11 [DEBUG] DB: Getting identity ca-org-rockontrol-admin
+2018/06/05 09:45:11 [DEBUG] Finished processing sign request
+2018/06/05 09:45:11 [DEBUG] DB: Getting identity ca-org-rockontrol-admin
+2018/06/05 09:45:11 [INFO] signed certificate with serial number 594939658117709017070699662138468529385441559974
+2018/06/05 09:45:11 [DEBUG] DB: Insert Certificate
+2018/06/05 09:45:11 [DEBUG] Saved serial number as hex 68360455fe680b3af477381411b287929abb85a6
+2018/06/05 09:45:11 [DEBUG] saved certificate with serial number 594939658117709017070699662138468529385441559974
+2018/06/05 09:45:11 [DEBUG] Successfully incremented state for identity ca-org-rockontrol-admin to 1
+2018/06/05 09:45:11 [INFO] 172.19.0.5:39274 POST /enroll 201 0 "OK"
+2018/06/05 09:45:11 [DEBUG] Received request for /register
+2018/06/05 09:45:11 [DEBUG] Checking for revocation/expiration of certificate owned by 'ca-org-rockontrol-admin'
+2018/06/05 09:45:11 [DEBUG] DB: Get certificate by serial (68360455fe680b3af477381411b287929abb85a6) and aki (73440318e6b8f8fa09ffb08f6160d80f96445188)
+2018/06/05 09:45:11 [DEBUG] Successful token authentication of 'ca-org-rockontrol-admin'
+2018/06/05 09:45:11 [DEBUG] Received registration request from ca-org-rockontrol-admin: { Name:peer1-org-rockontrol Type:peer Secret:**** MaxEnrollments:0 Affiliation:org-rockontrol Attributes:[{hf.Revoker true false}] CAName:  }
+2018/06/05 09:45:11 [DEBUG] DB: Getting identity ca-org-rockontrol-admin
+2018/06/05 09:45:11 [DEBUG] canRegister - Check to see if user 'ca-org-rockontrol-admin' can register
+2018/06/05 09:45:11 [DEBUG] Checking to see if caller 'ca-org-rockontrol-admin' is a registrar
+2018/06/05 09:45:11 [DEBUG] Validate Affiliation
+2018/06/05 09:45:11 [DEBUG] Checking to see if affiliation 'org-rockontrol' contains caller's affiliation ''
+2018/06/05 09:45:11 [DEBUG] Caller has root affiliation
+2018/06/05 09:45:11 [DEBUG] Validate ID
+2018/06/05 09:45:11 [DEBUG] Validating affiliation: org-rockontrol
+2018/06/05 09:45:11 [DEBUG] DB: Get affiliation org-rockontrol
+2018/06/05 09:45:11 [DEBUG] Checking to see if registrar can register the requested attributes: [{Name:hf.Revoker Value:true ECert:false}]
+2018/06/05 09:45:11 [DEBUG] Validating that registrar with the following values for hf.Registrar.Attributes '*' is authorized to register the requested attribute '&{Name:hf.Revoker Value:true ECert:false}'
+2018/06/05 09:45:11 [DEBUG] Checking if registrar can register attribute: hf.Revoker
+2018/06/05 09:45:11 [DEBUG] Performing authorization check...
+2018/06/05 09:45:11 [DEBUG] Checking if caller is authorized to register attribute 'hf.Revoker' with the requested value of '%!s(func() string=0x98fe70)'
+2018/06/05 09:45:11 [DEBUG] Requested attribute type is boolean
+2018/06/05 09:45:11 [DEBUG] Registering user id: peer1-org-rockontrol
+2018/06/05 09:45:11 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/06/05 09:45:11 [DEBUG] DB: Getting identity peer1-org-rockontrol
+2018/06/05 09:45:11 [DEBUG] DB: Add identity peer1-org-rockontrol
+2018/06/05 09:45:11 [DEBUG] Successfully added identity peer1-org-rockontrol to the database
+2018/06/05 09:45:11 [INFO] 172.19.0.5:39276 POST /register 201 0 "OK"
+2018/06/05 09:45:11 [DEBUG] Received request for /register
+2018/06/05 09:45:11 [DEBUG] Checking for revocation/expiration of certificate owned by 'ca-org-rockontrol-admin'
+2018/06/05 09:45:11 [DEBUG] DB: Get certificate by serial (68360455fe680b3af477381411b287929abb85a6) and aki (73440318e6b8f8fa09ffb08f6160d80f96445188)
+2018/06/05 09:45:11 [DEBUG] Successful token authentication of 'ca-org-rockontrol-admin'
+2018/06/05 09:45:11 [DEBUG] Received registration request from ca-org-rockontrol-admin: { Name:peer2-org-rockontrol Type:peer Secret:**** MaxEnrollments:0 Affiliation:org-rockontrol Attributes:[{hf.Revoker true false}] CAName:  }
+2018/06/05 09:45:11 [DEBUG] DB: Getting identity ca-org-rockontrol-admin
+2018/06/05 09:45:11 [DEBUG] canRegister - Check to see if user 'ca-org-rockontrol-admin' can register
+2018/06/05 09:45:11 [DEBUG] Checking to see if caller 'ca-org-rockontrol-admin' is a registrar
+2018/06/05 09:45:11 [DEBUG] Validate Affiliation
+2018/06/05 09:45:11 [DEBUG] Checking to see if affiliation 'org-rockontrol' contains caller's affiliation ''
+2018/06/05 09:45:11 [DEBUG] Caller has root affiliation
+2018/06/05 09:45:11 [DEBUG] Validate ID
+2018/06/05 09:45:11 [DEBUG] Validating affiliation: org-rockontrol
+2018/06/05 09:45:11 [DEBUG] DB: Get affiliation org-rockontrol
+2018/06/05 09:45:11 [DEBUG] Checking to see if registrar can register the requested attributes: [{Name:hf.Revoker Value:true ECert:false}]
+2018/06/05 09:45:11 [DEBUG] Validating that registrar with the following values for hf.Registrar.Attributes '*' is authorized to register the requested attribute '&{Name:hf.Revoker Value:true ECert:false}'
+2018/06/05 09:45:11 [DEBUG] Checking if registrar can register attribute: hf.Revoker
+2018/06/05 09:45:11 [DEBUG] Performing authorization check...
+2018/06/05 09:45:11 [DEBUG] Checking if caller is authorized to register attribute 'hf.Revoker' with the requested value of '%!s(func() string=0x98fe70)'
+2018/06/05 09:45:11 [DEBUG] Requested attribute type is boolean
+2018/06/05 09:45:11 [DEBUG] Registering user id: peer2-org-rockontrol
+2018/06/05 09:45:11 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/06/05 09:45:11 [DEBUG] DB: Getting identity peer2-org-rockontrol
+2018/06/05 09:45:11 [DEBUG] DB: Add identity peer2-org-rockontrol
+2018/06/05 09:45:11 [DEBUG] Successfully added identity peer2-org-rockontrol to the database
+2018/06/05 09:45:11 [INFO] 172.19.0.5:39278 POST /register 201 0 "OK"
+2018/06/05 09:45:11 [DEBUG] Received request for /register
+2018/06/05 09:45:11 [DEBUG] Checking for revocation/expiration of certificate owned by 'ca-org-rockontrol-admin'
+2018/06/05 09:45:11 [DEBUG] DB: Get certificate by serial (68360455fe680b3af477381411b287929abb85a6) and aki (73440318e6b8f8fa09ffb08f6160d80f96445188)
+2018/06/05 09:45:11 [DEBUG] Successful token authentication of 'ca-org-rockontrol-admin'
+2018/06/05 09:45:11 [DEBUG] Received registration request from ca-org-rockontrol-admin: { Name:org-rockontrol-admin Type:client Secret:**** MaxEnrollments:0 Affiliation:org-rockontrol Attributes:[{hf.Registrar.Roles client false} {hf.Registrar.Attributes * false} {hf.Revoker true false} {hf.GenCRL true false} {admin true true} {abac.init true true}] CAName:  }
+2018/06/05 09:45:11 [DEBUG] DB: Getting identity ca-org-rockontrol-admin
+2018/06/05 09:45:11 [DEBUG] canRegister - Check to see if user 'ca-org-rockontrol-admin' can register
+2018/06/05 09:45:11 [DEBUG] Checking to see if caller 'ca-org-rockontrol-admin' is a registrar
+2018/06/05 09:45:11 [DEBUG] Validate Affiliation
+2018/06/05 09:45:11 [DEBUG] Checking to see if affiliation 'org-rockontrol' contains caller's affiliation ''
+2018/06/05 09:45:11 [DEBUG] Caller has root affiliation
+2018/06/05 09:45:11 [DEBUG] Validate ID
+2018/06/05 09:45:11 [DEBUG] Validating affiliation: org-rockontrol
+2018/06/05 09:45:11 [DEBUG] DB: Get affiliation org-rockontrol
+2018/06/05 09:45:11 [DEBUG] Checking to see if registrar can register the requested attributes: [{Name:hf.Registrar.Roles Value:client ECert:false} {Name:hf.Registrar.Attributes Value:* ECert:false} {Name:hf.Revoker Value:true ECert:false} {Name:hf.GenCRL Value:true ECert:false} {Name:admin Value:true ECert:true} {Name:abac.init Value:true ECert:true}]
+2018/06/05 09:45:11 [DEBUG] Validating that registrar with the following values for hf.Registrar.Attributes '*' is authorized to register the requested attribute '&{Name:hf.Registrar.Roles Value:client ECert:false}'
+2018/06/05 09:45:11 [DEBUG] Checking if registrar can register attribute: hf.Registrar.Roles
+2018/06/05 09:45:11 [DEBUG] Performing authorization check...
+2018/06/05 09:45:11 [DEBUG] Checking if caller is authorized to register attribute 'hf.Registrar.Roles' with the requested value of '%!s(func() string=0x98fe70)'
+2018/06/05 09:45:11 [DEBUG] Requested attribute type is list
+2018/06/05 09:45:11 [DEBUG] Validating that registrar with the following values for hf.Registrar.Attributes '*' is authorized to register the requested attribute '&{Name:hf.Registrar.Attributes Value:* ECert:false}'
+2018/06/05 09:45:11 [DEBUG] Checking if registrar can register attribute: hf.Registrar.Attributes
+2018/06/05 09:45:11 [DEBUG] Performing authorization check...
+2018/06/05 09:45:11 [DEBUG] Checking if caller is authorized to register attribute 'hf.Registrar.Attributes' with the requested value of '%!s(func() string=0x98fe70)'
+2018/06/05 09:45:11 [DEBUG] Requested attribute type is list
+2018/06/05 09:45:11 [DEBUG] Perform ownshership check for requested 'hf.' attributes for the values of 'hf.Registrar.Attributes'
+2018/06/05 09:45:11 [DEBUG] Checking if registrar can register attribute: *
+2018/06/05 09:45:11 [DEBUG] Validating that registrar with the following values for hf.Registrar.Attributes '*' is authorized to register the requested attribute '&{Name:hf.Revoker Value:true ECert:false}'
+2018/06/05 09:45:11 [DEBUG] Checking if registrar can register attribute: hf.Revoker
+2018/06/05 09:45:11 [DEBUG] Performing authorization check...
+2018/06/05 09:45:11 [DEBUG] Checking if caller is authorized to register attribute 'hf.Revoker' with the requested value of '%!s(func() string=0x98fe70)'
+2018/06/05 09:45:11 [DEBUG] Requested attribute type is boolean
+2018/06/05 09:45:11 [DEBUG] Validating that registrar with the following values for hf.Registrar.Attributes '*' is authorized to register the requested attribute '&{Name:hf.GenCRL Value:true ECert:false}'
+2018/06/05 09:45:11 [DEBUG] Checking if registrar can register attribute: hf.GenCRL
+2018/06/05 09:45:11 [DEBUG] Performing authorization check...
+2018/06/05 09:45:11 [DEBUG] Checking if caller is authorized to register attribute 'hf.GenCRL' with the requested value of '%!s(func() string=0x98fe70)'
+2018/06/05 09:45:11 [DEBUG] Requested attribute type is boolean
+2018/06/05 09:45:11 [DEBUG] Validating that registrar with the following values for hf.Registrar.Attributes '*' is authorized to register the requested attribute '&{Name:admin Value:true ECert:true}'
+2018/06/05 09:45:11 [DEBUG] Checking if registrar can register attribute: admin
+2018/06/05 09:45:11 [DEBUG] Performing authorization check...
+2018/06/05 09:45:11 [DEBUG] Validating that registrar with the following values for hf.Registrar.Attributes '*' is authorized to register the requested attribute '&{Name:abac.init Value:true ECert:true}'
+2018/06/05 09:45:11 [DEBUG] Checking if registrar can register attribute: abac.init
+2018/06/05 09:45:11 [DEBUG] Performing authorization check...
+2018/06/05 09:45:11 [DEBUG] Registering user id: org-rockontrol-admin
+2018/06/05 09:45:11 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/06/05 09:45:11 [DEBUG] DB: Getting identity org-rockontrol-admin
+2018/06/05 09:45:11 [DEBUG] DB: Add identity org-rockontrol-admin
+2018/06/05 09:45:11 [DEBUG] Successfully added identity org-rockontrol-admin to the database
+2018/06/05 09:45:11 [INFO] 172.19.0.5:39280 POST /register 201 0 "OK"
+2018/06/05 09:45:11 [DEBUG] Received request for /register
+2018/06/05 09:45:11 [DEBUG] Checking for revocation/expiration of certificate owned by 'ca-org-rockontrol-admin'
+2018/06/05 09:45:11 [DEBUG] DB: Get certificate by serial (68360455fe680b3af477381411b287929abb85a6) and aki (73440318e6b8f8fa09ffb08f6160d80f96445188)
+2018/06/05 09:45:11 [DEBUG] Successful token authentication of 'ca-org-rockontrol-admin'
+2018/06/05 09:45:11 [DEBUG] Received registration request from ca-org-rockontrol-admin: { Name:user-org-rockontrol Type:user Secret:**** MaxEnrollments:0 Affiliation:org-rockontrol Attributes:[] CAName:  }
+2018/06/05 09:45:11 [DEBUG] DB: Getting identity ca-org-rockontrol-admin
+2018/06/05 09:45:11 [DEBUG] canRegister - Check to see if user 'ca-org-rockontrol-admin' can register
+2018/06/05 09:45:11 [DEBUG] Checking to see if caller 'ca-org-rockontrol-admin' is a registrar
+2018/06/05 09:45:11 [DEBUG] Validate Affiliation
+2018/06/05 09:45:11 [DEBUG] Checking to see if affiliation 'org-rockontrol' contains caller's affiliation ''
+2018/06/05 09:45:11 [DEBUG] Caller has root affiliation
+2018/06/05 09:45:11 [DEBUG] Validate ID
+2018/06/05 09:45:11 [DEBUG] Validating affiliation: org-rockontrol
+2018/06/05 09:45:11 [DEBUG] DB: Get affiliation org-rockontrol
+2018/06/05 09:45:11 [DEBUG] Registering user id: user-org-rockontrol
+2018/06/05 09:45:11 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/06/05 09:45:11 [DEBUG] DB: Getting identity user-org-rockontrol
+2018/06/05 09:45:11 [DEBUG] DB: Add identity user-org-rockontrol
+2018/06/05 09:45:11 [DEBUG] Successfully added identity user-org-rockontrol to the database
+2018/06/05 09:45:11 [INFO] 172.19.0.5:39282 POST /register 201 0 "OK"
+2018/06/05 09:45:12 [DEBUG] Received request for /cainfo
+2018/06/05 09:45:12 [INFO] 172.19.0.5:39300 POST /cainfo 200 0 "OK"
+2018/06/05 09:45:12 [DEBUG] Received request for /enroll
+2018/06/05 09:45:12 [DEBUG] ca.Config: &{Version:1.1.0 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/etc/hyperledger/fabric-ca/ca-key.pem Certfile:/etc/hyperledger/fabric-ca/ca-cert.pem Chainfile:/etc/hyperledger/fabric-ca/ca-chain.pem} Signing:0xc420306180 CSR:{CN:ca-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[ca-org-rockontrol] KeyRequest:<nil> CA:0xc4202837c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1]  }]} Affiliations:map[org-order:[] org1:[department1 department2] org-rockontrol:[] org2:[department1] org-weihai:[]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/etc/hyperledger/fabric-ca/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202ec870 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/06/05 09:45:12 [DEBUG] DB: Getting identity org-rockontrol-admin
+2018/06/05 09:45:12 [DEBUG] DB: Login user org-rockontrol-admin with max enrollments of -1 and state of 0
+2018/06/05 09:45:12 [DEBUG] DB: identity org-rockontrol-admin successfully logged in
+2018/06/05 09:45:12 [DEBUG] Processing sign request: id=org-rockontrol-admin, CommonName=org-rockontrol-admin, Subject=<nil>
+2018/06/05 09:45:12 [DEBUG] Request is not for a CA signing certificate
+2018/06/05 09:45:12 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/06/05 09:45:12 [DEBUG] DB: Getting identity org-rockontrol-admin
+2018/06/05 09:45:12 [DEBUG] Finished processing sign request
+2018/06/05 09:45:12 [DEBUG] DB: Getting identity org-rockontrol-admin
+2018/06/05 09:45:12 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b22616261632e696e6974223a2274727565222c2261646d696e223a2274727565222c2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a226f72672d726f636b6f6e74726f6c2d61646d696e222c2268662e54797065223a22636c69656e74227d7d}
+2018/06/05 09:45:12 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b22616261632e696e6974223a2274727565222c2261646d696e223a2274727565222c2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a226f72672d726f636b6f6e74726f6c2d61646d696e222c2268662e54797065223a22636c69656e74227d7d}
+2018/06/05 09:45:12 [INFO] signed certificate with serial number 151745541497116537646192553318200414951028058755
+2018/06/05 09:45:12 [DEBUG] DB: Insert Certificate
+2018/06/05 09:45:12 [DEBUG] Saved serial number as hex 1a948162fb1743ade147d0eb2c317350518c6a83
+2018/06/05 09:45:12 [DEBUG] saved certificate with serial number 151745541497116537646192553318200414951028058755
+2018/06/05 09:45:12 [DEBUG] Successfully incremented state for identity org-rockontrol-admin to 1
+2018/06/05 09:45:12 [INFO] 172.19.0.5:39302 POST /enroll 201 0 "OK"
+2018/06/05 09:45:13 [DEBUG] Received request for /enroll
+2018/06/05 09:45:13 [DEBUG] ca.Config: &{Version:1.1.0 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/etc/hyperledger/fabric-ca/ca-key.pem Certfile:/etc/hyperledger/fabric-ca/ca-cert.pem Chainfile:/etc/hyperledger/fabric-ca/ca-chain.pem} Signing:0xc420306180 CSR:{CN:ca-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[ca-org-rockontrol] KeyRequest:<nil> CA:0xc4202837c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1]  }]} Affiliations:map[org-order:[] org1:[department1 department2] org-rockontrol:[] org2:[department1] org-weihai:[]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/etc/hyperledger/fabric-ca/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202ec870 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/06/05 09:45:13 [DEBUG] DB: Getting identity peer2-org-rockontrol
+2018/06/05 09:45:13 [DEBUG] DB: Login user peer2-org-rockontrol with max enrollments of -1 and state of 0
+2018/06/05 09:45:13 [DEBUG] DB: identity peer2-org-rockontrol successfully logged in
+2018/06/05 09:45:13 [DEBUG] Processing sign request: id=peer2-org-rockontrol, CommonName=peer2-org-rockontrol, Subject=<nil>
+2018/06/05 09:45:13 [DEBUG] Request is not for a CA signing certificate
+2018/06/05 09:45:13 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/06/05 09:45:13 [DEBUG] DB: Getting identity peer2-org-rockontrol
+2018/06/05 09:45:13 [DEBUG] Finished processing sign request
+2018/06/05 09:45:13 [DEBUG] DB: Getting identity peer2-org-rockontrol
+2018/06/05 09:45:13 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a2270656572322d6f72672d726f636b6f6e74726f6c222c2268662e54797065223a2270656572227d7d}
+2018/06/05 09:45:13 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a2270656572322d6f72672d726f636b6f6e74726f6c222c2268662e54797065223a2270656572227d7d}
+2018/06/05 09:45:13 [INFO] signed certificate with serial number 324277940500425103999552225283445294610563456695
+2018/06/05 09:45:13 [DEBUG] DB: Insert Certificate
+2018/06/05 09:45:13 [DEBUG] Saved serial number as hex 38cd2031e2e71c182d105d5dacd65cc3c133deb7
+2018/06/05 09:45:13 [DEBUG] saved certificate with serial number 324277940500425103999552225283445294610563456695
+2018/06/05 09:45:13 [DEBUG] Successfully incremented state for identity peer2-org-rockontrol to 1
+2018/06/05 09:45:13 [INFO] 172.19.0.6:56682 POST /enroll 201 0 "OK"
+2018/06/05 09:45:13 [DEBUG] Received request for /enroll
+2018/06/05 09:45:13 [DEBUG] ca.Config: &{Version:1.1.0 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/etc/hyperledger/fabric-ca/ca-key.pem Certfile:/etc/hyperledger/fabric-ca/ca-cert.pem Chainfile:/etc/hyperledger/fabric-ca/ca-chain.pem} Signing:0xc420306180 CSR:{CN:ca-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[ca-org-rockontrol] KeyRequest:<nil> CA:0xc4202837c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1]  }]} Affiliations:map[org2:[department1] org-weihai:[] org-order:[] org1:[department1 department2] org-rockontrol:[]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/etc/hyperledger/fabric-ca/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202ec870 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/06/05 09:45:13 [DEBUG] DB: Getting identity peer1-org-rockontrol
+2018/06/05 09:45:13 [DEBUG] DB: Login user peer1-org-rockontrol with max enrollments of -1 and state of 0
+2018/06/05 09:45:13 [DEBUG] Received request for /enroll
+2018/06/05 09:45:13 [DEBUG] ca.Config: &{Version:1.1.0 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/etc/hyperledger/fabric-ca/ca-key.pem Certfile:/etc/hyperledger/fabric-ca/ca-cert.pem Chainfile:/etc/hyperledger/fabric-ca/ca-chain.pem} Signing:0xc420306180 CSR:{CN:ca-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[ca-org-rockontrol] KeyRequest:<nil> CA:0xc4202837c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1]  }]} Affiliations:map[org-weihai:[] org-order:[] org1:[department1 department2] org-rockontrol:[] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/etc/hyperledger/fabric-ca/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202ec870 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/06/05 09:45:13 [DEBUG] DB: Getting identity peer2-org-rockontrol
+2018/06/05 09:45:13 [DEBUG] DB: Login user peer2-org-rockontrol with max enrollments of -1 and state of 1
+2018/06/05 09:45:14 [DEBUG] DB: identity peer1-org-rockontrol successfully logged in
+2018/06/05 09:45:14 [DEBUG] Processing sign request: id=peer1-org-rockontrol, CommonName=peer1-org-rockontrol, Subject=<nil>
+2018/06/05 09:45:14 [DEBUG] Request is not for a CA signing certificate
+2018/06/05 09:45:14 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer1-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] Finished processing sign request
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer1-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a2270656572312d6f72672d726f636b6f6e74726f6c222c2268662e54797065223a2270656572227d7d}
+2018/06/05 09:45:14 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a2270656572312d6f72672d726f636b6f6e74726f6c222c2268662e54797065223a2270656572227d7d}
+2018/06/05 09:45:14 [INFO] signed certificate with serial number 94968993845126453839928039347299022068314930630
+2018/06/05 09:45:14 [DEBUG] DB: Insert Certificate
+2018/06/05 09:45:14 [DEBUG] Saved serial number as hex 10a28e956ba99d100e24d4d2b2d3d768a8d5fdc6
+2018/06/05 09:45:14 [DEBUG] saved certificate with serial number 94968993845126453839928039347299022068314930630
+2018/06/05 09:45:14 [DEBUG] Successfully incremented state for identity peer1-org-rockontrol to 1
+2018/06/05 09:45:14 [INFO] 172.19.0.7:56812 POST /enroll 201 0 "OK"
+2018/06/05 09:45:14 [DEBUG] DB: identity peer2-org-rockontrol successfully logged in
+2018/06/05 09:45:14 [DEBUG] Processing sign request: id=peer2-org-rockontrol, CommonName=peer2-org-rockontrol, Subject=<nil>
+2018/06/05 09:45:14 [DEBUG] Request is not for a CA signing certificate
+2018/06/05 09:45:14 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer2-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] Finished processing sign request
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer2-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a2270656572322d6f72672d726f636b6f6e74726f6c222c2268662e54797065223a2270656572227d7d}
+2018/06/05 09:45:14 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a2270656572322d6f72672d726f636b6f6e74726f6c222c2268662e54797065223a2270656572227d7d}
+2018/06/05 09:45:14 [INFO] signed certificate with serial number 337412566925650294898700353704218522088066770972
+2018/06/05 09:45:14 [DEBUG] DB: Insert Certificate
+2018/06/05 09:45:14 [DEBUG] Saved serial number as hex 3b1a1a4fcb3b377eea1564cc1db68236446be81c
+2018/06/05 09:45:14 [DEBUG] saved certificate with serial number 337412566925650294898700353704218522088066770972
+2018/06/05 09:45:14 [DEBUG] Successfully incremented state for identity peer2-org-rockontrol to 2
+2018/06/05 09:45:14 [INFO] 172.19.0.6:56688 POST /enroll 201 0 "OK"
+2018/06/05 09:45:14 [DEBUG] Received request for /enroll
+2018/06/05 09:45:14 [DEBUG] ca.Config: &{Version:1.1.0 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/etc/hyperledger/fabric-ca/ca-key.pem Certfile:/etc/hyperledger/fabric-ca/ca-cert.pem Chainfile:/etc/hyperledger/fabric-ca/ca-chain.pem} Signing:0xc420306180 CSR:{CN:ca-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[ca-org-rockontrol] KeyRequest:<nil> CA:0xc4202837c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user]  }]} Affiliations:map[org-rockontrol:[] org2:[department1] org-weihai:[] org-order:[] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/etc/hyperledger/fabric-ca/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202ec870 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer1-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] DB: Login user peer1-org-rockontrol with max enrollments of -1 and state of 1
+2018/06/05 09:45:14 [DEBUG] Received request for /enroll
+2018/06/05 09:45:14 [DEBUG] ca.Config: &{Version:1.1.0 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/etc/hyperledger/fabric-ca/ca-key.pem Certfile:/etc/hyperledger/fabric-ca/ca-cert.pem Chainfile:/etc/hyperledger/fabric-ca/ca-chain.pem} Signing:0xc420306180 CSR:{CN:ca-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[ca-org-rockontrol] KeyRequest:<nil> CA:0xc4202837c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user]  }]} Affiliations:map[org-order:[] org1:[department1 department2] org-rockontrol:[] org2:[department1] org-weihai:[]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/etc/hyperledger/fabric-ca/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202ec870 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer2-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] DB: Login user peer2-org-rockontrol with max enrollments of -1 and state of 2
+2018/06/05 09:45:14 [DEBUG] DB: identity peer1-org-rockontrol successfully logged in
+2018/06/05 09:45:14 [DEBUG] Processing sign request: id=peer1-org-rockontrol, CommonName=peer1-org-rockontrol, Subject=<nil>
+2018/06/05 09:45:14 [DEBUG] Request is not for a CA signing certificate
+2018/06/05 09:45:14 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer1-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] Finished processing sign request
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer1-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a2270656572312d6f72672d726f636b6f6e74726f6c222c2268662e54797065223a2270656572227d7d}
+2018/06/05 09:45:14 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a2270656572312d6f72672d726f636b6f6e74726f6c222c2268662e54797065223a2270656572227d7d}
+2018/06/05 09:45:14 [INFO] signed certificate with serial number 163589542378470166346203617184634906140459734549
+2018/06/05 09:45:14 [DEBUG] DB: Insert Certificate
+2018/06/05 09:45:14 [DEBUG] Saved serial number as hex 1ca79bd94c7a0a80c025a5165e93786cf2511615
+2018/06/05 09:45:14 [DEBUG] saved certificate with serial number 163589542378470166346203617184634906140459734549
+2018/06/05 09:45:14 [DEBUG] Successfully incremented state for identity peer1-org-rockontrol to 2
+2018/06/05 09:45:14 [INFO] 172.19.0.7:56818 POST /enroll 201 0 "OK"
+2018/06/05 09:45:14 [DEBUG] DB: identity peer2-org-rockontrol successfully logged in
+2018/06/05 09:45:14 [DEBUG] Processing sign request: id=peer2-org-rockontrol, CommonName=peer2-org-rockontrol, Subject=<nil>
+2018/06/05 09:45:14 [DEBUG] Request is not for a CA signing certificate
+2018/06/05 09:45:14 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer2-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] Finished processing sign request
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer2-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a2270656572322d6f72672d726f636b6f6e74726f6c222c2268662e54797065223a2270656572227d7d}
+2018/06/05 09:45:14 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a2270656572322d6f72672d726f636b6f6e74726f6c222c2268662e54797065223a2270656572227d7d}
+2018/06/05 09:45:14 [INFO] signed certificate with serial number 216637764042075968201317440105870841004525514902
+2018/06/05 09:45:14 [DEBUG] DB: Insert Certificate
+2018/06/05 09:45:14 [DEBUG] Saved serial number as hex 25f25f9183fd0c9b491470d55baec3706a9a7096
+2018/06/05 09:45:14 [DEBUG] Received request for /enroll
+2018/06/05 09:45:14 [DEBUG] ca.Config: &{Version:1.1.0 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/etc/hyperledger/fabric-ca/ca-key.pem Certfile:/etc/hyperledger/fabric-ca/ca-cert.pem Chainfile:/etc/hyperledger/fabric-ca/ca-chain.pem} Signing:0xc420306180 CSR:{CN:ca-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[ca-org-rockontrol] KeyRequest:<nil> CA:0xc4202837c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1]  }]} Affiliations:map[org2:[department1] org-weihai:[] org-order:[] org1:[department1 department2] org-rockontrol:[]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/etc/hyperledger/fabric-ca/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202ec870 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer1-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] saved certificate with serial number 216637764042075968201317440105870841004525514902
+2018/06/05 09:45:14 [DEBUG] DB: Login user peer1-org-rockontrol with max enrollments of -1 and state of 2
+2018/06/05 09:45:14 [DEBUG] Successfully incremented state for identity peer2-org-rockontrol to 3
+2018/06/05 09:45:14 [INFO] 172.19.0.6:56694 POST /enroll 201 0 "OK"
+2018/06/05 09:45:14 [DEBUG] DB: identity peer1-org-rockontrol successfully logged in
+2018/06/05 09:45:14 [DEBUG] Processing sign request: id=peer1-org-rockontrol, CommonName=peer1-org-rockontrol, Subject=<nil>
+2018/06/05 09:45:14 [DEBUG] Request is not for a CA signing certificate
+2018/06/05 09:45:14 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer1-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] Finished processing sign request
+2018/06/05 09:45:14 [DEBUG] DB: Getting identity peer1-org-rockontrol
+2018/06/05 09:45:14 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a2270656572312d6f72672d726f636b6f6e74726f6c222c2268662e54797065223a2270656572227d7d}
+2018/06/05 09:45:14 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f72672d726f636b6f6e74726f6c222c2268662e456e726f6c6c6d656e744944223a2270656572312d6f72672d726f636b6f6e74726f6c222c2268662e54797065223a2270656572227d7d}
+2018/06/05 09:45:14 [INFO] signed certificate with serial number 419031704070888535009341346097644810846036487463
+2018/06/05 09:45:14 [DEBUG] DB: Insert Certificate
+2018/06/05 09:45:14 [DEBUG] Saved serial number as hex 4966080e607d80b52b3a165231f33fd4ff76ed27
+2018/06/05 09:45:14 [DEBUG] saved certificate with serial number 419031704070888535009341346097644810846036487463
+2018/06/05 09:45:14 [DEBUG] Successfully incremented state for identity peer1-org-rockontrol to 3
+2018/06/05 09:45:14 [INFO] 172.19.0.7:56822 POST /enroll 201 0 "OK"

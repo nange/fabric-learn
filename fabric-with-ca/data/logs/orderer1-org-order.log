@@ -1,0 +1,471 @@
+Wait for setup to complete sucessfully
+Waiting for the 'setup' container to finish registering identities, creating the genesis block and other artifacts ...
+..
+Enroll to get orderer's TLS cert (using the 'tls' profile)
+2018/06/05 09:45:13 [DEBUG] Home directory: /root/.fabric-ca-client
+2018/06/05 09:45:13 [INFO] Created a default configuration file at /root/.fabric-ca-client/fabric-ca-client-config.yaml
+2018/06/05 09:45:13 [DEBUG] Client configuration settings: &{URL:http://orderer1-org-order:orderer1-org-orderpw@ca-org-order:7054 MSPDir:/tmp/tls TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile:tls Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:orderer1-org-order Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[orderer1-org-order] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name: Type:client Secret: MaxEnrollments:0 Affiliation: Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc42020c060}
+2018/06/05 09:45:13 [DEBUG] Entered runEnroll
+2018/06/05 09:45:13 [DEBUG] Enrolling { Name:orderer1-org-order Secret:**** Profile:tls Label: CSR:&{orderer1-org-order [{US North Carolina  Hyperledger Fabric }] [orderer1-org-order] <nil> <nil> } CAName: AttrReqs:[]  }
+2018/06/05 09:45:13 [DEBUG] Initializing client with config: &{URL:http://ca-org-order:7054 MSPDir:/tmp/tls TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name:orderer1-org-order Secret:**** Profile:tls Label: CSR:&{orderer1-org-order [{US North Carolina  Hyperledger Fabric }] [orderer1-org-order] <nil> <nil> } CAName: AttrReqs:[]  } CSR:{CN:orderer1-org-order Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[orderer1-org-order] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name: Type:client Secret: MaxEnrollments:0 Affiliation: Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc42020c060}
+2018/06/05 09:45:13 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc42020c0c0 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/06/05 09:45:13 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc42020aa80 DummyKeystore:<nil>}
+2018/06/05 09:45:13 [DEBUG] GenCSR &{CN:orderer1-org-order Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[orderer1-org-order] KeyRequest:<nil> CA:<nil> SerialNumber:}
+2018/06/05 09:45:13 [INFO] generating key: &{A:ecdsa S:256}
+2018/06/05 09:45:13 [DEBUG] generate key from request: algo=ecdsa, size=256
+2018/06/05 09:45:13 [INFO] encoded CSR
+2018/06/05 09:45:13 [DEBUG] Sending request
+POST http://ca-org-order:7054/enroll
+{"hosts":["orderer1-org-order"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBVTCB/AIBADBqMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp\nbmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxGzAZBgNV\nBAMTEm9yZGVyZXIxLW9yZy1vcmRlcjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IA\nBJUWjarNHTOEOrHJpeMfV51Vtq1lRZndXvbUfm3RuFy5G6f9pugnTNJt+z/he00X\nNHwARSeCVhdY/dw2UOJbTzigMDAuBgkqhkiG9w0BCQ4xITAfMB0GA1UdEQQWMBSC\nEm9yZGVyZXIxLW9yZy1vcmRlcjAKBggqhkjOPQQDAgNIADBFAiEAj/1l/9jUWikR\nq9RlOKf5bvYzWrh4Padyj4CJbB8a+X4CIHeRheYX6/1THZRHUYmaB6rrHj3MLxid\nP7eAWlqvopG3\n-----END CERTIFICATE REQUEST-----\n","profile":"tls","crl_override":"","label":"","NotBefore":"0001-01-01T00:00:00Z","NotAfter":"0001-01-01T00:00:00Z","CAName":""}
+2018/06/05 09:45:14 [DEBUG] Received response
+statusCode=201 (201 Created)
+2018/06/05 09:45:14 [DEBUG] Response body result: map[Cert:LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM5akNDQXB5Z0F3SUJBZ0lVYytwRnQzMnV0U0hoMDRlcDNaY2ZRYVBvMHhFd0NnWUlLb1pJemowRUF3SXcKWkRFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJVd0V3WURWUVFERXd4allTMXZjbWN0CmIzSmtaWEl3SGhjTk1UZ3dOakExTURrME1EQXdXaGNOTVRrd05qQTFNRGswTlRBd1dqQjlNUXN3Q1FZRFZRUUcKRXdKVlV6RVhNQlVHQTFVRUNCTU9UbTl5ZEdnZ1EyRnliMnhwYm1FeEZEQVNCZ05WQkFvVEMwaDVjR1Z5YkdWawpaMlZ5TVNJd0RnWURWUVFMRXdkdmNtUmxjbVZ5TUJBR0ExVUVDeE1KYjNKbkxXOXlaR1Z5TVJzd0dRWURWUVFECkV4SnZjbVJsY21WeU1TMXZjbWN0YjNKa1pYSXdXVEFUQmdjcWhrak9QUUlCQmdncWhrak9QUU1CQndOQ0FBU1YKRm8ycXpSMHpoRHF4eWFYakgxZWRWYmF0WlVXWjNWNzIxSDV0MGJoY3VSdW4vYWJvSjB6U2Jmcy80WHRORnpSOApBRVVuZ2xZWFdQM2NObERpVzA4NG80SUJFVENDQVEwd0RnWURWUjBQQVFIL0JBUURBZ09vTUIwR0ExVWRKUVFXCk1CUUdDQ3NHQVFVRkJ3TUJCZ2dyQmdFRkJRY0RBakFNQmdOVkhSTUJBZjhFQWpBQU1CMEdBMVVkRGdRV0JCVEEKcW5QRUo2L2J1ejlBOWtYU1cxem9yb0JJaXpBZkJnTlZIU01FR0RBV2dCUUNtUjdHTHVTYmlHd3pTWW5KV2R2MQpxMW4wRGpBZEJnTlZIUkVFRmpBVWdoSnZjbVJsY21WeU1TMXZjbWN0YjNKa1pYSXdid1lJS2dNRUJRWUhDQUVFClkzc2lZWFIwY25NaU9uc2lhR1l1UVdabWFXeHBZWFJwYjI0aU9pSnZjbWN0YjNKa1pYSWlMQ0pvWmk1RmJuSnYKYkd4dFpXNTBTVVFpT2lKdmNtUmxjbVZ5TVMxdmNtY3RiM0prWlhJaUxDSm9aaTVVZVhCbElqb2liM0prWlhKbApjaUo5ZlRBS0JnZ3Foa2pPUFFRREFnTklBREJGQWlFQXRoU3l3TzBPWW9ybjFCRXFBWU04WU1UeUpRWWw2SUlFCnVHM1VwQXlGbXprQ0lEbFFGZTB2Sk03TVRLQ3B0M1BCYmRtL2tQNS9GTi9qV1Y3cVBhdzBHeGxYCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K ServerInfo:map[CAName: CAChain:LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNEakNDQWJXZ0F3SUJBZ0lVSE5jUmwzYU5ZUFppUk1nekpTRDlrdlY2eCs0d0NnWUlLb1pJemowRUF3SXcKWkRFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJVd0V3WURWUVFERXd4allTMXZjbWN0CmIzSmtaWEl3SGhjTk1UZ3dOakExTURrME1EQXdXaGNOTXpNd05qQXhNRGswTURBd1dqQmtNUXN3Q1FZRFZRUUcKRXdKVlV6RVhNQlVHQTFVRUNCTU9UbTl5ZEdnZ1EyRnliMnhwYm1FeEZEQVNCZ05WQkFvVEMwaDVjR1Z5YkdWawpaMlZ5TVE4d0RRWURWUVFMRXdaR1lXSnlhV014RlRBVEJnTlZCQU1UREdOaExXOXlaeTF2Y21SbGNqQlpNQk1HCkJ5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEEwSUFCRUMrdE9nWmRlTHIrTmVpbDhiN3NjNGc4ZWluaDdyVjltb3YKelZ4UVhnaGs1TThvMEhRSWU5TFhPL2dHMFQ3RFVseXMrUk14R2s3N3JSeU91VUlBWHhxalJUQkRNQTRHQTFVZApEd0VCL3dRRUF3SUJCakFTQmdOVkhSTUJBZjhFQ0RBR0FRSC9BZ0VCTUIwR0ExVWREZ1FXQkJRQ21SN0dMdVNiCmlHd3pTWW5KV2R2MXExbjBEakFLQmdncWhrak9QUVFEQWdOSEFEQkVBaUJjQ1d0SzBOZU1uMllXbnVMTkIwRmIKVDBBY2JFdmVsVk1VZ0hFUzVTaWNvZ0lnZVordXhjam55azNZVVJlcC95WGZHaU96bkxYZTlDdmlvOXZmcGorQQpFYVk9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K Version:]]
+2018/06/05 09:45:14 [DEBUG] newEnrollmentResponse orderer1-org-order
+2018/06/05 09:45:14 [INFO] Stored client certificate at /tmp/tls/signcerts/cert.pem
+2018/06/05 09:45:14 [INFO] Stored TLS root CA certificate at /tmp/tls/tlscacerts/tls-ca-org-order-7054.pem
+2018/06/05 09:45:14 [INFO] Stored TLS intermediate certificates at /tmp/tls/tlsintermediatecerts/tls-ca-org-order-7054.pem
+Copy the TLS key and cert to the appropriate place
+Enroll again to get the orderer's enrollment certificate (default profile)
+2018/06/05 09:45:14 [DEBUG] Home directory: /root/.fabric-ca-client
+2018/06/05 09:45:14 [DEBUG] Client configuration settings: &{URL:http://orderer1-org-order:orderer1-org-orderpw@ca-org-order:7054 MSPDir:/etc/hyperledger/orderer/msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:orderer1-org-order Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[7ee46f4bbc74] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name: Type:client Secret: MaxEnrollments:0 Affiliation: Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc420196cf0}
+2018/06/05 09:45:14 [DEBUG] Entered runEnroll
+2018/06/05 09:45:14 [DEBUG] Enrolling { Name:orderer1-org-order Secret:**** Profile: Label: CSR:&{orderer1-org-order [{US North Carolina  Hyperledger Fabric }] [7ee46f4bbc74] <nil> <nil> } CAName: AttrReqs:[]  }
+2018/06/05 09:45:14 [DEBUG] Initializing client with config: &{URL:http://ca-org-order:7054 MSPDir:/etc/hyperledger/orderer/msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name:orderer1-org-order Secret:**** Profile: Label: CSR:&{orderer1-org-order [{US North Carolina  Hyperledger Fabric }] [7ee46f4bbc74] <nil> <nil> } CAName: AttrReqs:[]  } CSR:{CN:orderer1-org-order Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[7ee46f4bbc74] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name: Type:client Secret: MaxEnrollments:0 Affiliation: Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc420196cf0}
+2018/06/05 09:45:14 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc420196d50 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/06/05 09:45:14 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4201a8c40 DummyKeystore:<nil>}
+2018/06/05 09:45:14 [DEBUG] GenCSR &{CN:orderer1-org-order Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[7ee46f4bbc74] KeyRequest:<nil> CA:<nil> SerialNumber:}
+2018/06/05 09:45:14 [INFO] generating key: &{A:ecdsa S:256}
+2018/06/05 09:45:14 [DEBUG] generate key from request: algo=ecdsa, size=256
+2018/06/05 09:45:14 [INFO] encoded CSR
+2018/06/05 09:45:14 [DEBUG] Sending request
+POST http://ca-org-order:7054/enroll
+{"hosts":["7ee46f4bbc74"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBTzCB9gIBADBqMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp\nbmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxGzAZBgNV\nBAMTEm9yZGVyZXIxLW9yZy1vcmRlcjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IA\nBPN0gCfv91dOUviR+l/lIfgtluhK6DF/e0JLBlxzzVh5mUJ2kRDg1LMC6K2nph3R\nazOqX2GM5fJE4vZyJjCRBLegKjAoBgkqhkiG9w0BCQ4xGzAZMBcGA1UdEQQQMA6C\nDDdlZTQ2ZjRiYmM3NDAKBggqhkjOPQQDAgNIADBFAiEAnXqLQRPjw/Da04m5r5e+\nck2SnuZqAJc7wjvqcKM/9kYCIE8LkPgHzTeC7RzgWg+2qZaMEFaUueu5uSaWOW/+\n0fF3\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","NotBefore":"0001-01-01T00:00:00Z","NotAfter":"0001-01-01T00:00:00Z","CAName":""}
+2018/06/05 09:45:14 [DEBUG] Received response
+statusCode=201 (201 Created)
+2018/06/05 09:45:14 [DEBUG] Response body result: map[Cert:LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN6akNDQW5XZ0F3SUJBZ0lVS0xIbW15ekFvQVh2SEN3dDlTUWpQWVNJM2dRd0NnWUlLb1pJemowRUF3SXcKWkRFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJVd0V3WURWUVFERXd4allTMXZjbWN0CmIzSmtaWEl3SGhjTk1UZ3dOakExTURrME1EQXdXaGNOTVRrd05qQTFNRGswTlRBd1dqQjlNUXN3Q1FZRFZRUUcKRXdKVlV6RVhNQlVHQTFVRUNCTU9UbTl5ZEdnZ1EyRnliMnhwYm1FeEZEQVNCZ05WQkFvVEMwaDVjR1Z5YkdWawpaMlZ5TVNJd0RnWURWUVFMRXdkdmNtUmxjbVZ5TUJBR0ExVUVDeE1KYjNKbkxXOXlaR1Z5TVJzd0dRWURWUVFECkV4SnZjbVJsY21WeU1TMXZjbWN0YjNKa1pYSXdXVEFUQmdjcWhrak9QUUlCQmdncWhrak9QUU1CQndOQ0FBVHoKZElBbjcvZFhUbEw0a2ZwZjVTSDRMWmJvU3VneGYzdENTd1pjYzgxWWVabENkcEVRNE5TekF1aXRwNllkMFdzegpxbDloak9YeVJPTDJjaVl3a1FTM280SHJNSUhvTUE0R0ExVWREd0VCL3dRRUF3SUhnREFNQmdOVkhSTUJBZjhFCkFqQUFNQjBHQTFVZERnUVdCQlFYTmxybjI0a3NySk1kWDRyZXRFL0lrMGM4UkRBZkJnTlZIU01FR0RBV2dCUUMKbVI3R0x1U2JpR3d6U1luSldkdjFxMW4wRGpBWEJnTlZIUkVFRURBT2dndzNaV1UwTm1ZMFltSmpOelF3YndZSQpLZ01FQlFZSENBRUVZM3NpWVhSMGNuTWlPbnNpYUdZdVFXWm1hV3hwWVhScGIyNGlPaUp2Y21jdGIzSmtaWElpCkxDSm9aaTVGYm5KdmJHeHRaVzUwU1VRaU9pSnZjbVJsY21WeU1TMXZjbWN0YjNKa1pYSWlMQ0pvWmk1VWVYQmwKSWpvaWIzSmtaWEpsY2lKOWZUQUtCZ2dxaGtqT1BRUURBZ05IQURCRUFpQkVDdmtMUWN4aUMzYUdLYXc0ZVdQZwplWDdONkM3SFVDK3UxRkdjQXVGOW9BSWdDWURaU1ZHWnN0RWR4ZmtYZU1ydFlKbndtNG45a2ppN012cEpmc08wCitJVT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo= ServerInfo:map[CAChain:LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNEakNDQWJXZ0F3SUJBZ0lVSE5jUmwzYU5ZUFppUk1nekpTRDlrdlY2eCs0d0NnWUlLb1pJemowRUF3SXcKWkRFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJVd0V3WURWUVFERXd4allTMXZjbWN0CmIzSmtaWEl3SGhjTk1UZ3dOakExTURrME1EQXdXaGNOTXpNd05qQXhNRGswTURBd1dqQmtNUXN3Q1FZRFZRUUcKRXdKVlV6RVhNQlVHQTFVRUNCTU9UbTl5ZEdnZ1EyRnliMnhwYm1FeEZEQVNCZ05WQkFvVEMwaDVjR1Z5YkdWawpaMlZ5TVE4d0RRWURWUVFMRXdaR1lXSnlhV014RlRBVEJnTlZCQU1UREdOaExXOXlaeTF2Y21SbGNqQlpNQk1HCkJ5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEEwSUFCRUMrdE9nWmRlTHIrTmVpbDhiN3NjNGc4ZWluaDdyVjltb3YKelZ4UVhnaGs1TThvMEhRSWU5TFhPL2dHMFQ3RFVseXMrUk14R2s3N3JSeU91VUlBWHhxalJUQkRNQTRHQTFVZApEd0VCL3dRRUF3SUJCakFTQmdOVkhSTUJBZjhFQ0RBR0FRSC9BZ0VCTUIwR0ExVWREZ1FXQkJRQ21SN0dMdVNiCmlHd3pTWW5KV2R2MXExbjBEakFLQmdncWhrak9QUVFEQWdOSEFEQkVBaUJjQ1d0SzBOZU1uMllXbnVMTkIwRmIKVDBBY2JFdmVsVk1VZ0hFUzVTaWNvZ0lnZVordXhjam55azNZVVJlcC95WGZHaU96bkxYZTlDdmlvOXZmcGorQQpFYVk9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K Version: CAName:]]
+2018/06/05 09:45:14 [DEBUG] newEnrollmentResponse orderer1-org-order
+2018/06/05 09:45:14 [INFO] Stored client certificate at /etc/hyperledger/orderer/msp/signcerts/cert.pem
+2018/06/05 09:45:14 [INFO] Stored root CA certificate at /etc/hyperledger/orderer/msp/cacerts/ca-org-order-7054.pem
+2018/06/05 09:45:14 [INFO] Stored intermediate CA certificates at /etc/hyperledger/orderer/msp/intermediatecerts/ca-org-order-7054.pem
+Finish setting up the local MSP for the orderer
+
+ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/orderer/msp
+ORDERER_GENERAL_GENESISFILE=/data/genesis.block
+ORDERER_GENERAL_LOCALMSPID=org-orderMSP
+ORDERER_GENERAL_TLS_ROOTCAS=[/data/ca-org-order-cert.pem]
+ORDERER_GENERAL_TLS_CLIENTROOTCAS=[/data/ca-org-order-cert.pem]
+ORDERER_HOST=orderer1-org-order
+ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
+ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/orderer/tls/server.key
+ORDERER_GENERAL_TLS_CLIENTAUTHREQUIRED=true
+ORDERER_GENERAL_LOGLEVEL=debug
+ORDERER_GENERAL_GENESISMETHOD=file
+ORDERER_DEBUG_BROADCASTTRACEDIR=data/logs
+ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/orderer/tls/server.crt
+ORDERER_GENERAL_TLS_ENABLED=true
+ORDERER_HOME=/etc/hyperledger/orderer
+[36m2018-06-05 09:45:14.410 UTC [bccsp_sw] openKeyStore -> DEBU 001[0m KeyStore opened at [/etc/hyperledger/orderer/msp/keystore]...done
+[36m2018-06-05 09:45:14.410 UTC [bccsp] initBCCSP -> DEBU 002[0m Initialize BCCSP [SW]
+[36m2018-06-05 09:45:14.411 UTC [msp] getPemMaterialFromDir -> DEBU 003[0m Reading directory /etc/hyperledger/orderer/msp/signcerts
+[36m2018-06-05 09:45:14.415 UTC [msp] getPemMaterialFromDir -> DEBU 004[0m Inspecting file /etc/hyperledger/orderer/msp/signcerts/cert.pem
+[36m2018-06-05 09:45:14.418 UTC [msp] getPemMaterialFromDir -> DEBU 005[0m Reading directory /etc/hyperledger/orderer/msp/cacerts
+[36m2018-06-05 09:45:14.422 UTC [msp] getPemMaterialFromDir -> DEBU 006[0m Inspecting file /etc/hyperledger/orderer/msp/cacerts/ca-org-order-7054.pem
+[36m2018-06-05 09:45:14.425 UTC [msp] getPemMaterialFromDir -> DEBU 007[0m Reading directory /etc/hyperledger/orderer/msp/admincerts
+[36m2018-06-05 09:45:14.430 UTC [msp] getPemMaterialFromDir -> DEBU 008[0m Inspecting file /etc/hyperledger/orderer/msp/admincerts/cert.pem
+[36m2018-06-05 09:45:14.432 UTC [msp] getPemMaterialFromDir -> DEBU 009[0m Reading directory /etc/hyperledger/orderer/msp/intermediatecerts
+[36m2018-06-05 09:45:14.433 UTC [msp] getMspConfig -> DEBU 00a[0m Intermediate certs folder not found at [/etc/hyperledger/orderer/msp/intermediatecerts]. Skipping. [stat /etc/hyperledger/orderer/msp/intermediatecerts: no such file or directory]
+[36m2018-06-05 09:45:14.434 UTC [msp] getPemMaterialFromDir -> DEBU 00b[0m Reading directory /etc/hyperledger/orderer/msp/tlscacerts
+[36m2018-06-05 09:45:14.443 UTC [msp] getPemMaterialFromDir -> DEBU 00c[0m Inspecting file /etc/hyperledger/orderer/msp/tlscacerts/ca-org-order-7054.pem
+[36m2018-06-05 09:45:14.446 UTC [msp] getPemMaterialFromDir -> DEBU 00d[0m Reading directory /etc/hyperledger/orderer/msp/tlsintermediatecerts
+[36m2018-06-05 09:45:14.446 UTC [msp] getMspConfig -> DEBU 00e[0m TLS intermediate certs folder not found at [/etc/hyperledger/orderer/msp/tlsintermediatecerts]. Skipping. [stat /etc/hyperledger/orderer/msp/tlsintermediatecerts: no such file or directory]
+[36m2018-06-05 09:45:14.447 UTC [msp] getPemMaterialFromDir -> DEBU 00f[0m Reading directory /etc/hyperledger/orderer/msp/crls
+[36m2018-06-05 09:45:14.448 UTC [msp] getMspConfig -> DEBU 010[0m crls folder not found at [/etc/hyperledger/orderer/msp/crls]. Skipping. [stat /etc/hyperledger/orderer/msp/crls: no such file or directory]
+[36m2018-06-05 09:45:14.449 UTC [msp] getMspConfig -> DEBU 011[0m MSP configuration file not found at [/etc/hyperledger/orderer/msp/config.yaml]: [stat /etc/hyperledger/orderer/msp/config.yaml: no such file or directory]
+[36m2018-06-05 09:45:14.450 UTC [msp] newBccspMsp -> DEBU 012[0m Creating BCCSP-based MSP instance
+[36m2018-06-05 09:45:14.451 UTC [msp] New -> DEBU 013[0m Creating Cache-MSP instance
+[36m2018-06-05 09:45:14.451 UTC [msp] GetLocalMSP -> DEBU 014[0m Created new local MSP
+[36m2018-06-05 09:45:14.451 UTC [msp] Setup -> DEBU 015[0m Setting up MSP instance org-orderMSP
+[36m2018-06-05 09:45:14.456 UTC [msp/identity] newIdentity -> DEBU 016[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICDjCCAbWgAwIBAgIUHNcRl3aNYPZiRMgzJSD9kvV6x+4wCgYIKoZIzj0EAwIw
+ZDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK
+EwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRUwEwYDVQQDEwxjYS1vcmct
+b3JkZXIwHhcNMTgwNjA1MDk0MDAwWhcNMzMwNjAxMDk0MDAwWjBkMQswCQYDVQQG
+EwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExFDASBgNVBAoTC0h5cGVybGVk
+Z2VyMQ8wDQYDVQQLEwZGYWJyaWMxFTATBgNVBAMTDGNhLW9yZy1vcmRlcjBZMBMG
+ByqGSM49AgEGCCqGSM49AwEHA0IABEC+tOgZdeLr+Neil8b7sc4g8einh7rV9mov
+zVxQXghk5M8o0HQIe9LXO/gG0T7DUlys+RMxGk77rRyOuUIAXxqjRTBDMA4GA1Ud
+DwEB/wQEAwIBBjASBgNVHRMBAf8ECDAGAQH/AgEBMB0GA1UdDgQWBBQCmR7GLuSb
+iGwzSYnJWdv1q1n0DjAKBggqhkjOPQQDAgNHADBEAiBcCWtK0NeMn2YWnuLNB0Fb
+T0AcbEvelVMUgHES5SicogIgeZ+uxcjnyk3YURep/yXfGiOznLXe9Cvio9vfpj+A
+EaY=
+-----END CERTIFICATE-----
+[36m2018-06-05 09:45:14.458 UTC [msp/identity] newIdentity -> DEBU 017[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIIC1jCCAnygAwIBAgIUMzukyjGIuC+14ShN3DGVW0JkjE8wCgYIKoZIzj0EAwIw
+ZDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK
+EwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRUwEwYDVQQDEwxjYS1vcmct
+b3JkZXIwHhcNMTgwNjA1MDk0MDAwWhcNMTkwNjA1MDk0NTAwWjB5MQswCQYDVQQG
+EwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExFDASBgNVBAoTC0h5cGVybGVk
+Z2VyMSEwDQYDVQQLEwZjbGllbnQwEAYDVQQLEwlvcmctb3JkZXIxGDAWBgNVBAMT
+D29yZy1vcmRlci1hZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABMb23cwK
+RE1mvHR/UrjuCQcNvLzbzQ2ZOveI74Gp3udj4gdJGn2hnPhQftPTIEyaeFdNDYsP
+PB7Bg3MiZvY5tPqjgfYwgfMwDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAw
+HQYDVR0OBBYEFC5v4n8WJA41yv6+Ai+ZqCdFM3oyMB8GA1UdIwQYMBaAFAKZHsYu
+5JuIbDNJiclZ2/WrWfQOMBcGA1UdEQQQMA6CDDkyZTEwNDY4MTQwNzB6BggqAwQF
+BgcIAQRueyJhdHRycyI6eyJhZG1pbiI6InRydWUiLCJoZi5BZmZpbGlhdGlvbiI6
+Im9yZy1vcmRlciIsImhmLkVucm9sbG1lbnRJRCI6Im9yZy1vcmRlci1hZG1pbiIs
+ImhmLlR5cGUiOiJjbGllbnQifX0wCgYIKoZIzj0EAwIDSAAwRQIhAOnaGxrLLdWQ
+SfzgsXctklheK0MOLm8o838fSAeVH+6zAiBUekmW6jYbPldGRhe19PVfAtCwkxZe
+AgKPNxV8jFfllQ==
+-----END CERTIFICATE-----
+[36m2018-06-05 09:45:14.480 UTC [msp/identity] newIdentity -> DEBU 018[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICzjCCAnWgAwIBAgIUKLHmmyzAoAXvHCwt9SQjPYSI3gQwCgYIKoZIzj0EAwIw
+ZDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK
+EwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRUwEwYDVQQDEwxjYS1vcmct
+b3JkZXIwHhcNMTgwNjA1MDk0MDAwWhcNMTkwNjA1MDk0NTAwWjB9MQswCQYDVQQG
+EwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExFDASBgNVBAoTC0h5cGVybGVk
+Z2VyMSIwDgYDVQQLEwdvcmRlcmVyMBAGA1UECxMJb3JnLW9yZGVyMRswGQYDVQQD
+ExJvcmRlcmVyMS1vcmctb3JkZXIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATz
+dIAn7/dXTlL4kfpf5SH4LZboSugxf3tCSwZcc81YeZlCdpEQ4NSzAuitp6Yd0Wsz
+ql9hjOXyROL2ciYwkQS3o4HrMIHoMA4GA1UdDwEB/wQEAwIHgDAMBgNVHRMBAf8E
+AjAAMB0GA1UdDgQWBBQXNlrn24ksrJMdX4retE/Ik0c8RDAfBgNVHSMEGDAWgBQC
+mR7GLuSbiGwzSYnJWdv1q1n0DjAXBgNVHREEEDAOggw3ZWU0NmY0YmJjNzQwbwYI
+KgMEBQYHCAEEY3siYXR0cnMiOnsiaGYuQWZmaWxpYXRpb24iOiJvcmctb3JkZXIi
+LCJoZi5FbnJvbGxtZW50SUQiOiJvcmRlcmVyMS1vcmctb3JkZXIiLCJoZi5UeXBl
+Ijoib3JkZXJlciJ9fTAKBggqhkjOPQQDAgNHADBEAiBECvkLQcxiC3aGKaw4eWPg
+eX7N6C7HUC+u1FGcAuF9oAIgCYDZSVGZstEdxfkXeMrtYJnwm4n9kji7MvpJfsO0
++IU=
+-----END CERTIFICATE-----
+[36m2018-06-05 09:45:14.483 UTC [bccsp_sw] loadPrivateKey -> DEBU 019[0m Loading private key [48a8c39fe163dba05c4e56ea1fea05b64736e17d0613f285992c3c61527232ba] at [/etc/hyperledger/orderer/msp/keystore/48a8c39fe163dba05c4e56ea1fea05b64736e17d0613f285992c3c61527232ba_sk]...
+[36m2018-06-05 09:45:14.485 UTC [msp/identity] newIdentity -> DEBU 01a[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICzjCCAnWgAwIBAgIUKLHmmyzAoAXvHCwt9SQjPYSI3gQwCgYIKoZIzj0EAwIw
+ZDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK
+EwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRUwEwYDVQQDEwxjYS1vcmct
+b3JkZXIwHhcNMTgwNjA1MDk0MDAwWhcNMTkwNjA1MDk0NTAwWjB9MQswCQYDVQQG
+EwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExFDASBgNVBAoTC0h5cGVybGVk
+Z2VyMSIwDgYDVQQLEwdvcmRlcmVyMBAGA1UECxMJb3JnLW9yZGVyMRswGQYDVQQD
+ExJvcmRlcmVyMS1vcmctb3JkZXIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAATz
+dIAn7/dXTlL4kfpf5SH4LZboSugxf3tCSwZcc81YeZlCdpEQ4NSzAuitp6Yd0Wsz
+ql9hjOXyROL2ciYwkQS3o4HrMIHoMA4GA1UdDwEB/wQEAwIHgDAMBgNVHRMBAf8E
+AjAAMB0GA1UdDgQWBBQXNlrn24ksrJMdX4retE/Ik0c8RDAfBgNVHSMEGDAWgBQC
+mR7GLuSbiGwzSYnJWdv1q1n0DjAXBgNVHREEEDAOggw3ZWU0NmY0YmJjNzQwbwYI
+KgMEBQYHCAEEY3siYXR0cnMiOnsiaGYuQWZmaWxpYXRpb24iOiJvcmctb3JkZXIi
+LCJoZi5FbnJvbGxtZW50SUQiOiJvcmRlcmVyMS1vcmctb3JkZXIiLCJoZi5UeXBl
+Ijoib3JkZXJlciJ9fTAKBggqhkjOPQQDAgNHADBEAiBECvkLQcxiC3aGKaw4eWPg
+eX7N6C7HUC+u1FGcAuF9oAIgCYDZSVGZstEdxfkXeMrtYJnwm4n9kji7MvpJfsO0
++IU=
+-----END CERTIFICATE-----
+[36m2018-06-05 09:45:14.487 UTC [msp] setupSigningIdentity -> DEBU 01b[0m Signing identity expires at 2019-06-05 09:45:00 +0000 UTC
+[36m2018-06-05 09:45:14.487 UTC [msp] Validate -> DEBU 01c[0m MSP org-orderMSP validating identity
+2018-06-05 09:45:14.488 UTC [orderer/common/server] prettyPrintStruct -> INFO 01d[0m Orderer config values:
+	General.LedgerType = "file"
+	General.ListenAddress = "0.0.0.0"
+	General.ListenPort = 7050
+	General.TLS.Enabled = true
+	General.TLS.PrivateKey = "/etc/hyperledger/orderer/tls/server.key"
+	General.TLS.Certificate = "/etc/hyperledger/orderer/tls/server.crt"
+	General.TLS.RootCAs = [/data/ca-org-order-cert.pem]
+	General.TLS.ClientAuthRequired = true
+	General.TLS.ClientRootCAs = [/data/ca-org-order-cert.pem]
+	General.Keepalive.ServerMinInterval = 1m0s
+	General.Keepalive.ServerInterval = 2h0m0s
+	General.Keepalive.ServerTimeout = 20s
+	General.GenesisMethod = "file"
+	General.GenesisProfile = "SampleInsecureSolo"
+	General.SystemChannel = "testchainid"
+	General.GenesisFile = "/data/genesis.block"
+	General.Profile.Enabled = false
+	General.Profile.Address = "0.0.0.0:6060"
+	General.LogLevel = "debug"
+	General.LogFormat = "%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}"
+	General.LocalMSPDir = "/etc/hyperledger/orderer/msp"
+	General.LocalMSPID = "org-orderMSP"
+	General.BCCSP.ProviderName = "SW"
+	General.BCCSP.SwOpts.SecLevel = 256
+	General.BCCSP.SwOpts.HashFamily = "SHA2"
+	General.BCCSP.SwOpts.Ephemeral = false
+	General.BCCSP.SwOpts.FileKeystore.KeyStorePath = "/etc/hyperledger/orderer/msp/keystore"
+	General.BCCSP.SwOpts.DummyKeystore =
+	General.BCCSP.PluginOpts =
+	General.BCCSP.Pkcs11Opts =
+	General.Authentication.TimeWindow = 15m0s
+	FileLedger.Location = "/var/hyperledger/production/orderer"
+	FileLedger.Prefix = "hyperledger-fabric-ordererledger"
+	RAMLedger.HistorySize = 1000
+	Kafka.Retry.ShortInterval = 5s
+	Kafka.Retry.ShortTotal = 10m0s
+	Kafka.Retry.LongInterval = 5m0s
+	Kafka.Retry.LongTotal = 12h0m0s
+	Kafka.Retry.NetworkTimeouts.DialTimeout = 10s
+	Kafka.Retry.NetworkTimeouts.ReadTimeout = 10s
+	Kafka.Retry.NetworkTimeouts.WriteTimeout = 10s
+	Kafka.Retry.Metadata.RetryMax = 3
+	Kafka.Retry.Metadata.RetryBackoff = 250ms
+	Kafka.Retry.Producer.RetryMax = 3
+	Kafka.Retry.Producer.RetryBackoff = 100ms
+	Kafka.Retry.Consumer.RetryBackoff = 2s
+	Kafka.Verbose = false
+	Kafka.Version = 0.10.2.0
+	Kafka.TLS.Enabled = false
+	Kafka.TLS.PrivateKey = ""
+	Kafka.TLS.Certificate = ""
+	Kafka.TLS.RootCAs = []
+	Kafka.TLS.ClientAuthRequired = false
+	Kafka.TLS.ClientRootCAs = []
+	Debug.BroadcastTraceDir = "data/logs"
+	Debug.DeliverTraceDir = ""
+2018-06-05 09:45:14.497 UTC [orderer/common/server] initializeServerConfig -> INFO 01e[0m Starting orderer with mutual TLS enabled
+[36m2018-06-05 09:45:14.498 UTC [orderer/common/server] createLedgerFactory -> DEBU 01f[0m Ledger dir: /var/hyperledger/production/orderer
+[36m2018-06-05 09:45:14.499 UTC [kvledger.util] CreateDirIfMissing -> DEBU 020[0m CreateDirIfMissing [/var/hyperledger/production/orderer/index/]
+[36m2018-06-05 09:45:14.500 UTC [kvledger.util] logDirStatus -> DEBU 021[0m Before creating dir - [/var/hyperledger/production/orderer/index/] does not exist
+[36m2018-06-05 09:45:14.501 UTC [kvledger.util] logDirStatus -> DEBU 022[0m After creating dir - [/var/hyperledger/production/orderer/index/] exists
+[36m2018-06-05 09:45:14.512 UTC [fsblkstorage] newBlockfileMgr -> DEBU 023[0m newBlockfileMgr() initializing file-based block storage for ledger: testchainid 
+[36m2018-06-05 09:45:14.512 UTC [kvledger.util] CreateDirIfMissing -> DEBU 024[0m CreateDirIfMissing [/var/hyperledger/production/orderer/chains/testchainid/]
+[36m2018-06-05 09:45:14.513 UTC [kvledger.util] logDirStatus -> DEBU 025[0m Before creating dir - [/var/hyperledger/production/orderer/chains/testchainid/] does not exist
+[36m2018-06-05 09:45:14.514 UTC [kvledger.util] logDirStatus -> DEBU 026[0m After creating dir - [/var/hyperledger/production/orderer/chains/testchainid/] exists
+2018-06-05 09:45:14.514 UTC [fsblkstorage] newBlockfileMgr -> INFO 027[0m Getting block information from block storage
+[36m2018-06-05 09:45:14.514 UTC [fsblkstorage] constructCheckpointInfoFromBlockFiles -> DEBU 028[0m Retrieving checkpoint info from block files
+[36m2018-06-05 09:45:14.515 UTC [fsblkstorage] retrieveLastFileSuffix -> DEBU 029[0m retrieveLastFileSuffix()
+[36m2018-06-05 09:45:14.515 UTC [fsblkstorage] retrieveLastFileSuffix -> DEBU 02a[0m retrieveLastFileSuffix() - biggestFileNum = -1
+[36m2018-06-05 09:45:14.515 UTC [fsblkstorage] constructCheckpointInfoFromBlockFiles -> DEBU 02b[0m Last file number found = -1
+[36m2018-06-05 09:45:14.515 UTC [fsblkstorage] constructCheckpointInfoFromBlockFiles -> DEBU 02c[0m No block file found
+[36m2018-06-05 09:45:14.515 UTC [fsblkstorage] newBlockfileMgr -> DEBU 02d[0m Info constructed by scanning the blocks dir = (*fsblkstorage.checkpointInfo)(0xc42014a620)(latestFileChunkSuffixNum=[0], latestFileChunksize=[0], isChainEmpty=[true], lastBlockNumber=[0])
+[36m2018-06-05 09:45:14.519 UTC [fsblkstorage] newBlockIndex -> DEBU 02e[0m newBlockIndex() - indexItems:[[BlockNum]]
+[36m2018-06-05 09:45:14.534 UTC [fsblkstorage] indexBlock -> DEBU 02f[0m Indexing block [blockNum=0, blockHash=[]byte{0xf6, 0x40, 0xf2, 0xc4, 0x86, 0x34, 0x6c, 0x99, 0x2, 0xcc, 0x23, 0xb5, 0x16, 0x96, 0x77, 0xb4, 0xd0, 0xc4, 0xcc, 0x4d, 0x40, 0x9a, 0x1c, 0xe2, 0x2, 0xf8, 0xd8, 0xc5, 0x88, 0x91, 0x88, 0xdb} txOffsets=
+txId=b8fbb9ca83a2b2af10602e97d0c66fbfaa04b1a293eaebddf735d9cd77db07df locPointer=offset=38, bytesLength=9641
+]
+[36m2018-06-05 09:45:14.536 UTC [fsblkstorage] updateCheckpoint -> DEBU 030[0m Broadcasting about update checkpointInfo: latestFileChunkSuffixNum=[0], latestFileChunksize=[9684], isChainEmpty=[false], lastBlockNumber=[0]
+[36m2018-06-05 09:45:14.537 UTC [fsblkstorage] Next -> DEBU 031[0m Initializing block stream for iterator. itr.maxBlockNumAvailable=0
+[36m2018-06-05 09:45:14.537 UTC [fsblkstorage] newBlockfileStream -> DEBU 032[0m newBlockfileStream(): filePath=[/var/hyperledger/production/orderer/chains/testchainid/blockfile_000000], startOffset=[0]
+[36m2018-06-05 09:45:14.538 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 033[0m Remaining bytes=[9684], Going to peek [8] bytes
+[36m2018-06-05 09:45:14.538 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 034[0m Returning blockbytes - length=[9682], placementInfo={fileNum=[0], startOffset=[0], bytesOffset=[2]}
+[36m2018-06-05 09:45:14.539 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 035[0m blockbytes [9682] read from file [0]
+[36m2018-06-05 09:45:14.540 UTC [fsblkstorage] Next -> DEBU 036[0m Initializing block stream for iterator. itr.maxBlockNumAvailable=0
+[36m2018-06-05 09:45:14.540 UTC [fsblkstorage] newBlockfileStream -> DEBU 037[0m newBlockfileStream(): filePath=[/var/hyperledger/production/orderer/chains/testchainid/blockfile_000000], startOffset=[0]
+[36m2018-06-05 09:45:14.541 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 038[0m Remaining bytes=[9684], Going to peek [8] bytes
+[36m2018-06-05 09:45:14.541 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 039[0m Returning blockbytes - length=[9682], placementInfo={fileNum=[0], startOffset=[0], bytesOffset=[2]}
+[36m2018-06-05 09:45:14.542 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 03a[0m blockbytes [9682] read from file [0]
+[36m2018-06-05 09:45:14.543 UTC [common/channelconfig] NewStandardValues -> DEBU 03b[0m Initializing protos for *channelconfig.ChannelProtos
+[36m2018-06-05 09:45:14.544 UTC [common/channelconfig] initializeProtosStruct -> DEBU 03c[0m Processing field: HashingAlgorithm
+[36m2018-06-05 09:45:14.545 UTC [common/channelconfig] initializeProtosStruct -> DEBU 03d[0m Processing field: BlockDataHashingStructure
+[36m2018-06-05 09:45:14.545 UTC [common/channelconfig] initializeProtosStruct -> DEBU 03e[0m Processing field: OrdererAddresses
+[36m2018-06-05 09:45:14.546 UTC [common/channelconfig] initializeProtosStruct -> DEBU 03f[0m Processing field: Consortium
+[36m2018-06-05 09:45:14.546 UTC [common/channelconfig] initializeProtosStruct -> DEBU 040[0m Processing field: Capabilities
+[36m2018-06-05 09:45:14.546 UTC [common/channelconfig] NewStandardValues -> DEBU 041[0m Initializing protos for *channelconfig.ConsortiumProtos
+[36m2018-06-05 09:45:14.548 UTC [common/channelconfig] initializeProtosStruct -> DEBU 042[0m Processing field: ChannelCreationPolicy
+[36m2018-06-05 09:45:14.548 UTC [common/channelconfig] NewStandardValues -> DEBU 043[0m Initializing protos for *channelconfig.OrganizationProtos
+[36m2018-06-05 09:45:14.548 UTC [common/channelconfig] initializeProtosStruct -> DEBU 044[0m Processing field: MSP
+[36m2018-06-05 09:45:14.548 UTC [common/channelconfig] validateMSP -> DEBU 045[0m Setting up MSP for org org-weihai
+[36m2018-06-05 09:45:14.549 UTC [msp] newBccspMsp -> DEBU 046[0m Creating BCCSP-based MSP instance
+[36m2018-06-05 09:45:14.550 UTC [msp] New -> DEBU 047[0m Creating Cache-MSP instance
+[36m2018-06-05 09:45:14.550 UTC [msp] Setup -> DEBU 048[0m Setting up MSP instance org-weihaiMSP
+[36m2018-06-05 09:45:14.551 UTC [msp/identity] newIdentity -> DEBU 049[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICEDCCAbegAwIBAgIUU+LO7mUegNPdoLnynI8wmQnLKMwwCgYIKoZIzj0EAwIw
+ZTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK
+EwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRYwFAYDVQQDEw1jYS1vcmct
+d2VpaGFpMB4XDTE4MDYwNTA5NDAwMFoXDTMzMDYwMTA5NDAwMFowZTELMAkGA1UE
+BhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBlcmxl
+ZGdlcjEPMA0GA1UECxMGRmFicmljMRYwFAYDVQQDEw1jYS1vcmctd2VpaGFpMFkw
+EwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEWNM6rhqudxwLEoHSCZDCjo0vGsQcq5g9
+X8TnOrExWyatDwfyIcKxZthJVY+kKq443DTZo+owlZNkaQo0xOdOhaNFMEMwDgYD
+VR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYEFBMH/i8t
+VZNfEU27iFh1VwYKCPt6MAoGCCqGSM49BAMCA0cAMEQCIDO9lxS5UhylUbJIgX9F
+Q1tyJH6xDapjssCcqysx3PKkAiBQvSL2As2MNhhIL7guSTJqTdH/6ywOO5KldN93
+/VQ5UQ==
+-----END CERTIFICATE-----
+[36m2018-06-05 09:45:14.552 UTC [msp/identity] newIdentity -> DEBU 04a[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIIC8jCCApigAwIBAgIUdVgOXEQjPiTxf9epIya7HoolHzcwCgYIKoZIzj0EAwIw
+ZTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK
+EwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRYwFAYDVQQDEw1jYS1vcmct
+d2VpaGFpMB4XDTE4MDYwNTA5NDAwMFoXDTE5MDYwNTA5NDUwMFowezELMAkGA1UE
+BhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQKEwtIeXBlcmxl
+ZGdlcjEiMA0GA1UECxMGY2xpZW50MBEGA1UECxMKb3JnLXdlaWhhaTEZMBcGA1UE
+AxMQb3JnLXdlaWhhaS1hZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABGoA
+TTbjZZ7AgODYzfubHoWmxnlrps1IJaIL12oWHD5DgyLR/COdjWTCij2kR09/IW/c
++nr+2DaEG4TJxZi8eR+jggEOMIIBCjAOBgNVHQ8BAf8EBAMCB4AwDAYDVR0TAQH/
+BAIwADAdBgNVHQ4EFgQU/K0LUWN7MbPOsbHQcRSlslzIjbswHwYDVR0jBBgwFoAU
+Ewf+Ly1Vk18RTbuIWHVXBgoI+3owFwYDVR0RBBAwDoIMOTJlMTA0NjgxNDA3MIGQ
+BggqAwQFBgcIAQSBg3siYXR0cnMiOnsiYWJhYy5pbml0IjoidHJ1ZSIsImFkbWlu
+IjoidHJ1ZSIsImhmLkFmZmlsaWF0aW9uIjoib3JnLXdlaWhhaSIsImhmLkVucm9s
+bG1lbnRJRCI6Im9yZy13ZWloYWktYWRtaW4iLCJoZi5UeXBlIjoiY2xpZW50In19
+MAoGCCqGSM49BAMCA0gAMEUCIQCwPa+DFnKIfPuSpoFwQu/zXyhNFVXhv9PTzbAA
+v4ckzgIgEunb726QvReemIUoJDGPWoxFg/+XyGKHqVyltOsuhsQ=
+-----END CERTIFICATE-----
+[36m2018-06-05 09:45:14.560 UTC [msp] Validate -> DEBU 04b[0m MSP org-weihaiMSP validating identity
+[36m2018-06-05 09:45:14.561 UTC [common/channelconfig] NewStandardValues -> DEBU 04c[0m Initializing protos for *channelconfig.OrganizationProtos
+[36m2018-06-05 09:45:14.563 UTC [common/channelconfig] initializeProtosStruct -> DEBU 04d[0m Processing field: MSP
+[36m2018-06-05 09:45:14.563 UTC [common/channelconfig] validateMSP -> DEBU 04e[0m Setting up MSP for org org-rockontrol
+[36m2018-06-05 09:45:14.564 UTC [msp] newBccspMsp -> DEBU 04f[0m Creating BCCSP-based MSP instance
+[36m2018-06-05 09:45:14.566 UTC [msp] New -> DEBU 050[0m Creating Cache-MSP instance
+[36m2018-06-05 09:45:14.566 UTC [msp] Setup -> DEBU 051[0m Setting up MSP instance org-rockontrolMSP
+[36m2018-06-05 09:45:14.567 UTC [msp/identity] newIdentity -> DEBU 052[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICGDCCAb+gAwIBAgIULBFEJ0l40iMXPu/4V4vOU29ntiQwCgYIKoZIzj0EAwIw
+aTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK
+EwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRowGAYDVQQDExFjYS1vcmct
+cm9ja29udHJvbDAeFw0xODA2MDUwOTQwMDBaFw0zMzA2MDEwOTQwMDBaMGkxCzAJ
+BgNVBAYTAlVTMRcwFQYDVQQIEw5Ob3J0aCBDYXJvbGluYTEUMBIGA1UEChMLSHlw
+ZXJsZWRnZXIxDzANBgNVBAsTBkZhYnJpYzEaMBgGA1UEAxMRY2Etb3JnLXJvY2tv
+bnRyb2wwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAQ0C5PKUX5RzwX0fpzuh2hd
+WPd+1RzTPlbX/3w480lMVjwXCHz/B+tKm6X0ACPGOh+kn31287gGKYia6HYE/deN
+o0UwQzAOBgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBATAdBgNVHQ4E
+FgQUc0QDGOa4+PoJ/7CPYWDYD5ZEUYgwCgYIKoZIzj0EAwIDRwAwRAIgAK4aMeIX
+uxTbr3zCwpN2kbnGH7x1lW4trk2OHPFYiQkCIC9Do8KfvYacZFupjWyvM5uX6J8a
+AjS8CTSg8o+VgugF
+-----END CERTIFICATE-----
+[36m2018-06-05 09:45:14.568 UTC [msp/identity] newIdentity -> DEBU 053[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIIDBjCCAq2gAwIBAgIUGpSBYvsXQ63hR9DrLDFzUFGMaoMwCgYIKoZIzj0EAwIw
+aTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK
+EwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRowGAYDVQQDExFjYS1vcmct
+cm9ja29udHJvbDAeFw0xODA2MDUwOTQwMDBaFw0xOTA2MDUwOTQ1MDBaMIGDMQsw
+CQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExFDASBgNVBAoTC0h5
+cGVybGVkZ2VyMSYwDQYDVQQLEwZjbGllbnQwFQYDVQQLEw5vcmctcm9ja29udHJv
+bDEdMBsGA1UEAxMUb3JnLXJvY2tvbnRyb2wtYWRtaW4wWTATBgcqhkjOPQIBBggq
+hkjOPQMBBwNCAAQvyr5mB0GqQHAukmx2x8YMcw/iOmCad/Q5ClQI46rUbHyAwaWi
+6sr3EFk1pdSKRJxRqin7S7HMcx1PPDFmqYAZo4IBFjCCARIwDgYDVR0PAQH/BAQD
+AgeAMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFFFK2gZGS91TnR5fo7aGbs91i6m/
+MB8GA1UdIwQYMBaAFHNEAxjmuPj6Cf+wj2Fg2A+WRFGIMBcGA1UdEQQQMA6CDDky
+ZTEwNDY4MTQwNzCBmAYIKgMEBQYHCAEEgYt7ImF0dHJzIjp7ImFiYWMuaW5pdCI6
+InRydWUiLCJhZG1pbiI6InRydWUiLCJoZi5BZmZpbGlhdGlvbiI6Im9yZy1yb2Nr
+b250cm9sIiwiaGYuRW5yb2xsbWVudElEIjoib3JnLXJvY2tvbnRyb2wtYWRtaW4i
+LCJoZi5UeXBlIjoiY2xpZW50In19MAoGCCqGSM49BAMCA0cAMEQCIG9zw47ISJmo
+AjBS/DCd04v9/MfNUACoZ67wgiGhvUBYAiARJPJHyJGxS9dxcDCzslrNy7xFEO+A
+6QCUyESKZO3x7g==
+-----END CERTIFICATE-----
+[36m2018-06-05 09:45:14.569 UTC [msp] Validate -> DEBU 054[0m MSP org-rockontrolMSP validating identity
+[36m2018-06-05 09:45:14.570 UTC [common/channelconfig] NewStandardValues -> DEBU 055[0m Initializing protos for *channelconfig.OrdererProtos
+[36m2018-06-05 09:45:14.572 UTC [common/channelconfig] initializeProtosStruct -> DEBU 056[0m Processing field: ConsensusType
+[36m2018-06-05 09:45:14.572 UTC [common/channelconfig] initializeProtosStruct -> DEBU 057[0m Processing field: BatchSize
+[36m2018-06-05 09:45:14.573 UTC [common/channelconfig] initializeProtosStruct -> DEBU 058[0m Processing field: BatchTimeout
+[36m2018-06-05 09:45:14.573 UTC [common/channelconfig] initializeProtosStruct -> DEBU 059[0m Processing field: KafkaBrokers
+[36m2018-06-05 09:45:14.574 UTC [common/channelconfig] initializeProtosStruct -> DEBU 05a[0m Processing field: ChannelRestrictions
+[36m2018-06-05 09:45:14.574 UTC [common/channelconfig] initializeProtosStruct -> DEBU 05b[0m Processing field: Capabilities
+[36m2018-06-05 09:45:14.575 UTC [common/channelconfig] NewStandardValues -> DEBU 05c[0m Initializing protos for *channelconfig.OrganizationProtos
+[36m2018-06-05 09:45:14.576 UTC [common/channelconfig] initializeProtosStruct -> DEBU 05d[0m Processing field: MSP
+[36m2018-06-05 09:45:14.584 UTC [common/channelconfig] validateMSP -> DEBU 05e[0m Setting up MSP for org org-order
+[36m2018-06-05 09:45:14.592 UTC [msp] newBccspMsp -> DEBU 05f[0m Creating BCCSP-based MSP instance
+[36m2018-06-05 09:45:14.592 UTC [msp] New -> DEBU 060[0m Creating Cache-MSP instance
+[36m2018-06-05 09:45:14.593 UTC [msp] Setup -> DEBU 061[0m Setting up MSP instance org-orderMSP
+[36m2018-06-05 09:45:14.594 UTC [msp/identity] newIdentity -> DEBU 062[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICDjCCAbWgAwIBAgIUHNcRl3aNYPZiRMgzJSD9kvV6x+4wCgYIKoZIzj0EAwIw
+ZDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK
+EwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRUwEwYDVQQDEwxjYS1vcmct
+b3JkZXIwHhcNMTgwNjA1MDk0MDAwWhcNMzMwNjAxMDk0MDAwWjBkMQswCQYDVQQG
+EwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExFDASBgNVBAoTC0h5cGVybGVk
+Z2VyMQ8wDQYDVQQLEwZGYWJyaWMxFTATBgNVBAMTDGNhLW9yZy1vcmRlcjBZMBMG
+ByqGSM49AgEGCCqGSM49AwEHA0IABEC+tOgZdeLr+Neil8b7sc4g8einh7rV9mov
+zVxQXghk5M8o0HQIe9LXO/gG0T7DUlys+RMxGk77rRyOuUIAXxqjRTBDMA4GA1Ud
+DwEB/wQEAwIBBjASBgNVHRMBAf8ECDAGAQH/AgEBMB0GA1UdDgQWBBQCmR7GLuSb
+iGwzSYnJWdv1q1n0DjAKBggqhkjOPQQDAgNHADBEAiBcCWtK0NeMn2YWnuLNB0Fb
+T0AcbEvelVMUgHES5SicogIgeZ+uxcjnyk3YURep/yXfGiOznLXe9Cvio9vfpj+A
+EaY=
+-----END CERTIFICATE-----
+[36m2018-06-05 09:45:14.594 UTC [msp/identity] newIdentity -> DEBU 063[0m Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIIC1jCCAnygAwIBAgIUMzukyjGIuC+14ShN3DGVW0JkjE8wCgYIKoZIzj0EAwIw
+ZDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK
+EwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRUwEwYDVQQDEwxjYS1vcmct
+b3JkZXIwHhcNMTgwNjA1MDk0MDAwWhcNMTkwNjA1MDk0NTAwWjB5MQswCQYDVQQG
+EwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExFDASBgNVBAoTC0h5cGVybGVk
+Z2VyMSEwDQYDVQQLEwZjbGllbnQwEAYDVQQLEwlvcmctb3JkZXIxGDAWBgNVBAMT
+D29yZy1vcmRlci1hZG1pbjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABMb23cwK
+RE1mvHR/UrjuCQcNvLzbzQ2ZOveI74Gp3udj4gdJGn2hnPhQftPTIEyaeFdNDYsP
+PB7Bg3MiZvY5tPqjgfYwgfMwDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQCMAAw
+HQYDVR0OBBYEFC5v4n8WJA41yv6+Ai+ZqCdFM3oyMB8GA1UdIwQYMBaAFAKZHsYu
+5JuIbDNJiclZ2/WrWfQOMBcGA1UdEQQQMA6CDDkyZTEwNDY4MTQwNzB6BggqAwQF
+BgcIAQRueyJhdHRycyI6eyJhZG1pbiI6InRydWUiLCJoZi5BZmZpbGlhdGlvbiI6
+Im9yZy1vcmRlciIsImhmLkVucm9sbG1lbnRJRCI6Im9yZy1vcmRlci1hZG1pbiIs
+ImhmLlR5cGUiOiJjbGllbnQifX0wCgYIKoZIzj0EAwIDSAAwRQIhAOnaGxrLLdWQ
+SfzgsXctklheK0MOLm8o838fSAeVH+6zAiBUekmW6jYbPldGRhe19PVfAtCwkxZe
+AgKPNxV8jFfllQ==
+-----END CERTIFICATE-----
+[36m2018-06-05 09:45:14.604 UTC [msp] Validate -> DEBU 064[0m MSP org-orderMSP validating identity
+[36m2018-06-05 09:45:14.607 UTC [msp] Setup -> DEBU 065[0m Setting up the MSP manager (3 msps)
+[36m2018-06-05 09:45:14.607 UTC [msp] Setup -> DEBU 066[0m MSP manager setup complete, setup 3 msps
+[36m2018-06-05 09:45:14.607 UTC [policies] NewManagerImpl -> DEBU 067[0m Proposed new policy Writers for Channel/Orderer/org-order
+[36m2018-06-05 09:45:14.607 UTC [policies] NewManagerImpl -> DEBU 068[0m Proposed new policy Admins for Channel/Orderer/org-order
+[36m2018-06-05 09:45:14.607 UTC [policies] NewManagerImpl -> DEBU 069[0m Proposed new policy Readers for Channel/Orderer/org-order
+[36m2018-06-05 09:45:14.607 UTC [policies] NewManagerImpl -> DEBU 06a[0m Proposed new policy Admins for Channel/Orderer
+[36m2018-06-05 09:45:14.608 UTC [policies] NewManagerImpl -> DEBU 06b[0m Proposed new policy Readers for Channel/Orderer
+[36m2018-06-05 09:45:14.608 UTC [policies] NewManagerImpl -> DEBU 06c[0m Proposed new policy Writers for Channel/Orderer
+[36m2018-06-05 09:45:14.608 UTC [policies] NewManagerImpl -> DEBU 06d[0m Proposed new policy BlockValidation for Channel/Orderer
+[36m2018-06-05 09:45:14.608 UTC [policies] NewManagerImpl -> DEBU 06e[0m Proposed new policy Writers for Channel/Consortiums/SampleConsortium/org-weihai
+[36m2018-06-05 09:45:14.608 UTC [policies] NewManagerImpl -> DEBU 06f[0m Proposed new policy Admins for Channel/Consortiums/SampleConsortium/org-weihai
+[36m2018-06-05 09:45:14.609 UTC [policies] NewManagerImpl -> DEBU 070[0m Proposed new policy Readers for Channel/Consortiums/SampleConsortium/org-weihai
+[36m2018-06-05 09:45:14.609 UTC [policies] NewManagerImpl -> DEBU 071[0m Proposed new policy Writers for Channel/Consortiums/SampleConsortium/org-rockontrol
+[36m2018-06-05 09:45:14.609 UTC [policies] NewManagerImpl -> DEBU 072[0m Proposed new policy Admins for Channel/Consortiums/SampleConsortium/org-rockontrol
+[36m2018-06-05 09:45:14.609 UTC [policies] NewManagerImpl -> DEBU 073[0m Proposed new policy Readers for Channel/Consortiums/SampleConsortium/org-rockontrol
+[36m2018-06-05 09:45:14.609 UTC [policies] NewManagerImpl -> DEBU 074[0m Proposed new policy Admins for Channel/Consortiums
+[36m2018-06-05 09:45:14.609 UTC [policies] GetPolicy -> DEBU 075[0m Returning dummy reject all policy because Writers could not be found in Channel/Consortiums/Writers
+[36m2018-06-05 09:45:14.609 UTC [policies] NewManagerImpl -> DEBU 076[0m Proposed new policy Writers for Channel
+[36m2018-06-05 09:45:14.609 UTC [policies] NewManagerImpl -> DEBU 077[0m Proposed new policy Admins for Channel
+[36m2018-06-05 09:45:14.610 UTC [policies] GetPolicy -> DEBU 078[0m Returning dummy reject all policy because Readers could not be found in Channel/Consortiums/Readers
+[36m2018-06-05 09:45:14.611 UTC [policies] NewManagerImpl -> DEBU 079[0m Proposed new policy Readers for Channel
+[36m2018-06-05 09:45:14.612 UTC [common/configtx] addToMap -> DEBU 07a[0m Adding to config map: [Group]  /Channel
+[36m2018-06-05 09:45:14.613 UTC [common/configtx] addToMap -> DEBU 07b[0m Adding to config map: [Group]  /Channel/Orderer
+[36m2018-06-05 09:45:14.613 UTC [common/configtx] addToMap -> DEBU 07c[0m Adding to config map: [Group]  /Channel/Orderer/org-order
+[36m2018-06-05 09:45:14.614 UTC [common/configtx] addToMap -> DEBU 07d[0m Adding to config map: [Value]  /Channel/Orderer/org-order/MSP
+[36m2018-06-05 09:45:14.615 UTC [common/configtx] addToMap -> DEBU 07e[0m Adding to config map: [Policy] /Channel/Orderer/org-order/Writers
+[36m2018-06-05 09:45:14.616 UTC [common/configtx] addToMap -> DEBU 07f[0m Adding to config map: [Policy] /Channel/Orderer/org-order/Admins
+[36m2018-06-05 09:45:14.617 UTC [common/configtx] addToMap -> DEBU 080[0m Adding to config map: [Policy] /Channel/Orderer/org-order/Readers
+[36m2018-06-05 09:45:14.617 UTC [common/configtx] addToMap -> DEBU 081[0m Adding to config map: [Value]  /Channel/Orderer/BatchTimeout
+[36m2018-06-05 09:45:14.617 UTC [common/configtx] addToMap -> DEBU 082[0m Adding to config map: [Value]  /Channel/Orderer/ChannelRestrictions
+[36m2018-06-05 09:45:14.618 UTC [common/configtx] addToMap -> DEBU 083[0m Adding to config map: [Value]  /Channel/Orderer/ConsensusType
+[36m2018-06-05 09:45:14.618 UTC [common/configtx] addToMap -> DEBU 084[0m Adding to config map: [Value]  /Channel/Orderer/BatchSize
+[36m2018-06-05 09:45:14.619 UTC [common/configtx] addToMap -> DEBU 085[0m Adding to config map: [Policy] /Channel/Orderer/Admins
+[36m2018-06-05 09:45:14.619 UTC [common/configtx] addToMap -> DEBU 086[0m Adding to config map: [Policy] /Channel/Orderer/Readers
+[36m2018-06-05 09:45:14.619 UTC [common/configtx] addToMap -> DEBU 087[0m Adding to config map: [Policy] /Channel/Orderer/Writers
+[36m2018-06-05 09:45:14.619 UTC [common/configtx] addToMap -> DEBU 088[0m Adding to config map: [Policy] /Channel/Orderer/BlockValidation
+[36m2018-06-05 09:45:14.620 UTC [common/configtx] addToMap -> DEBU 089[0m Adding to config map: [Group]  /Channel/Consortiums
+[36m2018-06-05 09:45:14.620 UTC [common/configtx] addToMap -> DEBU 08a[0m Adding to config map: [Group]  /Channel/Consortiums/SampleConsortium
+[36m2018-06-05 09:45:14.620 UTC [common/configtx] addToMap -> DEBU 08b[0m Adding to config map: [Group]  /Channel/Consortiums/SampleConsortium/org-weihai
+[36m2018-06-05 09:45:14.620 UTC [common/configtx] addToMap -> DEBU 08c[0m Adding to config map: [Value]  /Channel/Consortiums/SampleConsortium/org-weihai/MSP
+[36m2018-06-05 09:45:14.620 UTC [common/configtx] addToMap -> DEBU 08d[0m Adding to config map: [Policy] /Channel/Consortiums/SampleConsortium/org-weihai/Admins
+[36m2018-06-05 09:45:14.620 UTC [common/configtx] addToMap -> DEBU 08e[0m Adding to config map: [Policy] /Channel/Consortiums/SampleConsortium/org-weihai/Readers
+[36m2018-06-05 09:45:14.620 UTC [common/configtx] addToMap -> DEBU 08f[0m Adding to config map: [Policy] /Channel/Consortiums/SampleConsortium/org-weihai/Writers
+[36m2018-06-05 09:45:14.620 UTC [common/configtx] addToMap -> DEBU 090[0m Adding to config map: [Group]  /Channel/Consortiums/SampleConsortium/org-rockontrol
+[36m2018-06-05 09:45:14.620 UTC [common/configtx] addToMap -> DEBU 091[0m Adding to config map: [Value]  /Channel/Consortiums/SampleConsortium/org-rockontrol/MSP
+[36m2018-06-05 09:45:14.621 UTC [common/configtx] addToMap -> DEBU 092[0m Adding to config map: [Policy] /Channel/Consortiums/SampleConsortium/org-rockontrol/Readers
+[36m2018-06-05 09:45:14.621 UTC [common/configtx] addToMap -> DEBU 093[0m Adding to config map: [Policy] /Channel/Consortiums/SampleConsortium/org-rockontrol/Writers
+[36m2018-06-05 09:45:14.621 UTC [common/configtx] addToMap -> DEBU 094[0m Adding to config map: [Policy] /Channel/Consortiums/SampleConsortium/org-rockontrol/Admins
+[36m2018-06-05 09:45:14.621 UTC [common/configtx] addToMap -> DEBU 095[0m Adding to config map: [Value]  /Channel/Consortiums/SampleConsortium/ChannelCreationPolicy
+[36m2018-06-05 09:45:14.622 UTC [common/configtx] addToMap -> DEBU 096[0m Adding to config map: [Policy] /Channel/Consortiums/Admins
+[36m2018-06-05 09:45:14.622 UTC [common/configtx] addToMap -> DEBU 097[0m Adding to config map: [Value]  /Channel/HashingAlgorithm
+[36m2018-06-05 09:45:14.623 UTC [common/configtx] addToMap -> DEBU 098[0m Adding to config map: [Value]  /Channel/BlockDataHashingStructure
+[36m2018-06-05 09:45:14.623 UTC [common/configtx] addToMap -> DEBU 099[0m Adding to config map: [Value]  /Channel/OrdererAddresses
+[36m2018-06-05 09:45:14.624 UTC [common/configtx] addToMap -> DEBU 09a[0m Adding to config map: [Policy] /Channel/Readers
+[36m2018-06-05 09:45:14.624 UTC [common/configtx] addToMap -> DEBU 09b[0m Adding to config map: [Policy] /Channel/Writers
+[36m2018-06-05 09:45:14.624 UTC [common/configtx] addToMap -> DEBU 09c[0m Adding to config map: [Policy] /Channel/Admins
+[36m2018-06-05 09:45:14.624 UTC [common/channelconfig] LogSanityChecks -> DEBU 09d[0m As expected, current configuration has policy '/Channel/Readers'
+[36m2018-06-05 09:45:14.625 UTC [common/channelconfig] LogSanityChecks -> DEBU 09e[0m As expected, current configuration has policy '/Channel/Writers'
+[36m2018-06-05 09:45:14.625 UTC [policies] Manager -> DEBU 09f[0m Manager Channel looking up path [Application]
+[36m2018-06-05 09:45:14.626 UTC [policies] Manager -> DEBU 0a0[0m Manager Channel has managers Orderer
+[36m2018-06-05 09:45:14.626 UTC [policies] Manager -> DEBU 0a1[0m Manager Channel has managers Consortiums
+[36m2018-06-05 09:45:14.626 UTC [policies] Manager -> DEBU 0a2[0m Manager Channel looking up path [Orderer]
+[36m2018-06-05 09:45:14.626 UTC [policies] Manager -> DEBU 0a3[0m Manager Channel has managers Orderer
+[36m2018-06-05 09:45:14.627 UTC [policies] Manager -> DEBU 0a4[0m Manager Channel has managers Consortiums
+[36m2018-06-05 09:45:14.628 UTC [policies] Manager -> DEBU 0a5[0m Manager Channel/Orderer looking up path []
+[36m2018-06-05 09:45:14.630 UTC [policies] Manager -> DEBU 0a6[0m Manager Channel/Orderer has managers org-order
+[36m2018-06-05 09:45:14.630 UTC [common/channelconfig] LogSanityChecks -> DEBU 0a7[0m As expected, current configuration has policy '/Channel/Orderer/BlockValidation'
+[36m2018-06-05 09:45:14.630 UTC [orderer/common/server] func1 -> DEBU 0a8[0m Executing callback to update root CAs
+[36m2018-06-05 09:45:14.631 UTC [orderer/common/server] updateTrustedRoots -> DEBU 0a9[0m updating root CAs for channel [testchainid]
+[36m2018-06-05 09:45:14.631 UTC [orderer/common/server] updateTrustedRoots -> DEBU 0aa[0m adding app root CAs for MSP [org-weihaiMSP]
+[36m2018-06-05 09:45:14.631 UTC [orderer/common/server] updateTrustedRoots -> DEBU 0ab[0m adding app root CAs for MSP [org-rockontrolMSP]
+[36m2018-06-05 09:45:14.631 UTC [orderer/common/server] updateTrustedRoots -> DEBU 0ac[0m adding orderer root CAs for MSP [org-orderMSP]
+[36m2018-06-05 09:45:14.633 UTC [fsblkstorage] Next -> DEBU 0ad[0m Initializing block stream for iterator. itr.maxBlockNumAvailable=0
+[36m2018-06-05 09:45:14.633 UTC [fsblkstorage] newBlockfileStream -> DEBU 0ae[0m newBlockfileStream(): filePath=[/var/hyperledger/production/orderer/chains/testchainid/blockfile_000000], startOffset=[0]
+[36m2018-06-05 09:45:14.635 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 0af[0m Remaining bytes=[9684], Going to peek [8] bytes
+[36m2018-06-05 09:45:14.635 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 0b0[0m Returning blockbytes - length=[9682], placementInfo={fileNum=[0], startOffset=[0], bytesOffset=[2]}
+[36m2018-06-05 09:45:14.635 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 0b1[0m blockbytes [9682] read from file [0]
+[36m2018-06-05 09:45:14.636 UTC [orderer/commmon/multichannel] newBlockWriter -> DEBU 0b2[0m [channel: testchainid] Creating block writer for tip of chain (blockNumber=0, lastConfigBlockNum=0, lastConfigSeq=0)
+[36m2018-06-05 09:45:14.644 UTC [orderer/commmon/multichannel] newChainSupport -> DEBU 0b3[0m [channel: testchainid] Done creating channel support resources
+[36m2018-06-05 09:45:14.644 UTC [orderer/common/msgprocessor] NewSystemChannel -> DEBU 0b4[0m Creating system channel msg processor for channel testchainid
+[36m2018-06-05 09:45:14.644 UTC [fsblkstorage] Next -> DEBU 0b5[0m Initializing block stream for iterator. itr.maxBlockNumAvailable=0
+[36m2018-06-05 09:45:14.644 UTC [fsblkstorage] newBlockfileStream -> DEBU 0b6[0m newBlockfileStream(): filePath=[/var/hyperledger/production/orderer/chains/testchainid/blockfile_000000], startOffset=[0]
+[36m2018-06-05 09:45:14.644 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 0b7[0m Remaining bytes=[9684], Going to peek [8] bytes
+[36m2018-06-05 09:45:14.645 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 0b8[0m Returning blockbytes - length=[9682], placementInfo={fileNum=[0], startOffset=[0], bytesOffset=[2]}
+[36m2018-06-05 09:45:14.645 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 0b9[0m blockbytes [9682] read from file [0]
+2018-06-05 09:45:14.645 UTC [orderer/commmon/multichannel] NewRegistrar -> INFO 0ba[0m Starting system channel 'testchainid' with genesis block hash f640f2c486346c9902cc23b5169677b4d0c4cc4d409a1ce202f8d8c5889188db and orderer type solo
+2018-06-05 09:45:14.645 UTC [orderer/common/server] Start -> INFO 0bb[0m Starting orderer:
+ Version: 1.1.0
+ Go version: go1.9.2
+ OS/Arch: linux/amd64
+ Experimental features: false
+2018-06-05 09:45:14.646 UTC [orderer/common/server] Start -> INFO 0bc[0m Beginning to serve requests

@@ -5,96 +5,68 @@ networks:
 
 services:
 
-  rca:
-    container_name: rca
+  ca-org-order:
+    container_name: ca-org-order
     image: hyperledger/fabric-ca
-    command: /bin/bash -c '/scripts/start-root-ca.sh 2>&1 | tee /data/logs/rca.log'
+    command: /bin/bash -c '/scripts/start-root-ca.sh 2>&1 | tee /data/logs/ca-org-order.log'
     environment:
       - FABRIC_CA_SERVER_HOME=/etc/hyperledger/fabric-ca
-      - FABRIC_CA_SERVER_TLS_ENABLED=true
-      - FABRIC_CA_SERVER_CSR_CN=rca
-      - FABRIC_CA_SERVER_CSR_HOSTS=rca
-      - FABRIC_CA_SERVER_DEBUG=true
-      - BOOTSTRAP_USER_PASS=rca-admin:rca-adminpw
-      - TARGET_CERTFILE=/data/rca-cert.pem
-      - FABRIC_ORGS=org-order org-rockontrol org-weihai
-    volumes:
-      - ./scripts:/scripts
-      - ./data:/data
-    networks:
-      - fabric-ca
-
-  ica-org-order:
-    container_name: ica-org-order
-    image: hyperledger/fabric-ca
-    command: /bin/bash -c '/scripts/start-intermediate-ca.sh org-order 2>&1 | tee /data/logs/ica-org-order.log'
-    environment:
-      - FABRIC_CA_SERVER_HOME=/etc/hyperledger/fabric-ca
-      - FABRIC_CA_SERVER_CA_NAME=ica-org-order
-      - FABRIC_CA_SERVER_INTERMEDIATE_TLS_CERTFILES=/data/rca-cert.pem
-      - FABRIC_CA_SERVER_CSR_HOSTS=ica-org-order
       - FABRIC_CA_SERVER_TLS_ENABLED=false
+      - FABRIC_CA_SERVER_CSR_CN=ca-org-order
+      - FABRIC_CA_SERVER_CSR_HOSTS=ca-org-order
       - FABRIC_CA_SERVER_DEBUG=true
-      - BOOTSTRAP_USER_PASS=order-admin:order-adminpw
-      - PARENT_URL=https://rca-admin:rca-adminpw@rca:7054
-      - TARGET_CHAINFILE=/data/org-order-ca-chain.pem
-      - ORG=org-order
+      - BOOTSTRAP_USER_PASS=ca-org-order-admin:ca-org-order-admin-pw
+      - TARGET_CERTFILE=/data/ca-org-order-cert.pem
       - FABRIC_ORGS=org-order org-rockontrol org-weihai
     volumes:
       - ./scripts:/scripts
       - ./data:/data
+      #- ./fabric-ca-server-config-order.yaml:/etc/hyperledger/fabric-ca/fabric-ca-server-config.yaml
     networks:
       - fabric-ca
-    depends_on:
-      - rca
 
-  ica-org-rockontrol:
-    container_name: ica-org-rockontrol
+
+  ca-org-rockontrol:
+    container_name: ca-org-rockontrol
     image: hyperledger/fabric-ca
-    command: /bin/bash -c '/scripts/start-intermediate-ca.sh org-rockontrol 2>&1 | tee /data/logs/ica-org-rockontrol.log'
+    command: /bin/bash -c '/scripts/start-root-ca.sh 2>&1 | tee /data/logs/ca-org-rockontrol.log'
     environment:
       - FABRIC_CA_SERVER_HOME=/etc/hyperledger/fabric-ca
-      - FABRIC_CA_SERVER_CA_NAME=ica-org-rockontrol
-      - FABRIC_CA_SERVER_INTERMEDIATE_TLS_CERTFILES=/data/rca-cert.pem
-      - FABRIC_CA_SERVER_CSR_HOSTS=ica-org-rockontrol
-      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_TLS_ENABLED=false
+      - FABRIC_CA_SERVER_CSR_CN=ca-org-rockontrol
+      - FABRIC_CA_SERVER_CSR_HOSTS=ca-org-rockontrol
       - FABRIC_CA_SERVER_DEBUG=true
-      - BOOTSTRAP_USER_PASS=rockontrol-admin:rockontrol-adminpw
-      - PARENT_URL=https://rca-admin:rca-adminpw@rca:7054
-      - TARGET_CHAINFILE=/data/org-rockontrol-ca-chain.pem
-      - ORG=org-rockontrol
+      - BOOTSTRAP_USER_PASS=ca-org-rockontrol-admin:ca-org-rockontrol-admin-pw
+      - TARGET_CERTFILE=/data/ca-org-rockontrol-cert.pem
       - FABRIC_ORGS=org-order org-rockontrol org-weihai
     volumes:
       - ./scripts:/scripts
       - ./data:/data
+      #- ./fabric-ca-server-config-rockontrol.yaml:/etc/hyperledger/fabric-ca/fabric-ca-server-config.yaml
     networks:
       - fabric-ca
-    depends_on:
-      - rca
 
-  ica-org-weihai:
-    container_name: ica-org-weihai
+
+  ca-org-weihai:
+    container_name: ca-org-weihai
     image: hyperledger/fabric-ca
-    command: /bin/bash -c '/scripts/start-intermediate-ca.sh org-weihai 2>&1 | tee /data/logs/ica-org-weihai.log'
+    command: /bin/bash -c '/scripts/start-root-ca.sh 2>&1 | tee /data/logs/ca-org-weihai.log'
     environment:
       - FABRIC_CA_SERVER_HOME=/etc/hyperledger/fabric-ca
-      - FABRIC_CA_SERVER_CA_NAME=ica-org-weihai
-      - FABRIC_CA_SERVER_INTERMEDIATE_TLS_CERTFILES=/data/rca-cert.pem
-      - FABRIC_CA_SERVER_CSR_HOSTS=ica-org-weihai
-      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_TLS_ENABLED=false
+      - FABRIC_CA_SERVER_CSR_CN=ca-org-weihai
+      - FABRIC_CA_SERVER_CSR_HOSTS=ca-org-weihai
       - FABRIC_CA_SERVER_DEBUG=true
-      - BOOTSTRAP_USER_PASS=weihai-admin:weihai-adminpw
-      - PARENT_URL=https://rca-admin:rca-adminpw@rca:7054
-      - TARGET_CHAINFILE=/data/org-weihai-ca-chain.pem
-      - ORG=org-weihai
+      - BOOTSTRAP_USER_PASS=ca-org-weihai-admin:ca-org-weihai-admin-pw
+      - TARGET_CERTFILE=/data/ca-org-weihai-cert.pem
       - FABRIC_ORGS=org-order org-rockontrol org-weihai
     volumes:
       - ./scripts:/scripts
       - ./data:/data
+      #- ./fabric-ca-server-config-weihai.yaml:/etc/hyperledger/fabric-ca/fabric-ca-server-config.yaml
     networks:
       - fabric-ca
-    depends_on:
-      - rca
+
 
   setup:
     container_name: setup
@@ -103,17 +75,129 @@ services:
     volumes:
       - ./scripts:/scripts
       - ./data:/data
+      - ./configtx.yaml:/etc/hyperledger/fabric/configtx.yaml
     networks:
       - fabric-ca
     depends_on:
-      - ica-org-order
-      - ica-org-rockontrol
-      - ica-org-weihai
+      - ca-org-order
+      - ca-org-rockontrol
+      - ca-org-weihai
 
 
+  orderer1-org-order:
+    container_name: orderer1-org-order
+    image: hyperledger/fabric-ca-orderer
+    environment:
+      - ENROLLMENT_URL=http://orderer1-org-order:orderer1-org-orderpw@ca-org-order:7054
+      - ORDERER_HOME=/etc/hyperledger/orderer
+      - ORDERER_HOST=orderer1-org-order
+      - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0
+      - ORDERER_GENERAL_GENESISMETHOD=file
+      - ORDERER_GENERAL_GENESISFILE=/data/genesis.block
+      - ORDERER_GENERAL_LOCALMSPID=org-orderMSP
+      - ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/orderer/msp
+      - ORDERER_GENERAL_TLS_ENABLED=true
+      - ORDERER_GENERAL_TLS_PRIVATEKEY=/etc/hyperledger/orderer/tls/server.key
+      - ORDERER_GENERAL_TLS_CERTIFICATE=/etc/hyperledger/orderer/tls/server.crt
+      - ORDERER_GENERAL_TLS_ROOTCAS=[/data/ca-org-order-cert.pem]
+      - ORDERER_GENERAL_TLS_CLIENTAUTHREQUIRED=true
+      - ORDERER_GENERAL_TLS_CLIENTROOTCAS=[/data/ca-org-order-cert.pem]
+      - ORDERER_GENERAL_LOGLEVEL=debug
+      - ORDERER_DEBUG_BROADCASTTRACEDIR=data/logs
+      - ORG=org-order
+      - ORG_ADMIN_CERT=/data/orgs/org-order/msp/admincerts/cert.pem
+
+    command: /bin/bash -c '/scripts/start-orderer.sh 2>&1 | tee /data/logs/orderer1-org-order.log'
+    volumes:
+      - ./scripts:/scripts
+      - ./data:/data
+      - ./data/orgs/org-order/orderers:/etc/hyperledger/orderer
+    networks:
+      - fabric-ca
+    depends_on:
+      - setup
 
 
+  peer1-org-rockontrol:
+    container_name: peer1-org-rockontrol
+    image: hyperledger/fabric-ca-peer
+    environment:
+      - ENROLLMENT_URL=http://peer1-org-rockontrol:peer1-org-rockontrolpw@ca-org-rockontrol:7054
+      - PEER_NAME=peer1-org-rockontrol
+      - PEER_HOME=/etc/hyperledger/peer
+      - PEER_HOST=peer1-org-rockontrol
+      - PEER_NAME_PASS=peer1-org-rockontrol:peer1-org-rockontrolpw
+      - CORE_PEER_ID=peer1-org-rockontrol
+      - CORE_PEER_ADDRESS=peer1-org-rockontrol:7051
+      - CORE_PEER_LOCALMSPID=org-rockontrolMSP
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/peer/msp
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=fabric-with-ca_fabric-ca
+      - CORE_LOGGING_LEVEL=DEBUG
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/peer/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/peer/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/data/ca-org-rockontrol-cert.pem
+      - CORE_PEER_TLS_CLIENTAUTHREQUIRED=true
+      - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/data/ca-org-rockontrol-cert.pem
+      - CORE_PEER_TLS_CLIENTCERT_FILE=/etc/hyperledger/peer/tls/server.crt
+      - CORE_PEER_TLS_CLIENTKEY_FILE=/etc/hyperledger/peer/tls/server.key
+      - CORE_PEER_GOSSIP_USELEADERELECTION=true
+      - CORE_PEER_GOSSIP_ORGLEADER=false
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1-org-rockontrol:7051
+      - CORE_PEER_GOSSIP_SKIPHANDSHAKE=true
+      - ORG=org-rockontrol
+      - ORG_ADMIN_CERT=/data/orgs/org-rockontrol/msp/admincerts/cert.pem
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+    command: /bin/bash -c '/scripts/start-peer.sh 2>&1 | tee /data/logs/peer1-org-rockontrol.log'
+    volumes:
+      - ./scripts:/scripts
+      - ./data:/data
+      - /var/run:/host/var/run
+    networks:
+      - fabric-ca
+    depends_on:
+      - setup
 
 
-
+  peer2-org-rockontrol:
+    container_name: peer2-org-rockontrol
+    image: hyperledger/fabric-ca-peer
+    environment:
+      - ENROLLMENT_URL=http://peer2-org-rockontrol:peer2-org-rockontrolpw@ca-org-rockontrol:7054
+      - PEER_NAME=peer2-org-rockontrol
+      - PEER_HOME=/etc/hyperledger/peer
+      - PEER_HOST=peer2-org-rockontrol
+      - PEER_NAME_PASS=peer2-org-rockontrol:peer2-org-rockontrolpw
+      - CORE_PEER_ID=peer2-org-rockontrol
+      - CORE_PEER_ADDRESS=peer2-org-rockontrol:7051
+      - CORE_PEER_LOCALMSPID=org-rockontrolMSP
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/peer/msp
+      - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=fabric-with-ca_fabric-ca
+      - CORE_LOGGING_LEVEL=DEBUG
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/peer/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/peer/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/data/ca-org-rockontrol-cert.pem
+      - CORE_PEER_TLS_CLIENTAUTHREQUIRED=true
+      - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/data/ca-org-rockontrol-cert.pem
+      - CORE_PEER_TLS_CLIENTCERT_FILE=/etc/hyperledger/peer/tls/server.crt
+      - CORE_PEER_TLS_CLIENTKEY_FILE=/etc/hyperledger/peer/tls/server.key
+      - CORE_PEER_GOSSIP_USELEADERELECTION=true
+      - CORE_PEER_GOSSIP_ORGLEADER=false
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer2-org-rockontrol:7051
+      - CORE_PEER_GOSSIP_SKIPHANDSHAKE=true
+      - ORG=org-rockontrol
+      - ORG_ADMIN_CERT=/data/orgs/org-rockontrol/msp/admincerts/cert.pem
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+    command: /bin/bash -c '/scripts/start-peer.sh 2>&1 | tee /data/logs/peer2-org-rockontrol.log'
+    volumes:
+      - ./scripts:/scripts
+      - ./data:/data
+      - /var/run:/host/var/run
+    networks:
+      - fabric-ca
+    depends_on:
+      - setup
 
