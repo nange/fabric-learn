@@ -289,7 +289,7 @@ services:
     volumes:
       - ./scripts:/scripts
       - ./data:/data
-      #- /root/go/src/github.com/hyperledger/fabric-samples:/opt/gopath/src/github.com/hyperledger/fabric-samples
+      - $GOPATH/src/github.com/hyperledger/fabric-samples:/opt/gopath/src/github.com/hyperledger/fabric-samples
       #- /src/github.com/hyperledger/fabric:/opt/gopath/src/github.com/hyperledger/fabric
     networks:
       - fabric-ca

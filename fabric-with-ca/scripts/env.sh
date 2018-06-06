@@ -131,22 +131,22 @@ function initPeerVars {
     export CORE_LOGGING_LEVEL=DEBUG
     export CORE_PEER_TLS_ENABLED=true
     export CORE_PEER_TLS_CLIENTAUTHREQUIRED=true
-    export CORE_PEER_TLS_ROOTCERT_FILE=$CA_CHAINFILE
+    export CORE_PEER_TLS_ROOTCERT_FILE=/${DATA}/ca-${ORG}-cert.pem
     export CORE_PEER_TLS_CLIENTCERT_FILE=/$DATA/tls/$PEER_NAME-cli-client.crt
     export CORE_PEER_TLS_CLIENTKEY_FILE=/$DATA/tls/$PEER_NAME-cli-client.key
     export CORE_PEER_PROFILE_ENABLED=true
 
-   # gossip variables
-   export CORE_PEER_GOSSIP_USELEADERELECTION=true
-   export CORE_PEER_GOSSIP_ORGLEADER=false
-   export CORE_PEER_GOSSIP_EXTERNALENDPOINT=$PEER_HOST:7051
+    # gossip variables
+    export CORE_PEER_GOSSIP_USELEADERELECTION=true
+    export CORE_PEER_GOSSIP_ORGLEADER=false
+    export CORE_PEER_GOSSIP_EXTERNALENDPOINT=$PEER_HOST:7051
 
-   if [ $NUM -gt 1 ]; then
+    if [ $NUM -gt 1 ]; then
       # Point the non-anchor peers to the anchor peer, which is always the 1st peer
       export CORE_PEER_GOSSIP_BOOTSTRAP=peer1-${ORG}:7051
-   fi
+    fi
 
-   export ORDERER_CONN_ARGS="$ORDERER_PORT_ARGS --keyfile $CORE_PEER_TLS_CLIENTKEY_FILE --certfile $CORE_PEER_TLS_CLIENTCERT_FILE"
+    export ORDERER_CONN_ARGS="$ORDERER_PORT_ARGS --keyfile $CORE_PEER_TLS_CLIENTKEY_FILE --certfile $CORE_PEER_TLS_CLIENTCERT_FILE"
 }
 
 # Create the TLS directories of the MSP folder if they don't exist.
