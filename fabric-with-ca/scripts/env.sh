@@ -21,6 +21,9 @@ CHANNEL_TX_FILE=/$DATA/channel.tx
 # Name of test channel
 CHANNEL_NAME=mychannel
 
+# Query timeout in seconds
+QUERY_TIMEOUT=15
+
 # Setup timeout in seconds (for setup container to complete)
 SETUP_TIMEOUT=120
 
@@ -54,6 +57,14 @@ ORGS="$ORDERER_ORGS $PEER_ORGS"
 
 # Set to true to populate the "admincerts" folder of MSPs
 ADMINCERTS=true
+
+
+# Config block file path
+CONFIG_BLOCK_FILE=/tmp/config_block.pb
+
+# Update config block payload file path
+CONFIG_UPDATE_ENVELOPE_FILE=/tmp/config_update_as_envelope.pb
+
 
 
 # initOrgVars <ORG>
@@ -204,6 +215,36 @@ function switchToAdminIdentity {
    fi
    export CORE_PEER_MSPCONFIGPATH=$ORG_ADMIN_HOME/msp
 }
+
+
+# Switch to the current org's user identity.  Enroll if not previously enrolled.
+function switchToUserIdentity {
+   export FABRIC_CA_CLIENT_HOME=/etc/hyperledger/fabric/orgs/$ORG/user
+   export CORE_PEER_MSPCONFIGPATH=$FABRIC_CA_CLIENT_HOME/msp
+   if [ ! -d $FABRIC_CA_CLIENT_HOME ]; then
+      dowait "$CA_NAME to start" 60 $CA_LOGFILE $CA_CHAINFILE
+      echo "Enrolling user for organization $ORG with home directory $FABRIC_CA_CLIENT_HOME ..."
+      #export FABRIC_CA_CLIENT_TLS_CERTFILES=$CA_CHAINFILE
+      fabric-ca-client enroll -d -u http://$USER_NAME:$USER_PASS@$CA_HOST:7054
+      # Set up admincerts directory if required
+      if [ $ADMINCERTS ]; then
+         ACDIR=$CORE_PEER_MSPCONFIGPATH/admincerts
+         mkdir -p $ACDIR
+         cp $ORG_ADMIN_HOME/msp/signcerts/* $ACDIR
+      fi
+   fi
+}
+
+
+# Revokes the fabric user
+function revokeFabricUserAndGenerateCRL {
+   switchToAdminIdentity
+   export  FABRIC_CA_CLIENT_HOME=$ORG_ADMIN_HOME
+   logr "Revoking the user '$USER_NAME' of the organization '$ORG' with Fabric CA Client home directory set to $FABRIC_CA_CLIENT_HOME and generating CRL ..."
+   export FABRIC_CA_CLIENT_TLS_CERTFILES=$CA_CHAINFILE
+   fabric-ca-client revoke -d --revoke.name $USER_NAME --gencrl
+}
+
 
 function genClientTLSCert {
    if [ $# -ne 3 ]; then

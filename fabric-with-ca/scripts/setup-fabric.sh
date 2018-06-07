@@ -133,7 +133,7 @@ function registerPeerIdentities {
       done
       echo "Registering admin identity with $CA_NAME"
       # The admin identity has the "admin" attribute which is added to ECert by default
-      fabric-ca-client register -d --id.name $ADMIN_NAME --id.affiliation $ORG --id.secret $ADMIN_PASS --id.attrs "hf.Registrar.Roles=client,hf.Registrar.Attributes=*,hf.Revoker=true,hf.GenCRL=true,admin=true:ecert,abac.init=true:ecert"
+      fabric-ca-client register -d --id.name $ADMIN_NAME --id.affiliation $ORG --id.secret $ADMIN_PASS --id.attrs "\"hf.Registrar.Roles=client,user,peer\",hf.Registrar.Attributes=*,hf.Revoker=true,hf.GenCRL=true,admin=true:ecert,abac.init=true:ecert"
       echo "Registering user identity with $CA_NAME"
       fabric-ca-client register -d --id.name $USER_NAME --id.affiliation $ORG --id.secret $USER_PASS --id.type user
    done

@@ -1,485 +1,831 @@
 
 Creating channel 'mychannel' on orderer1-org-order ...
-[33m2018-06-06 10:52:28.724 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
-[36m2018-06-06 10:52:28.746 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
-[36m2018-06-06 10:52:28.746 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
-2018-06-06 10:52:28.761 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
-[36m2018-06-06 10:52:28.765 UTC [msp] GetLocalMSP -> DEBU 005[0m Returning existing local MSP
-[36m2018-06-06 10:52:28.765 UTC [msp] GetDefaultSigningIdentity -> DEBU 006[0m Obtaining default signing identity
-[36m2018-06-06 10:52:28.766 UTC [msp] GetLocalMSP -> DEBU 007[0m Returning existing local MSP
-[36m2018-06-06 10:52:28.766 UTC [msp] GetDefaultSigningIdentity -> DEBU 008[0m Obtaining default signing identity
-[36m2018-06-06 10:52:28.766 UTC [msp/identity] Sign -> DEBU 009[0m Sign: plaintext: 0AED080A116F72672D726F636B6F6E74...53616D706C65436F6E736F727469756D 
-[36m2018-06-06 10:52:28.766 UTC [msp/identity] Sign -> DEBU 00a[0m Sign: digest: 22BA0DB1DC90AB74F8720566D0EF9E4CED30039FB675D6C0D01945EAA5CB36F0 
-[36m2018-06-06 10:52:28.767 UTC [msp] GetLocalMSP -> DEBU 00b[0m Returning existing local MSP
-[36m2018-06-06 10:52:28.767 UTC [msp] GetDefaultSigningIdentity -> DEBU 00c[0m Obtaining default signing identity
-[36m2018-06-06 10:52:28.768 UTC [msp] GetLocalMSP -> DEBU 00d[0m Returning existing local MSP
-[36m2018-06-06 10:52:28.768 UTC [msp] GetDefaultSigningIdentity -> DEBU 00e[0m Obtaining default signing identity
-[36m2018-06-06 10:52:28.768 UTC [msp/identity] Sign -> DEBU 00f[0m Sign: plaintext: 0AA4090A1508021A0608ECF9DED80522...422527F004E6BF7E5C220B6ABF917705 
-[36m2018-06-06 10:52:28.768 UTC [msp/identity] Sign -> DEBU 010[0m Sign: digest: 99341C74105B9BC9A5AE2AE0DABBCF02A7278F05F3C550970F581F66EF567E85 
-[36m2018-06-06 10:52:28.916 UTC [msp] GetLocalMSP -> DEBU 011[0m Returning existing local MSP
-[36m2018-06-06 10:52:28.916 UTC [msp] GetDefaultSigningIdentity -> DEBU 012[0m Obtaining default signing identity
-[36m2018-06-06 10:52:28.916 UTC [msp] GetLocalMSP -> DEBU 013[0m Returning existing local MSP
-[36m2018-06-06 10:52:28.916 UTC [msp] GetDefaultSigningIdentity -> DEBU 014[0m Obtaining default signing identity
-[36m2018-06-06 10:52:28.916 UTC [msp/identity] Sign -> DEBU 015[0m Sign: plaintext: 0AC6090A3708021A0608ECF9DED80522...F5633429668A12080A021A0012021A00 
-[36m2018-06-06 10:52:28.916 UTC [msp/identity] Sign -> DEBU 016[0m Sign: digest: 45115019DDFAB138CCF04EA85C940E21266D73E509162526B532C786F9C9EADA 
-[36m2018-06-06 10:52:28.919 UTC [channelCmd] readBlock -> DEBU 017[0m Got status: &{NOT_FOUND}
-[36m2018-06-06 10:52:28.922 UTC [msp] GetLocalMSP -> DEBU 018[0m Returning existing local MSP
-[36m2018-06-06 10:52:28.922 UTC [msp] GetDefaultSigningIdentity -> DEBU 019[0m Obtaining default signing identity
-2018-06-06 10:52:28.942 UTC [channelCmd] InitCmdFactory -> INFO 01a[0m Endorser and orderer connections initialized
-[36m2018-06-06 10:52:29.143 UTC [msp] GetLocalMSP -> DEBU 01b[0m Returning existing local MSP
-[36m2018-06-06 10:52:29.144 UTC [msp] GetDefaultSigningIdentity -> DEBU 01c[0m Obtaining default signing identity
-[36m2018-06-06 10:52:29.146 UTC [msp] GetLocalMSP -> DEBU 01d[0m Returning existing local MSP
-[36m2018-06-06 10:52:29.146 UTC [msp] GetDefaultSigningIdentity -> DEBU 01e[0m Obtaining default signing identity
-[36m2018-06-06 10:52:29.146 UTC [msp/identity] Sign -> DEBU 01f[0m Sign: plaintext: 0AC6090A3708021A0608EDF9DED80522...CB459F6AEFE912080A021A0012021A00 
-[36m2018-06-06 10:52:29.146 UTC [msp/identity] Sign -> DEBU 020[0m Sign: digest: 39BD88A6425ED6398AD4592AA102483F1CD13D7BF7B8583D0E36ABED296A2E0D 
-[36m2018-06-06 10:52:29.198 UTC [channelCmd] readBlock -> DEBU 021[0m Received block: 0
-2018-06-06 10:52:29.199 UTC [main] main -> INFO 022[0m Exiting.....
+[33m2018-06-07 07:33:00.126 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
+[36m2018-06-07 07:33:00.156 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:33:00.156 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:33:00.173 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
+[36m2018-06-07 07:33:00.183 UTC [msp] GetLocalMSP -> DEBU 005[0m Returning existing local MSP
+[36m2018-06-07 07:33:00.183 UTC [msp] GetDefaultSigningIdentity -> DEBU 006[0m Obtaining default signing identity
+[36m2018-06-07 07:33:00.184 UTC [msp] GetLocalMSP -> DEBU 007[0m Returning existing local MSP
+[36m2018-06-07 07:33:00.184 UTC [msp] GetDefaultSigningIdentity -> DEBU 008[0m Obtaining default signing identity
+[36m2018-06-07 07:33:00.184 UTC [msp/identity] Sign -> DEBU 009[0m Sign: plaintext: 0AED080A116F72672D726F636B6F6E74...53616D706C65436F6E736F727469756D 
+[36m2018-06-07 07:33:00.185 UTC [msp/identity] Sign -> DEBU 00a[0m Sign: digest: 2D45DA01C727481FA2290F1C5F103A455BA7DE69DCC26575802F3FB21B78CEBE 
+[36m2018-06-07 07:33:00.186 UTC [msp] GetLocalMSP -> DEBU 00b[0m Returning existing local MSP
+[36m2018-06-07 07:33:00.186 UTC [msp] GetDefaultSigningIdentity -> DEBU 00c[0m Obtaining default signing identity
+[36m2018-06-07 07:33:00.187 UTC [msp] GetLocalMSP -> DEBU 00d[0m Returning existing local MSP
+[36m2018-06-07 07:33:00.187 UTC [msp] GetDefaultSigningIdentity -> DEBU 00e[0m Obtaining default signing identity
+[36m2018-06-07 07:33:00.187 UTC [msp/identity] Sign -> DEBU 00f[0m Sign: plaintext: 0AA4090A1508021A0608ACBFE3D80522...2D56A7850C1916D342FB44D2300B26C3 
+[36m2018-06-07 07:33:00.188 UTC [msp/identity] Sign -> DEBU 010[0m Sign: digest: 19028A12E000BF673B659EB70AC08E9DA7F321B8A294D6DBB40328753A780618 
+[36m2018-06-07 07:33:00.297 UTC [msp] GetLocalMSP -> DEBU 011[0m Returning existing local MSP
+[36m2018-06-07 07:33:00.297 UTC [msp] GetDefaultSigningIdentity -> DEBU 012[0m Obtaining default signing identity
+[36m2018-06-07 07:33:00.297 UTC [msp] GetLocalMSP -> DEBU 013[0m Returning existing local MSP
+[36m2018-06-07 07:33:00.297 UTC [msp] GetDefaultSigningIdentity -> DEBU 014[0m Obtaining default signing identity
+[36m2018-06-07 07:33:00.297 UTC [msp/identity] Sign -> DEBU 015[0m Sign: plaintext: 0AC6090A3708021A0608ACBFE3D80522...1156E6ED319712080A021A0012021A00 
+[36m2018-06-07 07:33:00.297 UTC [msp/identity] Sign -> DEBU 016[0m Sign: digest: 1E2E6D6F5B7B1F6F4E2453F9B4E1015FE803F42D1F2EF2F7D37D10A1F77386D4 
+[36m2018-06-07 07:33:00.299 UTC [channelCmd] readBlock -> DEBU 017[0m Got status: &{NOT_FOUND}
+[36m2018-06-07 07:33:00.300 UTC [msp] GetLocalMSP -> DEBU 018[0m Returning existing local MSP
+[36m2018-06-07 07:33:00.300 UTC [msp] GetDefaultSigningIdentity -> DEBU 019[0m Obtaining default signing identity
+2018-06-07 07:33:00.338 UTC [channelCmd] InitCmdFactory -> INFO 01a[0m Endorser and orderer connections initialized
+[36m2018-06-07 07:33:00.540 UTC [msp] GetLocalMSP -> DEBU 01b[0m Returning existing local MSP
+[36m2018-06-07 07:33:00.540 UTC [msp] GetDefaultSigningIdentity -> DEBU 01c[0m Obtaining default signing identity
+[36m2018-06-07 07:33:00.542 UTC [msp] GetLocalMSP -> DEBU 01d[0m Returning existing local MSP
+[36m2018-06-07 07:33:00.543 UTC [msp] GetDefaultSigningIdentity -> DEBU 01e[0m Obtaining default signing identity
+[36m2018-06-07 07:33:00.544 UTC [msp/identity] Sign -> DEBU 01f[0m Sign: plaintext: 0AC6090A3708021A0608ACBFE3D80522...0701A802AEDD12080A021A0012021A00 
+[36m2018-06-07 07:33:00.544 UTC [msp/identity] Sign -> DEBU 020[0m Sign: digest: 2664E79F0211617D0FC6AC67CC81CD785CA2709B7873AF2501B112FB0C9ACF0F 
+[36m2018-06-07 07:33:00.555 UTC [channelCmd] readBlock -> DEBU 021[0m Received block: 0
+2018-06-07 07:33:00.556 UTC [main] main -> INFO 022[0m Exiting.....
 create channel completed.......
 All peers join the channel
 Peer peer1-org-rockontrol is attempting to join channel 'mychannel' (attempt #1) ...
-[33m2018-06-06 10:52:29.257 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
-[36m2018-06-06 10:52:29.279 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
-[36m2018-06-06 10:52:29.279 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
-2018-06-06 10:52:29.294 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
-[36m2018-06-06 10:52:29.295 UTC [msp/identity] Sign -> DEBU 005[0m Sign: plaintext: 0AEB090A5C08011A0C08EDF9DED80510...020F0CEA07B71A080A000A000A000A00 
-[36m2018-06-06 10:52:29.296 UTC [msp/identity] Sign -> DEBU 006[0m Sign: digest: D4BADC7716E10AA314DF789F9BBBC3D21BBEAE69C3B614DDA77736CCBD807C2B 
-2018-06-06 10:52:29.431 UTC [channelCmd] executeJoin -> INFO 007[0m Successfully submitted proposal to join channel
-2018-06-06 10:52:29.431 UTC [main] main -> INFO 008[0m Exiting.....
+[33m2018-06-07 07:33:00.639 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
+[36m2018-06-07 07:33:00.661 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:33:00.661 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:33:00.671 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
+[36m2018-06-07 07:33:00.671 UTC [msp/identity] Sign -> DEBU 005[0m Sign: plaintext: 0AEB090A5C08011A0C08ACBFE3D80510...8E141D0C87741A080A000A000A000A00 
+[36m2018-06-07 07:33:00.671 UTC [msp/identity] Sign -> DEBU 006[0m Sign: digest: 0C9E0AF07EAC3739935AF8EFB7C266D37BF786ACC1FE6A3CCEDB3A6EF30833C8 
+2018-06-07 07:33:00.811 UTC [channelCmd] executeJoin -> INFO 007[0m Successfully submitted proposal to join channel
+2018-06-07 07:33:00.811 UTC [main] main -> INFO 008[0m Exiting.....
 Peer peer1-org-rockontrol successfully joined channel 'mychannel'
 Peer peer2-org-rockontrol is attempting to join channel 'mychannel' (attempt #1) ...
-[33m2018-06-06 10:52:29.518 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
-[36m2018-06-06 10:52:29.540 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
-[36m2018-06-06 10:52:29.540 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
-2018-06-06 10:52:29.559 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
-[36m2018-06-06 10:52:29.560 UTC [msp/identity] Sign -> DEBU 005[0m Sign: plaintext: 0AEB090A5C08011A0C08EDF9DED80510...020F0CEA07B71A080A000A000A000A00 
-[36m2018-06-06 10:52:29.561 UTC [msp/identity] Sign -> DEBU 006[0m Sign: digest: DD2B6A7A9372BB2B679BE5CB3816B76BACE56F2410A9B601DE9EFC2AA0DFD77E 
-2018-06-06 10:52:29.697 UTC [channelCmd] executeJoin -> INFO 007[0m Successfully submitted proposal to join channel
-2018-06-06 10:52:29.698 UTC [main] main -> INFO 008[0m Exiting.....
+[33m2018-06-07 07:33:00.888 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
+[36m2018-06-07 07:33:00.910 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:33:00.910 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:33:00.922 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
+[36m2018-06-07 07:33:00.922 UTC [msp/identity] Sign -> DEBU 005[0m Sign: plaintext: 0AEB090A5C08011A0C08ACBFE3D80510...8E141D0C87741A080A000A000A000A00 
+[36m2018-06-07 07:33:00.922 UTC [msp/identity] Sign -> DEBU 006[0m Sign: digest: 3882AA4C33EA788D1050C68319076EFDC0D93610B4CFB3857E47919AC872582D 
+2018-06-07 07:33:01.068 UTC [channelCmd] executeJoin -> INFO 007[0m Successfully submitted proposal to join channel
+2018-06-07 07:33:01.068 UTC [main] main -> INFO 008[0m Exiting.....
 Peer peer2-org-rockontrol successfully joined channel 'mychannel'
 Peer peer1-org-weihai is attempting to join channel 'mychannel' (attempt #1) ...
-[33m2018-06-06 10:52:29.780 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem: no pem content for file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem
-[36m2018-06-06 10:52:29.806 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
-[36m2018-06-06 10:52:29.806 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
-2018-06-06 10:52:29.819 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
-[36m2018-06-06 10:52:29.820 UTC [msp/identity] Sign -> DEBU 005[0m Sign: plaintext: 0ACA090A5C08011A0C08EDF9DED80510...020F0CEA07B71A080A000A000A000A00 
-[36m2018-06-06 10:52:29.820 UTC [msp/identity] Sign -> DEBU 006[0m Sign: digest: 137E70AE18DB84EDCF6DDE127EF337C01469037B79CAAF8D23E8CA8EA3D90012 
-2018-06-06 10:52:30.954 UTC [channelCmd] executeJoin -> INFO 007[0m Successfully submitted proposal to join channel
-2018-06-06 10:52:30.954 UTC [main] main -> INFO 008[0m Exiting.....
+[33m2018-06-07 07:33:01.149 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem: no pem content for file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem
+[36m2018-06-07 07:33:01.170 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:33:01.170 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:33:01.181 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
+[36m2018-06-07 07:33:01.181 UTC [msp/identity] Sign -> DEBU 005[0m Sign: plaintext: 0AC9090A5B08011A0B08ADBFE3D80510...8E141D0C87741A080A000A000A000A00 
+[36m2018-06-07 07:33:01.182 UTC [msp/identity] Sign -> DEBU 006[0m Sign: digest: EAC3A0785C5A8D2BFD718861A43AA38A8DB32732A87D9834639999F88D97D78A 
+2018-06-07 07:33:01.310 UTC [channelCmd] executeJoin -> INFO 007[0m Successfully submitted proposal to join channel
+2018-06-07 07:33:01.311 UTC [main] main -> INFO 008[0m Exiting.....
 Peer peer1-org-weihai successfully joined channel 'mychannel'
 Peer peer2-org-weihai is attempting to join channel 'mychannel' (attempt #1) ...
-[33m2018-06-06 10:52:31.010 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem: no pem content for file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem
-[36m2018-06-06 10:52:31.033 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
-[36m2018-06-06 10:52:31.033 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
-2018-06-06 10:52:31.048 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
-[36m2018-06-06 10:52:31.049 UTC [msp/identity] Sign -> DEBU 005[0m Sign: plaintext: 0AC9090A5B08011A0B08EFF9DED80510...020F0CEA07B71A080A000A000A000A00 
-[36m2018-06-06 10:52:31.049 UTC [msp/identity] Sign -> DEBU 006[0m Sign: digest: 6E9887AA9890DFF4882E9A639AA17B652B9B738BB290AEDC2464DA6ACEDCCF46 
-2018-06-06 10:52:31.215 UTC [channelCmd] executeJoin -> INFO 007[0m Successfully submitted proposal to join channel
-2018-06-06 10:52:31.217 UTC [main] main -> INFO 008[0m Exiting.....
+[33m2018-06-07 07:33:01.393 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem: no pem content for file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem
+[36m2018-06-07 07:33:01.417 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:33:01.417 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:33:01.429 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
+[36m2018-06-07 07:33:01.431 UTC [msp/identity] Sign -> DEBU 005[0m Sign: plaintext: 0ACA090A5C08011A0C08ADBFE3D80510...8E141D0C87741A080A000A000A000A00 
+[36m2018-06-07 07:33:01.431 UTC [msp/identity] Sign -> DEBU 006[0m Sign: digest: C3696DCD4FA29F018372A78558EFA1E657CA2E8D193547FD1AC954713436ED97 
+2018-06-07 07:33:01.584 UTC [channelCmd] executeJoin -> INFO 007[0m Successfully submitted proposal to join channel
+2018-06-07 07:33:01.584 UTC [main] main -> INFO 008[0m Exiting.....
 Peer peer2-org-weihai successfully joined channel 'mychannel'
 peers join channel completed.......
 Update the anchor peers
 Updating anchor peers for peer1-org-rockontrol ...
-[33m2018-06-06 10:52:31.288 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
-[36m2018-06-06 10:52:31.310 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
-[36m2018-06-06 10:52:31.310 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
-2018-06-06 10:52:31.324 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
-[36m2018-06-06 10:52:31.330 UTC [msp] GetLocalMSP -> DEBU 005[0m Returning existing local MSP
-[36m2018-06-06 10:52:31.330 UTC [msp] GetDefaultSigningIdentity -> DEBU 006[0m Obtaining default signing identity
-[36m2018-06-06 10:52:31.332 UTC [msp] GetLocalMSP -> DEBU 007[0m Returning existing local MSP
-[36m2018-06-06 10:52:31.333 UTC [msp] GetDefaultSigningIdentity -> DEBU 008[0m Obtaining default signing identity
-[36m2018-06-06 10:52:31.333 UTC [msp/identity] Sign -> DEBU 009[0m Sign: plaintext: 0AED080A116F72672D726F636B6F6E74...2A0641646D696E732A0641646D696E73 
-[36m2018-06-06 10:52:31.333 UTC [msp/identity] Sign -> DEBU 00a[0m Sign: digest: 67DF2D9B59E37389A264A4F1937A2A97BBF1C410AD0E741266B11F754D9C8513 
-[36m2018-06-06 10:52:31.334 UTC [msp] GetLocalMSP -> DEBU 00b[0m Returning existing local MSP
-[36m2018-06-06 10:52:31.334 UTC [msp] GetDefaultSigningIdentity -> DEBU 00c[0m Obtaining default signing identity
-[36m2018-06-06 10:52:31.335 UTC [msp] GetLocalMSP -> DEBU 00d[0m Returning existing local MSP
-[36m2018-06-06 10:52:31.336 UTC [msp] GetDefaultSigningIdentity -> DEBU 00e[0m Obtaining default signing identity
-[36m2018-06-06 10:52:31.336 UTC [msp/identity] Sign -> DEBU 00f[0m Sign: plaintext: 0AA4090A1508021A0608EFF9DED80522...3B68584E6F292C6BF4C20C926F4EC720 
-[36m2018-06-06 10:52:31.336 UTC [msp/identity] Sign -> DEBU 010[0m Sign: digest: 3AE603E80D2B16CE14CC017F4CDBCE6AB168369D5CCB9A7D4E0186D0A560113F 
-2018-06-06 10:52:31.417 UTC [channelCmd] update -> INFO 011[0m Successfully submitted channel update
-2018-06-06 10:52:31.417 UTC [main] main -> INFO 012[0m Exiting.....
+[33m2018-06-07 07:33:01.642 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
+[36m2018-06-07 07:33:01.671 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:33:01.671 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:33:01.685 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
+[36m2018-06-07 07:33:01.690 UTC [msp] GetLocalMSP -> DEBU 005[0m Returning existing local MSP
+[36m2018-06-07 07:33:01.690 UTC [msp] GetDefaultSigningIdentity -> DEBU 006[0m Obtaining default signing identity
+[36m2018-06-07 07:33:01.690 UTC [msp] GetLocalMSP -> DEBU 007[0m Returning existing local MSP
+[36m2018-06-07 07:33:01.690 UTC [msp] GetDefaultSigningIdentity -> DEBU 008[0m Obtaining default signing identity
+[36m2018-06-07 07:33:01.690 UTC [msp/identity] Sign -> DEBU 009[0m Sign: plaintext: 0AED080A116F72672D726F636B6F6E74...2A0641646D696E732A0641646D696E73 
+[36m2018-06-07 07:33:01.690 UTC [msp/identity] Sign -> DEBU 00a[0m Sign: digest: 6B9C3CAB773AF389FAF090D978B00FDF792CA8DA68EDA5A9788E87B0233239EA 
+[36m2018-06-07 07:33:01.691 UTC [msp] GetLocalMSP -> DEBU 00b[0m Returning existing local MSP
+[36m2018-06-07 07:33:01.691 UTC [msp] GetDefaultSigningIdentity -> DEBU 00c[0m Obtaining default signing identity
+[36m2018-06-07 07:33:01.691 UTC [msp] GetLocalMSP -> DEBU 00d[0m Returning existing local MSP
+[36m2018-06-07 07:33:01.691 UTC [msp] GetDefaultSigningIdentity -> DEBU 00e[0m Obtaining default signing identity
+[36m2018-06-07 07:33:01.691 UTC [msp/identity] Sign -> DEBU 00f[0m Sign: plaintext: 0AA4090A1508021A0608ADBFE3D80522...D67B90C689F133F11F3DBBEE5118F9F6 
+[36m2018-06-07 07:33:01.691 UTC [msp/identity] Sign -> DEBU 010[0m Sign: digest: 7B5A70064698B1D5CE5A0AF285E4E364C4C4937376AE566D0E422841470128AC 
+2018-06-07 07:33:01.787 UTC [channelCmd] update -> INFO 011[0m Successfully submitted channel update
+2018-06-07 07:33:01.788 UTC [main] main -> INFO 012[0m Exiting.....
 Updating anchor peers for peer1-org-weihai ...
-[33m2018-06-06 10:52:31.486 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem: no pem content for file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem
-[36m2018-06-06 10:52:31.507 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
-[36m2018-06-06 10:52:31.507 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
-2018-06-06 10:52:31.520 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
-[36m2018-06-06 10:52:31.528 UTC [msp] GetLocalMSP -> DEBU 005[0m Returning existing local MSP
-[36m2018-06-06 10:52:31.529 UTC [msp] GetDefaultSigningIdentity -> DEBU 006[0m Obtaining default signing identity
-[36m2018-06-06 10:52:31.531 UTC [msp] GetLocalMSP -> DEBU 007[0m Returning existing local MSP
-[36m2018-06-06 10:52:31.532 UTC [msp] GetDefaultSigningIdentity -> DEBU 008[0m Obtaining default signing identity
-[36m2018-06-06 10:52:31.532 UTC [msp/identity] Sign -> DEBU 009[0m Sign: plaintext: 0ACC080A0D6F72672D7765696861694D...2A0641646D696E732A0641646D696E73 
-[36m2018-06-06 10:52:31.532 UTC [msp/identity] Sign -> DEBU 00a[0m Sign: digest: 34392E4016FCE0AFF6BA333B549E66083935F5C29D1BB29E86858E5910488915 
-[36m2018-06-06 10:52:31.534 UTC [msp] GetLocalMSP -> DEBU 00b[0m Returning existing local MSP
-[36m2018-06-06 10:52:31.534 UTC [msp] GetDefaultSigningIdentity -> DEBU 00c[0m Obtaining default signing identity
-[36m2018-06-06 10:52:31.535 UTC [msp] GetLocalMSP -> DEBU 00d[0m Returning existing local MSP
-[36m2018-06-06 10:52:31.536 UTC [msp] GetDefaultSigningIdentity -> DEBU 00e[0m Obtaining default signing identity
-[36m2018-06-06 10:52:31.536 UTC [msp/identity] Sign -> DEBU 00f[0m Sign: plaintext: 0A83090A1508021A0608EFF9DED80522...19ED3561E0B69C0903EA1D97E8AC5162 
-[36m2018-06-06 10:52:31.537 UTC [msp/identity] Sign -> DEBU 010[0m Sign: digest: 7501E9A4E6517E1D4F6832635E17EE6E6FF58FC0FCD59BADF89FBECEF68DD07E 
-2018-06-06 10:52:31.581 UTC [channelCmd] update -> INFO 011[0m Successfully submitted channel update
-2018-06-06 10:52:31.581 UTC [main] main -> INFO 012[0m Exiting.....
+[33m2018-06-07 07:33:01.886 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem: no pem content for file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem
+[36m2018-06-07 07:33:01.908 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:33:01.909 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:33:01.924 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
+[36m2018-06-07 07:33:01.933 UTC [msp] GetLocalMSP -> DEBU 005[0m Returning existing local MSP
+[36m2018-06-07 07:33:01.933 UTC [msp] GetDefaultSigningIdentity -> DEBU 006[0m Obtaining default signing identity
+[36m2018-06-07 07:33:01.936 UTC [msp] GetLocalMSP -> DEBU 007[0m Returning existing local MSP
+[36m2018-06-07 07:33:01.936 UTC [msp] GetDefaultSigningIdentity -> DEBU 008[0m Obtaining default signing identity
+[36m2018-06-07 07:33:01.936 UTC [msp/identity] Sign -> DEBU 009[0m Sign: plaintext: 0ACC080A0D6F72672D7765696861694D...2A0641646D696E732A0641646D696E73 
+[36m2018-06-07 07:33:01.936 UTC [msp/identity] Sign -> DEBU 00a[0m Sign: digest: A3D8EF8B38A9B3343F36FE2B82526BF6283FCF8445148B54A5BBE1731F55F69F 
+[36m2018-06-07 07:33:01.937 UTC [msp] GetLocalMSP -> DEBU 00b[0m Returning existing local MSP
+[36m2018-06-07 07:33:01.937 UTC [msp] GetDefaultSigningIdentity -> DEBU 00c[0m Obtaining default signing identity
+[36m2018-06-07 07:33:01.938 UTC [msp] GetLocalMSP -> DEBU 00d[0m Returning existing local MSP
+[36m2018-06-07 07:33:01.938 UTC [msp] GetDefaultSigningIdentity -> DEBU 00e[0m Obtaining default signing identity
+[36m2018-06-07 07:33:01.938 UTC [msp/identity] Sign -> DEBU 00f[0m Sign: plaintext: 0A83090A1508021A0608ADBFE3D80522...9C41D513E8C58A006CF8F037FF551D4C 
+[36m2018-06-07 07:33:01.938 UTC [msp/identity] Sign -> DEBU 010[0m Sign: digest: F5C68C5FFEDC77D272C6FC230E20F72EDF90DEF5D13E7DE3C4D8B90D8CBA41ED 
+2018-06-07 07:33:01.988 UTC [channelCmd] update -> INFO 011[0m Successfully submitted channel update
+2018-06-07 07:33:01.988 UTC [main] main -> INFO 012[0m Exiting.....
 Update the anchor peers completed.......
 Install chaincode on the 1st peer in each org
 Installing chaincode on peer1-org-rockontrol ...
-[33m2018-06-06 10:52:41.681 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
-[36m2018-06-06 10:52:41.721 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
-[36m2018-06-06 10:52:41.722 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
-2018-06-06 10:52:41.722 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 004[0m Using default escc
-2018-06-06 10:52:41.723 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 005[0m Using default vscc
-[36m2018-06-06 10:52:41.723 UTC [chaincodeCmd] getChaincodeSpec -> DEBU 006[0m java chaincode disabled
-[36m2018-06-06 10:52:41.781 UTC [golang-platform] getCodeFromFS -> DEBU 007[0m getCodeFromFS github.com/hyperledger/fabric-samples/chaincode/abac/go
-[36m2018-06-06 10:52:42.060 UTC [golang-platform] func1 -> DEBU 008[0m Discarding GOROOT package fmt
-[36m2018-06-06 10:52:42.060 UTC [golang-platform] func1 -> DEBU 009[0m Accepting import: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid
-[36m2018-06-06 10:52:42.060 UTC [golang-platform] func1 -> DEBU 00a[0m Discarding provided package github.com/hyperledger/fabric/core/chaincode/shim
-[36m2018-06-06 10:52:42.060 UTC [golang-platform] func1 -> DEBU 00b[0m Discarding provided package github.com/hyperledger/fabric/protos/peer
-[36m2018-06-06 10:52:42.060 UTC [golang-platform] func1 -> DEBU 00c[0m Discarding GOROOT package strconv
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] func1 -> DEBU 00d[0m skipping dir: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 00e[0m processing dep: crypto
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 00f[0m checking: /opt/gopath/src/crypto exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 010[0m processing dep: crypto/rand
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 011[0m checking: /opt/gopath/src/crypto/rand exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 012[0m processing dep: crypto/sha1
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 013[0m checking: /opt/gopath/src/crypto/sha1 exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 014[0m processing dep: unicode/utf8
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 015[0m checking: /opt/gopath/src/unicode/utf8 exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 016[0m processing dep: unicode/utf16
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 017[0m checking: /opt/gopath/src/unicode/utf16 exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 018[0m processing dep: crypto/internal/cipherhw
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 019[0m checking: /opt/gopath/src/crypto/internal/cipherhw exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 01a[0m processing dep: crypto/sha512
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 01b[0m checking: /opt/gopath/src/crypto/sha512 exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 01c[0m processing dep: encoding/base64
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 01d[0m checking: /opt/gopath/src/encoding/base64 exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 01e[0m processing dep: fmt
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 01f[0m checking: /opt/gopath/src/fmt exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 020[0m processing dep: math/bits
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 021[0m checking: /opt/gopath/src/math/bits exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 022[0m processing dep: crypto/sha256
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 023[0m checking: /opt/gopath/src/crypto/sha256 exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 024[0m processing dep: sort
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 025[0m checking: /opt/gopath/src/sort exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 026[0m processing dep: internal/nettrace
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 027[0m checking: /opt/gopath/src/internal/nettrace exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 028[0m processing dep: internal/race
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 029[0m checking: /opt/gopath/src/internal/race exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 02a[0m processing dep: internal/syscall/unix
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 02b[0m checking: /opt/gopath/src/internal/syscall/unix exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 02c[0m processing dep: math/big
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 02d[0m checking: /opt/gopath/src/math/big exists: false
-[36m2018-06-06 10:52:42.312 UTC [golang-platform] GetDeploymentPayload -> DEBU 02e[0m processing dep: context
-[36m2018-06-06 10:52:42.313 UTC [golang-platform] GetDeploymentPayload -> DEBU 02f[0m checking: /opt/gopath/src/context exists: false
-[36m2018-06-06 10:52:42.313 UTC [golang-platform] GetDeploymentPayload -> DEBU 030[0m processing dep: crypto/des
-[36m2018-06-06 10:52:42.313 UTC [golang-platform] GetDeploymentPayload -> DEBU 031[0m checking: /opt/gopath/src/crypto/des exists: false
-[36m2018-06-06 10:52:42.313 UTC [golang-platform] GetDeploymentPayload -> DEBU 032[0m processing dep: math
-[36m2018-06-06 10:52:42.313 UTC [golang-platform] GetDeploymentPayload -> DEBU 033[0m checking: /opt/gopath/src/math exists: false
-[36m2018-06-06 10:52:42.313 UTC [golang-platform] GetDeploymentPayload -> DEBU 034[0m processing dep: crypto/x509
-[36m2018-06-06 10:52:42.313 UTC [golang-platform] GetDeploymentPayload -> DEBU 035[0m checking: /opt/gopath/src/crypto/x509 exists: false
-[36m2018-06-06 10:52:42.313 UTC [golang-platform] GetDeploymentPayload -> DEBU 036[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors
-[36m2018-06-06 10:52:42.314 UTC [golang-platform] GetDeploymentPayload -> DEBU 037[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors exists: true
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 038[0m processing dep: log
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 039[0m checking: /opt/gopath/src/log exists: false
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 03a[0m processing dep: sync/atomic
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 03b[0m checking: /opt/gopath/src/sync/atomic exists: false
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 03c[0m processing dep: unsafe
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 03d[0m checking: /opt/gopath/src/unsafe exists: false
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 03e[0m processing dep: crypto/aes
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 03f[0m checking: /opt/gopath/src/crypto/aes exists: false
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 040[0m processing dep: encoding
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 041[0m checking: /opt/gopath/src/encoding exists: false
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 042[0m processing dep: encoding/asn1
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 043[0m checking: /opt/gopath/src/encoding/asn1 exists: false
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 044[0m processing dep: hash
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 045[0m checking: /opt/gopath/src/hash exists: false
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 046[0m processing dep: reflect
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 047[0m checking: /opt/gopath/src/reflect exists: false
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 048[0m processing dep: github.com/hyperledger/fabric/protos/msp
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 049[0m checking: /opt/gopath/src/github.com/hyperledger/fabric/protos/msp exists: false
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 04a[0m processing dep: internal/cpu
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 04b[0m checking: /opt/gopath/src/internal/cpu exists: false
-[36m2018-06-06 10:52:42.319 UTC [golang-platform] GetDeploymentPayload -> DEBU 04c[0m processing dep: internal/singleflight
-[36m2018-06-06 10:52:42.320 UTC [golang-platform] GetDeploymentPayload -> DEBU 04d[0m checking: /opt/gopath/src/internal/singleflight exists: false
-[36m2018-06-06 10:52:42.320 UTC [golang-platform] GetDeploymentPayload -> DEBU 04e[0m processing dep: math/rand
-[36m2018-06-06 10:52:42.320 UTC [golang-platform] GetDeploymentPayload -> DEBU 04f[0m checking: /opt/gopath/src/math/rand exists: false
-[36m2018-06-06 10:52:42.321 UTC [golang-platform] GetDeploymentPayload -> DEBU 050[0m processing dep: sync
-[36m2018-06-06 10:52:42.321 UTC [golang-platform] GetDeploymentPayload -> DEBU 051[0m checking: /opt/gopath/src/sync exists: false
-[36m2018-06-06 10:52:42.321 UTC [golang-platform] GetDeploymentPayload -> DEBU 052[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid
-[36m2018-06-06 10:52:42.324 UTC [golang-platform] GetDeploymentPayload -> DEBU 053[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid exists: true
-[36m2018-06-06 10:52:42.329 UTC [golang-platform] GetDeploymentPayload -> DEBU 054[0m processing dep: crypto/cipher
-[36m2018-06-06 10:52:42.329 UTC [golang-platform] GetDeploymentPayload -> DEBU 055[0m checking: /opt/gopath/src/crypto/cipher exists: false
-[36m2018-06-06 10:52:42.329 UTC [golang-platform] GetDeploymentPayload -> DEBU 056[0m processing dep: crypto/subtle
-[36m2018-06-06 10:52:42.330 UTC [golang-platform] GetDeploymentPayload -> DEBU 057[0m checking: /opt/gopath/src/crypto/subtle exists: false
-[36m2018-06-06 10:52:42.330 UTC [golang-platform] GetDeploymentPayload -> DEBU 058[0m processing dep: internal/poll
-[36m2018-06-06 10:52:42.330 UTC [golang-platform] GetDeploymentPayload -> DEBU 059[0m checking: /opt/gopath/src/internal/poll exists: false
-[36m2018-06-06 10:52:42.330 UTC [golang-platform] GetDeploymentPayload -> DEBU 05a[0m processing dep: net
-[36m2018-06-06 10:52:42.331 UTC [golang-platform] GetDeploymentPayload -> DEBU 05b[0m checking: /opt/gopath/src/net exists: false
-[36m2018-06-06 10:52:42.331 UTC [golang-platform] GetDeploymentPayload -> DEBU 05c[0m processing dep: encoding/hex
-[36m2018-06-06 10:52:42.331 UTC [golang-platform] GetDeploymentPayload -> DEBU 05d[0m checking: /opt/gopath/src/encoding/hex exists: false
-[36m2018-06-06 10:52:42.331 UTC [golang-platform] GetDeploymentPayload -> DEBU 05e[0m processing dep: os
-[36m2018-06-06 10:52:42.331 UTC [golang-platform] GetDeploymentPayload -> DEBU 05f[0m checking: /opt/gopath/src/os exists: false
-[36m2018-06-06 10:52:42.331 UTC [golang-platform] GetDeploymentPayload -> DEBU 060[0m processing dep: path
-[36m2018-06-06 10:52:42.331 UTC [golang-platform] GetDeploymentPayload -> DEBU 061[0m checking: /opt/gopath/src/path exists: false
-[36m2018-06-06 10:52:42.332 UTC [golang-platform] GetDeploymentPayload -> DEBU 062[0m processing dep: path/filepath
-[36m2018-06-06 10:52:42.332 UTC [golang-platform] GetDeploymentPayload -> DEBU 063[0m checking: /opt/gopath/src/path/filepath exists: false
-[36m2018-06-06 10:52:42.332 UTC [golang-platform] GetDeploymentPayload -> DEBU 064[0m processing dep: crypto/ecdsa
-[36m2018-06-06 10:52:42.332 UTC [golang-platform] GetDeploymentPayload -> DEBU 065[0m checking: /opt/gopath/src/crypto/ecdsa exists: false
-[36m2018-06-06 10:52:42.332 UTC [golang-platform] GetDeploymentPayload -> DEBU 066[0m processing dep: encoding/binary
-[36m2018-06-06 10:52:42.332 UTC [golang-platform] GetDeploymentPayload -> DEBU 067[0m checking: /opt/gopath/src/encoding/binary exists: false
-[36m2018-06-06 10:52:42.332 UTC [golang-platform] GetDeploymentPayload -> DEBU 068[0m processing dep: runtime/internal/atomic
-[36m2018-06-06 10:52:42.332 UTC [golang-platform] GetDeploymentPayload -> DEBU 069[0m checking: /opt/gopath/src/runtime/internal/atomic exists: false
-[36m2018-06-06 10:52:42.333 UTC [golang-platform] GetDeploymentPayload -> DEBU 06a[0m processing dep: runtime/internal/sys
-[36m2018-06-06 10:52:42.333 UTC [golang-platform] GetDeploymentPayload -> DEBU 06b[0m checking: /opt/gopath/src/runtime/internal/sys exists: false
-[36m2018-06-06 10:52:42.333 UTC [golang-platform] GetDeploymentPayload -> DEBU 06c[0m processing dep: crypto/md5
-[36m2018-06-06 10:52:42.333 UTC [golang-platform] GetDeploymentPayload -> DEBU 06d[0m checking: /opt/gopath/src/crypto/md5 exists: false
-[36m2018-06-06 10:52:42.333 UTC [golang-platform] GetDeploymentPayload -> DEBU 06e[0m processing dep: crypto/rsa
-[36m2018-06-06 10:52:42.333 UTC [golang-platform] GetDeploymentPayload -> DEBU 06f[0m checking: /opt/gopath/src/crypto/rsa exists: false
-[36m2018-06-06 10:52:42.333 UTC [golang-platform] GetDeploymentPayload -> DEBU 070[0m processing dep: crypto/x509/pkix
-[36m2018-06-06 10:52:42.333 UTC [golang-platform] GetDeploymentPayload -> DEBU 071[0m checking: /opt/gopath/src/crypto/x509/pkix exists: false
-[36m2018-06-06 10:52:42.333 UTC [golang-platform] GetDeploymentPayload -> DEBU 072[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto
-[36m2018-06-06 10:52:42.336 UTC [golang-platform] GetDeploymentPayload -> DEBU 073[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto exists: true
-[36m2018-06-06 10:52:42.360 UTC [golang-platform] GetDeploymentPayload -> DEBU 074[0m processing dep: io
-[36m2018-06-06 10:52:42.360 UTC [golang-platform] GetDeploymentPayload -> DEBU 075[0m checking: /opt/gopath/src/io exists: false
-[36m2018-06-06 10:52:42.360 UTC [golang-platform] GetDeploymentPayload -> DEBU 076[0m processing dep: bufio
-[36m2018-06-06 10:52:42.361 UTC [golang-platform] GetDeploymentPayload -> DEBU 077[0m checking: /opt/gopath/src/bufio exists: false
-[36m2018-06-06 10:52:42.361 UTC [golang-platform] GetDeploymentPayload -> DEBU 078[0m processing dep: crypto/dsa
-[36m2018-06-06 10:52:42.361 UTC [golang-platform] GetDeploymentPayload -> DEBU 079[0m checking: /opt/gopath/src/crypto/dsa exists: false
-[36m2018-06-06 10:52:42.361 UTC [golang-platform] GetDeploymentPayload -> DEBU 07a[0m processing dep: crypto/elliptic
-[36m2018-06-06 10:52:42.366 UTC [golang-platform] GetDeploymentPayload -> DEBU 07b[0m checking: /opt/gopath/src/crypto/elliptic exists: false
-[36m2018-06-06 10:52:42.371 UTC [golang-platform] GetDeploymentPayload -> DEBU 07c[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr
-[36m2018-06-06 10:52:42.379 UTC [golang-platform] GetDeploymentPayload -> DEBU 07d[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr exists: true
-[36m2018-06-06 10:52:42.382 UTC [golang-platform] GetDeploymentPayload -> DEBU 07e[0m processing dep: runtime
-[36m2018-06-06 10:52:42.382 UTC [golang-platform] GetDeploymentPayload -> DEBU 07f[0m checking: /opt/gopath/src/runtime exists: false
-[36m2018-06-06 10:52:42.383 UTC [golang-platform] GetDeploymentPayload -> DEBU 080[0m processing dep: bytes
-[36m2018-06-06 10:52:42.383 UTC [golang-platform] GetDeploymentPayload -> DEBU 081[0m checking: /opt/gopath/src/bytes exists: false
-[36m2018-06-06 10:52:42.384 UTC [golang-platform] GetDeploymentPayload -> DEBU 082[0m processing dep: encoding/json
-[36m2018-06-06 10:52:42.384 UTC [golang-platform] GetDeploymentPayload -> DEBU 083[0m checking: /opt/gopath/src/encoding/json exists: false
-[36m2018-06-06 10:52:42.384 UTC [golang-platform] GetDeploymentPayload -> DEBU 084[0m processing dep: encoding/pem
-[36m2018-06-06 10:52:42.384 UTC [golang-platform] GetDeploymentPayload -> DEBU 085[0m checking: /opt/gopath/src/encoding/pem exists: false
-[36m2018-06-06 10:52:42.386 UTC [golang-platform] GetDeploymentPayload -> DEBU 086[0m processing dep: strings
-[36m2018-06-06 10:52:42.386 UTC [golang-platform] GetDeploymentPayload -> DEBU 087[0m checking: /opt/gopath/src/strings exists: false
-[36m2018-06-06 10:52:42.386 UTC [golang-platform] GetDeploymentPayload -> DEBU 088[0m processing dep: syscall
-[36m2018-06-06 10:52:42.387 UTC [golang-platform] GetDeploymentPayload -> DEBU 089[0m checking: /opt/gopath/src/syscall exists: false
-[36m2018-06-06 10:52:42.387 UTC [golang-platform] GetDeploymentPayload -> DEBU 08a[0m processing dep: unicode
-[36m2018-06-06 10:52:42.387 UTC [golang-platform] GetDeploymentPayload -> DEBU 08b[0m checking: /opt/gopath/src/unicode exists: false
-[36m2018-06-06 10:52:42.387 UTC [golang-platform] GetDeploymentPayload -> DEBU 08c[0m processing dep: errors
-[36m2018-06-06 10:52:42.387 UTC [golang-platform] GetDeploymentPayload -> DEBU 08d[0m checking: /opt/gopath/src/errors exists: false
-[36m2018-06-06 10:52:42.387 UTC [golang-platform] GetDeploymentPayload -> DEBU 08e[0m processing dep: io/ioutil
-[36m2018-06-06 10:52:42.387 UTC [golang-platform] GetDeploymentPayload -> DEBU 08f[0m checking: /opt/gopath/src/io/ioutil exists: false
-[36m2018-06-06 10:52:42.387 UTC [golang-platform] GetDeploymentPayload -> DEBU 090[0m processing dep: runtime/cgo
-[36m2018-06-06 10:52:42.388 UTC [golang-platform] GetDeploymentPayload -> DEBU 091[0m checking: /opt/gopath/src/runtime/cgo exists: false
-[36m2018-06-06 10:52:42.388 UTC [golang-platform] GetDeploymentPayload -> DEBU 092[0m processing dep: strconv
-[36m2018-06-06 10:52:42.388 UTC [golang-platform] GetDeploymentPayload -> DEBU 093[0m checking: /opt/gopath/src/strconv exists: false
-[36m2018-06-06 10:52:42.388 UTC [golang-platform] GetDeploymentPayload -> DEBU 094[0m processing dep: time
-[36m2018-06-06 10:52:42.389 UTC [golang-platform] GetDeploymentPayload -> DEBU 095[0m checking: /opt/gopath/src/time exists: false
-[36m2018-06-06 10:52:42.389 UTC [golang-platform] GetDeploymentPayload -> DEBU 096[0m done
-[36m2018-06-06 10:52:42.389 UTC [container] WriteFileToPackage -> DEBU 097[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/abac.go
-[36m2018-06-06 10:52:42.395 UTC [container] WriteFileToPackage -> DEBU 098[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/clone.go
-[36m2018-06-06 10:52:42.399 UTC [container] WriteFileToPackage -> DEBU 099[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/decode.go
-[36m2018-06-06 10:52:42.411 UTC [container] WriteFileToPackage -> DEBU 09a[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/discard.go
-[36m2018-06-06 10:52:42.416 UTC [container] WriteFileToPackage -> DEBU 09b[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/encode.go
-[36m2018-06-06 10:52:42.420 UTC [container] WriteFileToPackage -> DEBU 09c[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/equal.go
-[36m2018-06-06 10:52:42.423 UTC [container] WriteFileToPackage -> DEBU 09d[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/extensions.go
-[36m2018-06-06 10:52:42.426 UTC [container] WriteFileToPackage -> DEBU 09e[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/lib.go
-[36m2018-06-06 10:52:42.431 UTC [container] WriteFileToPackage -> DEBU 09f[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/message_set.go
-[36m2018-06-06 10:52:42.438 UTC [container] WriteFileToPackage -> DEBU 0a0[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/pointer_reflect.go
-[36m2018-06-06 10:52:42.445 UTC [container] WriteFileToPackage -> DEBU 0a1[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/pointer_unsafe.go
-[36m2018-06-06 10:52:42.447 UTC [container] WriteFileToPackage -> DEBU 0a2[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/properties.go
-[36m2018-06-06 10:52:42.451 UTC [container] WriteFileToPackage -> DEBU 0a3[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/text.go
-[36m2018-06-06 10:52:42.457 UTC [container] WriteFileToPackage -> DEBU 0a4[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/text_parser.go
-[36m2018-06-06 10:52:42.461 UTC [container] WriteFileToPackage -> DEBU 0a5[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr/attrmgr.go
-[36m2018-06-06 10:52:42.465 UTC [container] WriteFileToPackage -> DEBU 0a6[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid/cid.go
-[36m2018-06-06 10:52:42.469 UTC [container] WriteFileToPackage -> DEBU 0a7[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid/interfaces.go
-[36m2018-06-06 10:52:42.472 UTC [container] WriteFileToPackage -> DEBU 0a8[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors/errors.go
-[36m2018-06-06 10:52:42.477 UTC [container] WriteFileToPackage -> DEBU 0a9[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors/stack.go
-[36m2018-06-06 10:52:42.480 UTC [msp/identity] Sign -> DEBU 0aa[0m Sign: plaintext: 0AEB090A5C08031A0C08FAF9DED80510...8CCFFF0F0000FFFF804F00E800600400 
-[36m2018-06-06 10:52:42.480 UTC [msp/identity] Sign -> DEBU 0ab[0m Sign: digest: 58E72FE2EA0265B09BF08623A2EF01F9EE91156DC890E861E3312F520B1C53F2 
-[36m2018-06-06 10:52:42.514 UTC [chaincodeCmd] install -> DEBU 0ac[0m Installed remotely response:<status:200 payload:"OK" > 
-2018-06-06 10:52:42.514 UTC [main] main -> INFO 0ad[0m Exiting.....
+[33m2018-06-07 07:33:07.153 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
+[36m2018-06-07 07:33:07.229 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:33:07.230 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:33:07.232 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 004[0m Using default escc
+2018-06-07 07:33:07.232 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 005[0m Using default vscc
+[36m2018-06-07 07:33:07.233 UTC [chaincodeCmd] getChaincodeSpec -> DEBU 006[0m java chaincode disabled
+[36m2018-06-07 07:33:07.640 UTC [golang-platform] getCodeFromFS -> DEBU 007[0m getCodeFromFS github.com/hyperledger/fabric-samples/chaincode/abac/go
+[36m2018-06-07 07:33:08.505 UTC [golang-platform] func1 -> DEBU 008[0m Discarding GOROOT package fmt
+[36m2018-06-07 07:33:08.505 UTC [golang-platform] func1 -> DEBU 009[0m Accepting import: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid
+[36m2018-06-07 07:33:08.505 UTC [golang-platform] func1 -> DEBU 00a[0m Discarding provided package github.com/hyperledger/fabric/core/chaincode/shim
+[36m2018-06-07 07:33:08.505 UTC [golang-platform] func1 -> DEBU 00b[0m Discarding provided package github.com/hyperledger/fabric/protos/peer
+[36m2018-06-07 07:33:08.505 UTC [golang-platform] func1 -> DEBU 00c[0m Discarding GOROOT package strconv
+[36m2018-06-07 07:33:08.678 UTC [golang-platform] func1 -> DEBU 00d[0m skipping dir: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor
+[36m2018-06-07 07:33:08.678 UTC [golang-platform] GetDeploymentPayload -> DEBU 00e[0m processing dep: crypto/subtle
+[36m2018-06-07 07:33:08.678 UTC [golang-platform] GetDeploymentPayload -> DEBU 00f[0m checking: /opt/gopath/src/crypto/subtle exists: false
+[36m2018-06-07 07:33:08.678 UTC [golang-platform] GetDeploymentPayload -> DEBU 010[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr
+[36m2018-06-07 07:33:08.680 UTC [golang-platform] GetDeploymentPayload -> DEBU 011[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr exists: true
+[36m2018-06-07 07:33:08.683 UTC [golang-platform] GetDeploymentPayload -> DEBU 012[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors
+[36m2018-06-07 07:33:08.685 UTC [golang-platform] GetDeploymentPayload -> DEBU 013[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors exists: true
+[36m2018-06-07 07:33:08.690 UTC [golang-platform] GetDeploymentPayload -> DEBU 014[0m processing dep: sort
+[36m2018-06-07 07:33:08.690 UTC [golang-platform] GetDeploymentPayload -> DEBU 015[0m checking: /opt/gopath/src/sort exists: false
+[36m2018-06-07 07:33:08.690 UTC [golang-platform] GetDeploymentPayload -> DEBU 016[0m processing dep: sync
+[36m2018-06-07 07:33:08.690 UTC [golang-platform] GetDeploymentPayload -> DEBU 017[0m checking: /opt/gopath/src/sync exists: false
+[36m2018-06-07 07:33:08.690 UTC [golang-platform] GetDeploymentPayload -> DEBU 018[0m processing dep: crypto/internal/cipherhw
+[36m2018-06-07 07:33:08.690 UTC [golang-platform] GetDeploymentPayload -> DEBU 019[0m checking: /opt/gopath/src/crypto/internal/cipherhw exists: false
+[36m2018-06-07 07:33:08.690 UTC [golang-platform] GetDeploymentPayload -> DEBU 01a[0m processing dep: path
+[36m2018-06-07 07:33:08.690 UTC [golang-platform] GetDeploymentPayload -> DEBU 01b[0m checking: /opt/gopath/src/path exists: false
+[36m2018-06-07 07:33:08.690 UTC [golang-platform] GetDeploymentPayload -> DEBU 01c[0m processing dep: sync/atomic
+[36m2018-06-07 07:33:08.690 UTC [golang-platform] GetDeploymentPayload -> DEBU 01d[0m checking: /opt/gopath/src/sync/atomic exists: false
+[36m2018-06-07 07:33:08.690 UTC [golang-platform] GetDeploymentPayload -> DEBU 01e[0m processing dep: time
+[36m2018-06-07 07:33:08.690 UTC [golang-platform] GetDeploymentPayload -> DEBU 01f[0m checking: /opt/gopath/src/time exists: false
+[36m2018-06-07 07:33:08.691 UTC [golang-platform] GetDeploymentPayload -> DEBU 020[0m processing dep: crypto/md5
+[36m2018-06-07 07:33:08.691 UTC [golang-platform] GetDeploymentPayload -> DEBU 021[0m checking: /opt/gopath/src/crypto/md5 exists: false
+[36m2018-06-07 07:33:08.691 UTC [golang-platform] GetDeploymentPayload -> DEBU 022[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto
+[36m2018-06-07 07:33:08.693 UTC [golang-platform] GetDeploymentPayload -> DEBU 023[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto exists: true
+[36m2018-06-07 07:33:08.708 UTC [golang-platform] GetDeploymentPayload -> DEBU 024[0m processing dep: internal/syscall/unix
+[36m2018-06-07 07:33:08.708 UTC [golang-platform] GetDeploymentPayload -> DEBU 025[0m checking: /opt/gopath/src/internal/syscall/unix exists: false
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 026[0m processing dep: runtime
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 027[0m checking: /opt/gopath/src/runtime exists: false
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 028[0m processing dep: errors
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 029[0m checking: /opt/gopath/src/errors exists: false
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 02a[0m processing dep: encoding/json
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 02b[0m checking: /opt/gopath/src/encoding/json exists: false
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 02c[0m processing dep: encoding/pem
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 02d[0m checking: /opt/gopath/src/encoding/pem exists: false
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 02e[0m processing dep: runtime/cgo
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 02f[0m checking: /opt/gopath/src/runtime/cgo exists: false
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 030[0m processing dep: runtime/internal/sys
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 031[0m checking: /opt/gopath/src/runtime/internal/sys exists: false
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 032[0m processing dep: strconv
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 033[0m checking: /opt/gopath/src/strconv exists: false
+[36m2018-06-07 07:33:08.709 UTC [golang-platform] GetDeploymentPayload -> DEBU 034[0m processing dep: syscall
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 035[0m checking: /opt/gopath/src/syscall exists: false
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 036[0m processing dep: bytes
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 037[0m checking: /opt/gopath/src/bytes exists: false
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 038[0m processing dep: math/bits
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 039[0m checking: /opt/gopath/src/math/bits exists: false
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 03a[0m processing dep: unsafe
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 03b[0m checking: /opt/gopath/src/unsafe exists: false
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 03c[0m processing dep: crypto/aes
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 03d[0m checking: /opt/gopath/src/crypto/aes exists: false
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 03e[0m processing dep: crypto/dsa
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 03f[0m checking: /opt/gopath/src/crypto/dsa exists: false
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 040[0m processing dep: crypto/rand
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 041[0m checking: /opt/gopath/src/crypto/rand exists: false
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 042[0m processing dep: encoding/hex
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 043[0m checking: /opt/gopath/src/encoding/hex exists: false
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 044[0m processing dep: hash
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 045[0m checking: /opt/gopath/src/hash exists: false
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 046[0m processing dep: unicode/utf16
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 047[0m checking: /opt/gopath/src/unicode/utf16 exists: false
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 048[0m processing dep: crypto/cipher
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 049[0m checking: /opt/gopath/src/crypto/cipher exists: false
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 04a[0m processing dep: log
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 04b[0m checking: /opt/gopath/src/log exists: false
+[36m2018-06-07 07:33:08.710 UTC [golang-platform] GetDeploymentPayload -> DEBU 04c[0m processing dep: internal/cpu
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 04d[0m checking: /opt/gopath/src/internal/cpu exists: false
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 04e[0m processing dep: math
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 04f[0m checking: /opt/gopath/src/math exists: false
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 050[0m processing dep: bufio
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 051[0m checking: /opt/gopath/src/bufio exists: false
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 052[0m processing dep: crypto/rsa
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 053[0m checking: /opt/gopath/src/crypto/rsa exists: false
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 054[0m processing dep: crypto/x509/pkix
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 055[0m checking: /opt/gopath/src/crypto/x509/pkix exists: false
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 056[0m processing dep: os
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 057[0m checking: /opt/gopath/src/os exists: false
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 058[0m processing dep: crypto/ecdsa
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 059[0m checking: /opt/gopath/src/crypto/ecdsa exists: false
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 05a[0m processing dep: internal/nettrace
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 05b[0m checking: /opt/gopath/src/internal/nettrace exists: false
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 05c[0m processing dep: runtime/internal/atomic
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 05d[0m checking: /opt/gopath/src/runtime/internal/atomic exists: false
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 05e[0m processing dep: crypto/elliptic
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 05f[0m checking: /opt/gopath/src/crypto/elliptic exists: false
+[36m2018-06-07 07:33:08.711 UTC [golang-platform] GetDeploymentPayload -> DEBU 060[0m processing dep: crypto
+[36m2018-06-07 07:33:08.712 UTC [golang-platform] GetDeploymentPayload -> DEBU 061[0m checking: /opt/gopath/src/crypto exists: false
+[36m2018-06-07 07:33:08.712 UTC [golang-platform] GetDeploymentPayload -> DEBU 062[0m processing dep: encoding/binary
+[36m2018-06-07 07:33:08.712 UTC [golang-platform] GetDeploymentPayload -> DEBU 063[0m checking: /opt/gopath/src/encoding/binary exists: false
+[36m2018-06-07 07:33:08.712 UTC [golang-platform] GetDeploymentPayload -> DEBU 064[0m processing dep: strings
+[36m2018-06-07 07:33:08.712 UTC [golang-platform] GetDeploymentPayload -> DEBU 065[0m checking: /opt/gopath/src/strings exists: false
+[36m2018-06-07 07:33:08.712 UTC [golang-platform] GetDeploymentPayload -> DEBU 066[0m processing dep: unicode/utf8
+[36m2018-06-07 07:33:08.712 UTC [golang-platform] GetDeploymentPayload -> DEBU 067[0m checking: /opt/gopath/src/unicode/utf8 exists: false
+[36m2018-06-07 07:33:08.712 UTC [golang-platform] GetDeploymentPayload -> DEBU 068[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid
+[36m2018-06-07 07:33:08.717 UTC [golang-platform] GetDeploymentPayload -> DEBU 069[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid exists: true
+[36m2018-06-07 07:33:08.723 UTC [golang-platform] GetDeploymentPayload -> DEBU 06a[0m processing dep: crypto/x509
+[36m2018-06-07 07:33:08.723 UTC [golang-platform] GetDeploymentPayload -> DEBU 06b[0m checking: /opt/gopath/src/crypto/x509 exists: false
+[36m2018-06-07 07:33:08.723 UTC [golang-platform] GetDeploymentPayload -> DEBU 06c[0m processing dep: io
+[36m2018-06-07 07:33:08.724 UTC [golang-platform] GetDeploymentPayload -> DEBU 06d[0m checking: /opt/gopath/src/io exists: false
+[36m2018-06-07 07:33:08.724 UTC [golang-platform] GetDeploymentPayload -> DEBU 06e[0m processing dep: crypto/des
+[36m2018-06-07 07:33:08.724 UTC [golang-platform] GetDeploymentPayload -> DEBU 06f[0m checking: /opt/gopath/src/crypto/des exists: false
+[36m2018-06-07 07:33:08.725 UTC [golang-platform] GetDeploymentPayload -> DEBU 070[0m processing dep: crypto/sha256
+[36m2018-06-07 07:33:08.725 UTC [golang-platform] GetDeploymentPayload -> DEBU 071[0m checking: /opt/gopath/src/crypto/sha256 exists: false
+[36m2018-06-07 07:33:08.725 UTC [golang-platform] GetDeploymentPayload -> DEBU 072[0m processing dep: encoding
+[36m2018-06-07 07:33:08.726 UTC [golang-platform] GetDeploymentPayload -> DEBU 073[0m checking: /opt/gopath/src/encoding exists: false
+[36m2018-06-07 07:33:08.726 UTC [golang-platform] GetDeploymentPayload -> DEBU 074[0m processing dep: encoding/base64
+[36m2018-06-07 07:33:08.727 UTC [golang-platform] GetDeploymentPayload -> DEBU 075[0m checking: /opt/gopath/src/encoding/base64 exists: false
+[36m2018-06-07 07:33:08.728 UTC [golang-platform] GetDeploymentPayload -> DEBU 076[0m processing dep: context
+[36m2018-06-07 07:33:08.730 UTC [golang-platform] GetDeploymentPayload -> DEBU 077[0m checking: /opt/gopath/src/context exists: false
+[36m2018-06-07 07:33:08.730 UTC [golang-platform] GetDeploymentPayload -> DEBU 078[0m processing dep: github.com/hyperledger/fabric/protos/msp
+[36m2018-06-07 07:33:08.730 UTC [golang-platform] GetDeploymentPayload -> DEBU 079[0m checking: /opt/gopath/src/github.com/hyperledger/fabric/protos/msp exists: false
+[36m2018-06-07 07:33:08.730 UTC [golang-platform] GetDeploymentPayload -> DEBU 07a[0m processing dep: internal/race
+[36m2018-06-07 07:33:08.731 UTC [golang-platform] GetDeploymentPayload -> DEBU 07b[0m checking: /opt/gopath/src/internal/race exists: false
+[36m2018-06-07 07:33:08.731 UTC [golang-platform] GetDeploymentPayload -> DEBU 07c[0m processing dep: math/big
+[36m2018-06-07 07:33:08.731 UTC [golang-platform] GetDeploymentPayload -> DEBU 07d[0m checking: /opt/gopath/src/math/big exists: false
+[36m2018-06-07 07:33:08.732 UTC [golang-platform] GetDeploymentPayload -> DEBU 07e[0m processing dep: math/rand
+[36m2018-06-07 07:33:08.732 UTC [golang-platform] GetDeploymentPayload -> DEBU 07f[0m checking: /opt/gopath/src/math/rand exists: false
+[36m2018-06-07 07:33:08.732 UTC [golang-platform] GetDeploymentPayload -> DEBU 080[0m processing dep: path/filepath
+[36m2018-06-07 07:33:08.732 UTC [golang-platform] GetDeploymentPayload -> DEBU 081[0m checking: /opt/gopath/src/path/filepath exists: false
+[36m2018-06-07 07:33:08.733 UTC [golang-platform] GetDeploymentPayload -> DEBU 082[0m processing dep: unicode
+[36m2018-06-07 07:33:08.733 UTC [golang-platform] GetDeploymentPayload -> DEBU 083[0m checking: /opt/gopath/src/unicode exists: false
+[36m2018-06-07 07:33:08.733 UTC [golang-platform] GetDeploymentPayload -> DEBU 084[0m processing dep: crypto/sha1
+[36m2018-06-07 07:33:08.733 UTC [golang-platform] GetDeploymentPayload -> DEBU 085[0m checking: /opt/gopath/src/crypto/sha1 exists: false
+[36m2018-06-07 07:33:08.733 UTC [golang-platform] GetDeploymentPayload -> DEBU 086[0m processing dep: encoding/asn1
+[36m2018-06-07 07:33:08.733 UTC [golang-platform] GetDeploymentPayload -> DEBU 087[0m checking: /opt/gopath/src/encoding/asn1 exists: false
+[36m2018-06-07 07:33:08.733 UTC [golang-platform] GetDeploymentPayload -> DEBU 088[0m processing dep: fmt
+[36m2018-06-07 07:33:08.733 UTC [golang-platform] GetDeploymentPayload -> DEBU 089[0m checking: /opt/gopath/src/fmt exists: false
+[36m2018-06-07 07:33:08.733 UTC [golang-platform] GetDeploymentPayload -> DEBU 08a[0m processing dep: internal/poll
+[36m2018-06-07 07:33:08.733 UTC [golang-platform] GetDeploymentPayload -> DEBU 08b[0m checking: /opt/gopath/src/internal/poll exists: false
+[36m2018-06-07 07:33:08.734 UTC [golang-platform] GetDeploymentPayload -> DEBU 08c[0m processing dep: internal/singleflight
+[36m2018-06-07 07:33:08.734 UTC [golang-platform] GetDeploymentPayload -> DEBU 08d[0m checking: /opt/gopath/src/internal/singleflight exists: false
+[36m2018-06-07 07:33:08.734 UTC [golang-platform] GetDeploymentPayload -> DEBU 08e[0m processing dep: io/ioutil
+[36m2018-06-07 07:33:08.734 UTC [golang-platform] GetDeploymentPayload -> DEBU 08f[0m checking: /opt/gopath/src/io/ioutil exists: false
+[36m2018-06-07 07:33:08.734 UTC [golang-platform] GetDeploymentPayload -> DEBU 090[0m processing dep: net
+[36m2018-06-07 07:33:08.734 UTC [golang-platform] GetDeploymentPayload -> DEBU 091[0m checking: /opt/gopath/src/net exists: false
+[36m2018-06-07 07:33:08.734 UTC [golang-platform] GetDeploymentPayload -> DEBU 092[0m processing dep: reflect
+[36m2018-06-07 07:33:08.734 UTC [golang-platform] GetDeploymentPayload -> DEBU 093[0m checking: /opt/gopath/src/reflect exists: false
+[36m2018-06-07 07:33:08.734 UTC [golang-platform] GetDeploymentPayload -> DEBU 094[0m processing dep: crypto/sha512
+[36m2018-06-07 07:33:08.734 UTC [golang-platform] GetDeploymentPayload -> DEBU 095[0m checking: /opt/gopath/src/crypto/sha512 exists: false
+[36m2018-06-07 07:33:08.734 UTC [golang-platform] GetDeploymentPayload -> DEBU 096[0m done
+[36m2018-06-07 07:33:08.735 UTC [container] WriteFileToPackage -> DEBU 097[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/abac.go
+[36m2018-06-07 07:33:08.743 UTC [container] WriteFileToPackage -> DEBU 098[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/clone.go
+[36m2018-06-07 07:33:08.747 UTC [container] WriteFileToPackage -> DEBU 099[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/decode.go
+[36m2018-06-07 07:33:08.756 UTC [container] WriteFileToPackage -> DEBU 09a[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/discard.go
+[36m2018-06-07 07:33:08.760 UTC [container] WriteFileToPackage -> DEBU 09b[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/encode.go
+[36m2018-06-07 07:33:08.764 UTC [container] WriteFileToPackage -> DEBU 09c[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/equal.go
+[36m2018-06-07 07:33:08.769 UTC [container] WriteFileToPackage -> DEBU 09d[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/extensions.go
+[36m2018-06-07 07:33:08.789 UTC [container] WriteFileToPackage -> DEBU 09e[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/lib.go
+[36m2018-06-07 07:33:08.802 UTC [container] WriteFileToPackage -> DEBU 09f[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/message_set.go
+[36m2018-06-07 07:33:08.825 UTC [container] WriteFileToPackage -> DEBU 0a0[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/pointer_reflect.go
+[36m2018-06-07 07:33:08.829 UTC [container] WriteFileToPackage -> DEBU 0a1[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/pointer_unsafe.go
+[36m2018-06-07 07:33:08.832 UTC [container] WriteFileToPackage -> DEBU 0a2[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/properties.go
+[36m2018-06-07 07:33:08.841 UTC [container] WriteFileToPackage -> DEBU 0a3[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/text.go
+[36m2018-06-07 07:33:08.847 UTC [container] WriteFileToPackage -> DEBU 0a4[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/text_parser.go
+[36m2018-06-07 07:33:08.851 UTC [container] WriteFileToPackage -> DEBU 0a5[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr/attrmgr.go
+[36m2018-06-07 07:33:08.854 UTC [container] WriteFileToPackage -> DEBU 0a6[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid/cid.go
+[36m2018-06-07 07:33:08.864 UTC [container] WriteFileToPackage -> DEBU 0a7[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid/interfaces.go
+[36m2018-06-07 07:33:08.867 UTC [container] WriteFileToPackage -> DEBU 0a8[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors/errors.go
+[36m2018-06-07 07:33:08.870 UTC [container] WriteFileToPackage -> DEBU 0a9[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors/stack.go
+[36m2018-06-07 07:33:08.873 UTC [msp/identity] Sign -> DEBU 0aa[0m Sign: plaintext: 0AEB090A5C08031A0C08B4BFE3D80510...8CCFFF0F0000FFFF804F00E800600400 
+[36m2018-06-07 07:33:08.873 UTC [msp/identity] Sign -> DEBU 0ab[0m Sign: digest: B7AB73EA7E791320FFDE5C479B633F8F7DE55B572541BD85B89AD74C9D94639A 
+[36m2018-06-07 07:33:08.898 UTC [chaincodeCmd] install -> DEBU 0ac[0m Installed remotely response:<status:200 payload:"OK" > 
+2018-06-07 07:33:08.898 UTC [main] main -> INFO 0ad[0m Exiting.....
 Installing chaincode on peer1-org-weihai ...
-[33m2018-06-06 10:52:42.561 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem: no pem content for file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem
-[36m2018-06-06 10:52:42.593 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
-[36m2018-06-06 10:52:42.593 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
-2018-06-06 10:52:42.593 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 004[0m Using default escc
-2018-06-06 10:52:42.594 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 005[0m Using default vscc
-[36m2018-06-06 10:52:42.594 UTC [chaincodeCmd] getChaincodeSpec -> DEBU 006[0m java chaincode disabled
-[36m2018-06-06 10:52:42.637 UTC [golang-platform] getCodeFromFS -> DEBU 007[0m getCodeFromFS github.com/hyperledger/fabric-samples/chaincode/abac/go
-[36m2018-06-06 10:52:42.928 UTC [golang-platform] func1 -> DEBU 008[0m Discarding GOROOT package fmt
-[36m2018-06-06 10:52:42.928 UTC [golang-platform] func1 -> DEBU 009[0m Accepting import: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid
-[36m2018-06-06 10:52:42.928 UTC [golang-platform] func1 -> DEBU 00a[0m Discarding provided package github.com/hyperledger/fabric/core/chaincode/shim
-[36m2018-06-06 10:52:42.928 UTC [golang-platform] func1 -> DEBU 00b[0m Discarding provided package github.com/hyperledger/fabric/protos/peer
-[36m2018-06-06 10:52:42.930 UTC [golang-platform] func1 -> DEBU 00c[0m Discarding GOROOT package strconv
-[36m2018-06-06 10:52:43.110 UTC [golang-platform] func1 -> DEBU 00d[0m skipping dir: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor
-[36m2018-06-06 10:52:43.110 UTC [golang-platform] GetDeploymentPayload -> DEBU 00e[0m processing dep: crypto/rand
-[36m2018-06-06 10:52:43.110 UTC [golang-platform] GetDeploymentPayload -> DEBU 00f[0m checking: /opt/gopath/src/crypto/rand exists: false
-[36m2018-06-06 10:52:43.111 UTC [golang-platform] GetDeploymentPayload -> DEBU 010[0m processing dep: crypto/sha1
-[36m2018-06-06 10:52:43.111 UTC [golang-platform] GetDeploymentPayload -> DEBU 011[0m checking: /opt/gopath/src/crypto/sha1 exists: false
-[36m2018-06-06 10:52:43.111 UTC [golang-platform] GetDeploymentPayload -> DEBU 012[0m processing dep: crypto/subtle
-[36m2018-06-06 10:52:43.112 UTC [golang-platform] GetDeploymentPayload -> DEBU 013[0m checking: /opt/gopath/src/crypto/subtle exists: false
-[36m2018-06-06 10:52:43.113 UTC [golang-platform] GetDeploymentPayload -> DEBU 014[0m processing dep: fmt
-[36m2018-06-06 10:52:43.113 UTC [golang-platform] GetDeploymentPayload -> DEBU 015[0m checking: /opt/gopath/src/fmt exists: false
-[36m2018-06-06 10:52:43.113 UTC [golang-platform] GetDeploymentPayload -> DEBU 016[0m processing dep: crypto
-[36m2018-06-06 10:52:43.113 UTC [golang-platform] GetDeploymentPayload -> DEBU 017[0m checking: /opt/gopath/src/crypto exists: false
-[36m2018-06-06 10:52:43.114 UTC [golang-platform] GetDeploymentPayload -> DEBU 018[0m processing dep: runtime/cgo
-[36m2018-06-06 10:52:43.114 UTC [golang-platform] GetDeploymentPayload -> DEBU 019[0m checking: /opt/gopath/src/runtime/cgo exists: false
-[36m2018-06-06 10:52:43.114 UTC [golang-platform] GetDeploymentPayload -> DEBU 01a[0m processing dep: sync/atomic
-[36m2018-06-06 10:52:43.115 UTC [golang-platform] GetDeploymentPayload -> DEBU 01b[0m checking: /opt/gopath/src/sync/atomic exists: false
-[36m2018-06-06 10:52:43.115 UTC [golang-platform] GetDeploymentPayload -> DEBU 01c[0m processing dep: crypto/des
-[36m2018-06-06 10:52:43.116 UTC [golang-platform] GetDeploymentPayload -> DEBU 01d[0m checking: /opt/gopath/src/crypto/des exists: false
-[36m2018-06-06 10:52:43.116 UTC [golang-platform] GetDeploymentPayload -> DEBU 01e[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors
-[36m2018-06-06 10:52:43.117 UTC [golang-platform] GetDeploymentPayload -> DEBU 01f[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors exists: true
-[36m2018-06-06 10:52:43.121 UTC [golang-platform] GetDeploymentPayload -> DEBU 020[0m processing dep: hash
-[36m2018-06-06 10:52:43.121 UTC [golang-platform] GetDeploymentPayload -> DEBU 021[0m checking: /opt/gopath/src/hash exists: false
-[36m2018-06-06 10:52:43.121 UTC [golang-platform] GetDeploymentPayload -> DEBU 022[0m processing dep: internal/syscall/unix
-[36m2018-06-06 10:52:43.121 UTC [golang-platform] GetDeploymentPayload -> DEBU 023[0m checking: /opt/gopath/src/internal/syscall/unix exists: false
-[36m2018-06-06 10:52:43.121 UTC [golang-platform] GetDeploymentPayload -> DEBU 024[0m processing dep: crypto/md5
-[36m2018-06-06 10:52:43.122 UTC [golang-platform] GetDeploymentPayload -> DEBU 025[0m checking: /opt/gopath/src/crypto/md5 exists: false
-[36m2018-06-06 10:52:43.122 UTC [golang-platform] GetDeploymentPayload -> DEBU 026[0m processing dep: crypto/rsa
-[36m2018-06-06 10:52:43.122 UTC [golang-platform] GetDeploymentPayload -> DEBU 027[0m checking: /opt/gopath/src/crypto/rsa exists: false
-[36m2018-06-06 10:52:43.123 UTC [golang-platform] GetDeploymentPayload -> DEBU 028[0m processing dep: github.com/hyperledger/fabric/protos/msp
-[36m2018-06-06 10:52:43.123 UTC [golang-platform] GetDeploymentPayload -> DEBU 029[0m checking: /opt/gopath/src/github.com/hyperledger/fabric/protos/msp exists: false
-[36m2018-06-06 10:52:43.123 UTC [golang-platform] GetDeploymentPayload -> DEBU 02a[0m processing dep: syscall
-[36m2018-06-06 10:52:43.123 UTC [golang-platform] GetDeploymentPayload -> DEBU 02b[0m checking: /opt/gopath/src/syscall exists: false
-[36m2018-06-06 10:52:43.123 UTC [golang-platform] GetDeploymentPayload -> DEBU 02c[0m processing dep: crypto/aes
-[36m2018-06-06 10:52:43.123 UTC [golang-platform] GetDeploymentPayload -> DEBU 02d[0m checking: /opt/gopath/src/crypto/aes exists: false
-[36m2018-06-06 10:52:43.123 UTC [golang-platform] GetDeploymentPayload -> DEBU 02e[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto
-[36m2018-06-06 10:52:43.126 UTC [golang-platform] GetDeploymentPayload -> DEBU 02f[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto exists: true
-[36m2018-06-06 10:52:43.135 UTC [golang-platform] GetDeploymentPayload -> DEBU 030[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr
-[36m2018-06-06 10:52:43.137 UTC [golang-platform] GetDeploymentPayload -> DEBU 031[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr exists: true
-[36m2018-06-06 10:52:43.138 UTC [golang-platform] GetDeploymentPayload -> DEBU 032[0m processing dep: path
-[36m2018-06-06 10:52:43.138 UTC [golang-platform] GetDeploymentPayload -> DEBU 033[0m checking: /opt/gopath/src/path exists: false
-[36m2018-06-06 10:52:43.138 UTC [golang-platform] GetDeploymentPayload -> DEBU 034[0m processing dep: bytes
-[36m2018-06-06 10:52:43.139 UTC [golang-platform] GetDeploymentPayload -> DEBU 035[0m checking: /opt/gopath/src/bytes exists: false
-[36m2018-06-06 10:52:43.139 UTC [golang-platform] GetDeploymentPayload -> DEBU 036[0m processing dep: context
-[36m2018-06-06 10:52:43.139 UTC [golang-platform] GetDeploymentPayload -> DEBU 037[0m checking: /opt/gopath/src/context exists: false
-[36m2018-06-06 10:52:43.140 UTC [golang-platform] GetDeploymentPayload -> DEBU 038[0m processing dep: encoding/base64
-[36m2018-06-06 10:52:43.140 UTC [golang-platform] GetDeploymentPayload -> DEBU 039[0m checking: /opt/gopath/src/encoding/base64 exists: false
-[36m2018-06-06 10:52:43.140 UTC [golang-platform] GetDeploymentPayload -> DEBU 03a[0m processing dep: encoding/json
-[36m2018-06-06 10:52:43.140 UTC [golang-platform] GetDeploymentPayload -> DEBU 03b[0m checking: /opt/gopath/src/encoding/json exists: false
-[36m2018-06-06 10:52:43.140 UTC [golang-platform] GetDeploymentPayload -> DEBU 03c[0m processing dep: internal/cpu
-[36m2018-06-06 10:52:43.141 UTC [golang-platform] GetDeploymentPayload -> DEBU 03d[0m checking: /opt/gopath/src/internal/cpu exists: false
-[36m2018-06-06 10:52:43.141 UTC [golang-platform] GetDeploymentPayload -> DEBU 03e[0m processing dep: io
-[36m2018-06-06 10:52:43.141 UTC [golang-platform] GetDeploymentPayload -> DEBU 03f[0m checking: /opt/gopath/src/io exists: false
-[36m2018-06-06 10:52:43.141 UTC [golang-platform] GetDeploymentPayload -> DEBU 040[0m processing dep: math
-[36m2018-06-06 10:52:43.141 UTC [golang-platform] GetDeploymentPayload -> DEBU 041[0m checking: /opt/gopath/src/math exists: false
-[36m2018-06-06 10:52:43.141 UTC [golang-platform] GetDeploymentPayload -> DEBU 042[0m processing dep: sync
-[36m2018-06-06 10:52:43.141 UTC [golang-platform] GetDeploymentPayload -> DEBU 043[0m checking: /opt/gopath/src/sync exists: false
-[36m2018-06-06 10:52:43.141 UTC [golang-platform] GetDeploymentPayload -> DEBU 044[0m processing dep: bufio
-[36m2018-06-06 10:52:43.142 UTC [golang-platform] GetDeploymentPayload -> DEBU 045[0m checking: /opt/gopath/src/bufio exists: false
-[36m2018-06-06 10:52:43.142 UTC [golang-platform] GetDeploymentPayload -> DEBU 046[0m processing dep: io/ioutil
-[36m2018-06-06 10:52:43.142 UTC [golang-platform] GetDeploymentPayload -> DEBU 047[0m checking: /opt/gopath/src/io/ioutil exists: false
-[36m2018-06-06 10:52:43.142 UTC [golang-platform] GetDeploymentPayload -> DEBU 048[0m processing dep: log
-[36m2018-06-06 10:52:43.143 UTC [golang-platform] GetDeploymentPayload -> DEBU 049[0m checking: /opt/gopath/src/log exists: false
-[36m2018-06-06 10:52:43.143 UTC [golang-platform] GetDeploymentPayload -> DEBU 04a[0m processing dep: strconv
-[36m2018-06-06 10:52:43.143 UTC [golang-platform] GetDeploymentPayload -> DEBU 04b[0m checking: /opt/gopath/src/strconv exists: false
-[36m2018-06-06 10:52:43.143 UTC [golang-platform] GetDeploymentPayload -> DEBU 04c[0m processing dep: crypto/elliptic
-[36m2018-06-06 10:52:43.143 UTC [golang-platform] GetDeploymentPayload -> DEBU 04d[0m checking: /opt/gopath/src/crypto/elliptic exists: false
-[36m2018-06-06 10:52:43.143 UTC [golang-platform] GetDeploymentPayload -> DEBU 04e[0m processing dep: unsafe
-[36m2018-06-06 10:52:43.144 UTC [golang-platform] GetDeploymentPayload -> DEBU 04f[0m checking: /opt/gopath/src/unsafe exists: false
-[36m2018-06-06 10:52:43.144 UTC [golang-platform] GetDeploymentPayload -> DEBU 050[0m processing dep: encoding/hex
-[36m2018-06-06 10:52:43.144 UTC [golang-platform] GetDeploymentPayload -> DEBU 051[0m checking: /opt/gopath/src/encoding/hex exists: false
-[36m2018-06-06 10:52:43.144 UTC [golang-platform] GetDeploymentPayload -> DEBU 052[0m processing dep: internal/nettrace
-[36m2018-06-06 10:52:43.144 UTC [golang-platform] GetDeploymentPayload -> DEBU 053[0m checking: /opt/gopath/src/internal/nettrace exists: false
-[36m2018-06-06 10:52:43.144 UTC [golang-platform] GetDeploymentPayload -> DEBU 054[0m processing dep: math/bits
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 055[0m checking: /opt/gopath/src/math/bits exists: false
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 056[0m processing dep: runtime/internal/atomic
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 057[0m checking: /opt/gopath/src/runtime/internal/atomic exists: false
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 058[0m processing dep: crypto/cipher
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 059[0m checking: /opt/gopath/src/crypto/cipher exists: false
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 05a[0m processing dep: crypto/sha512
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 05b[0m checking: /opt/gopath/src/crypto/sha512 exists: false
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 05c[0m processing dep: encoding
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 05d[0m checking: /opt/gopath/src/encoding exists: false
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 05e[0m processing dep: math/rand
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 05f[0m checking: /opt/gopath/src/math/rand exists: false
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 060[0m processing dep: sort
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 061[0m checking: /opt/gopath/src/sort exists: false
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 062[0m processing dep: crypto/ecdsa
-[36m2018-06-06 10:52:43.145 UTC [golang-platform] GetDeploymentPayload -> DEBU 063[0m checking: /opt/gopath/src/crypto/ecdsa exists: false
-[36m2018-06-06 10:52:43.146 UTC [golang-platform] GetDeploymentPayload -> DEBU 064[0m processing dep: path/filepath
-[36m2018-06-06 10:52:43.146 UTC [golang-platform] GetDeploymentPayload -> DEBU 065[0m checking: /opt/gopath/src/path/filepath exists: false
-[36m2018-06-06 10:52:43.146 UTC [golang-platform] GetDeploymentPayload -> DEBU 066[0m processing dep: unicode
-[36m2018-06-06 10:52:43.146 UTC [golang-platform] GetDeploymentPayload -> DEBU 067[0m checking: /opt/gopath/src/unicode exists: false
-[36m2018-06-06 10:52:43.146 UTC [golang-platform] GetDeploymentPayload -> DEBU 068[0m processing dep: runtime/internal/sys
-[36m2018-06-06 10:52:43.146 UTC [golang-platform] GetDeploymentPayload -> DEBU 069[0m checking: /opt/gopath/src/runtime/internal/sys exists: false
-[36m2018-06-06 10:52:43.146 UTC [golang-platform] GetDeploymentPayload -> DEBU 06a[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid
-[36m2018-06-06 10:52:43.150 UTC [golang-platform] GetDeploymentPayload -> DEBU 06b[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid exists: true
-[36m2018-06-06 10:52:43.154 UTC [golang-platform] GetDeploymentPayload -> DEBU 06c[0m processing dep: crypto/dsa
-[36m2018-06-06 10:52:43.154 UTC [golang-platform] GetDeploymentPayload -> DEBU 06d[0m checking: /opt/gopath/src/crypto/dsa exists: false
-[36m2018-06-06 10:52:43.154 UTC [golang-platform] GetDeploymentPayload -> DEBU 06e[0m processing dep: encoding/pem
-[36m2018-06-06 10:52:43.154 UTC [golang-platform] GetDeploymentPayload -> DEBU 06f[0m checking: /opt/gopath/src/encoding/pem exists: false
-[36m2018-06-06 10:52:43.154 UTC [golang-platform] GetDeploymentPayload -> DEBU 070[0m processing dep: errors
-[36m2018-06-06 10:52:43.154 UTC [golang-platform] GetDeploymentPayload -> DEBU 071[0m checking: /opt/gopath/src/errors exists: false
-[36m2018-06-06 10:52:43.154 UTC [golang-platform] GetDeploymentPayload -> DEBU 072[0m processing dep: internal/poll
-[36m2018-06-06 10:52:43.154 UTC [golang-platform] GetDeploymentPayload -> DEBU 073[0m checking: /opt/gopath/src/internal/poll exists: false
-[36m2018-06-06 10:52:43.154 UTC [golang-platform] GetDeploymentPayload -> DEBU 074[0m processing dep: internal/singleflight
-[36m2018-06-06 10:52:43.154 UTC [golang-platform] GetDeploymentPayload -> DEBU 075[0m checking: /opt/gopath/src/internal/singleflight exists: false
-[36m2018-06-06 10:52:43.154 UTC [golang-platform] GetDeploymentPayload -> DEBU 076[0m processing dep: runtime
-[36m2018-06-06 10:52:43.154 UTC [golang-platform] GetDeploymentPayload -> DEBU 077[0m checking: /opt/gopath/src/runtime exists: false
-[36m2018-06-06 10:52:43.155 UTC [golang-platform] GetDeploymentPayload -> DEBU 078[0m processing dep: strings
-[36m2018-06-06 10:52:43.155 UTC [golang-platform] GetDeploymentPayload -> DEBU 079[0m checking: /opt/gopath/src/strings exists: false
-[36m2018-06-06 10:52:43.155 UTC [golang-platform] GetDeploymentPayload -> DEBU 07a[0m processing dep: unicode/utf16
-[36m2018-06-06 10:52:43.155 UTC [golang-platform] GetDeploymentPayload -> DEBU 07b[0m checking: /opt/gopath/src/unicode/utf16 exists: false
-[36m2018-06-06 10:52:43.155 UTC [golang-platform] GetDeploymentPayload -> DEBU 07c[0m processing dep: crypto/x509
-[36m2018-06-06 10:52:43.155 UTC [golang-platform] GetDeploymentPayload -> DEBU 07d[0m checking: /opt/gopath/src/crypto/x509 exists: false
-[36m2018-06-06 10:52:43.155 UTC [golang-platform] GetDeploymentPayload -> DEBU 07e[0m processing dep: crypto/x509/pkix
-[36m2018-06-06 10:52:43.155 UTC [golang-platform] GetDeploymentPayload -> DEBU 07f[0m checking: /opt/gopath/src/crypto/x509/pkix exists: false
-[36m2018-06-06 10:52:43.155 UTC [golang-platform] GetDeploymentPayload -> DEBU 080[0m processing dep: encoding/binary
-[36m2018-06-06 10:52:43.155 UTC [golang-platform] GetDeploymentPayload -> DEBU 081[0m checking: /opt/gopath/src/encoding/binary exists: false
-[36m2018-06-06 10:52:43.156 UTC [golang-platform] GetDeploymentPayload -> DEBU 082[0m processing dep: math/big
-[36m2018-06-06 10:52:43.156 UTC [golang-platform] GetDeploymentPayload -> DEBU 083[0m checking: /opt/gopath/src/math/big exists: false
-[36m2018-06-06 10:52:43.156 UTC [golang-platform] GetDeploymentPayload -> DEBU 084[0m processing dep: os
-[36m2018-06-06 10:52:43.156 UTC [golang-platform] GetDeploymentPayload -> DEBU 085[0m checking: /opt/gopath/src/os exists: false
-[36m2018-06-06 10:52:43.156 UTC [golang-platform] GetDeploymentPayload -> DEBU 086[0m processing dep: crypto/sha256
-[36m2018-06-06 10:52:43.157 UTC [golang-platform] GetDeploymentPayload -> DEBU 087[0m checking: /opt/gopath/src/crypto/sha256 exists: false
-[36m2018-06-06 10:52:43.157 UTC [golang-platform] GetDeploymentPayload -> DEBU 088[0m processing dep: internal/race
-[36m2018-06-06 10:52:43.158 UTC [golang-platform] GetDeploymentPayload -> DEBU 089[0m checking: /opt/gopath/src/internal/race exists: false
-[36m2018-06-06 10:52:43.158 UTC [golang-platform] GetDeploymentPayload -> DEBU 08a[0m processing dep: reflect
-[36m2018-06-06 10:52:43.158 UTC [golang-platform] GetDeploymentPayload -> DEBU 08b[0m checking: /opt/gopath/src/reflect exists: false
-[36m2018-06-06 10:52:43.158 UTC [golang-platform] GetDeploymentPayload -> DEBU 08c[0m processing dep: unicode/utf8
-[36m2018-06-06 10:52:43.158 UTC [golang-platform] GetDeploymentPayload -> DEBU 08d[0m checking: /opt/gopath/src/unicode/utf8 exists: false
-[36m2018-06-06 10:52:43.158 UTC [golang-platform] GetDeploymentPayload -> DEBU 08e[0m processing dep: crypto/internal/cipherhw
-[36m2018-06-06 10:52:43.158 UTC [golang-platform] GetDeploymentPayload -> DEBU 08f[0m checking: /opt/gopath/src/crypto/internal/cipherhw exists: false
-[36m2018-06-06 10:52:43.159 UTC [golang-platform] GetDeploymentPayload -> DEBU 090[0m processing dep: encoding/asn1
-[36m2018-06-06 10:52:43.159 UTC [golang-platform] GetDeploymentPayload -> DEBU 091[0m checking: /opt/gopath/src/encoding/asn1 exists: false
-[36m2018-06-06 10:52:43.160 UTC [golang-platform] GetDeploymentPayload -> DEBU 092[0m processing dep: net
-[36m2018-06-06 10:52:43.160 UTC [golang-platform] GetDeploymentPayload -> DEBU 093[0m checking: /opt/gopath/src/net exists: false
-[36m2018-06-06 10:52:43.160 UTC [golang-platform] GetDeploymentPayload -> DEBU 094[0m processing dep: time
-[36m2018-06-06 10:52:43.161 UTC [golang-platform] GetDeploymentPayload -> DEBU 095[0m checking: /opt/gopath/src/time exists: false
-[36m2018-06-06 10:52:43.161 UTC [golang-platform] GetDeploymentPayload -> DEBU 096[0m done
-[36m2018-06-06 10:52:43.161 UTC [container] WriteFileToPackage -> DEBU 097[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/abac.go
-[36m2018-06-06 10:52:43.165 UTC [container] WriteFileToPackage -> DEBU 098[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/clone.go
-[36m2018-06-06 10:52:43.183 UTC [container] WriteFileToPackage -> DEBU 099[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/decode.go
-[36m2018-06-06 10:52:43.189 UTC [container] WriteFileToPackage -> DEBU 09a[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/discard.go
-[36m2018-06-06 10:52:43.198 UTC [container] WriteFileToPackage -> DEBU 09b[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/encode.go
-[36m2018-06-06 10:52:43.202 UTC [container] WriteFileToPackage -> DEBU 09c[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/equal.go
-[36m2018-06-06 10:52:43.210 UTC [container] WriteFileToPackage -> DEBU 09d[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/extensions.go
-[36m2018-06-06 10:52:43.216 UTC [container] WriteFileToPackage -> DEBU 09e[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/lib.go
-[36m2018-06-06 10:52:43.220 UTC [container] WriteFileToPackage -> DEBU 09f[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/message_set.go
-[36m2018-06-06 10:52:43.225 UTC [container] WriteFileToPackage -> DEBU 0a0[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/pointer_reflect.go
-[36m2018-06-06 10:52:43.228 UTC [container] WriteFileToPackage -> DEBU 0a1[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/pointer_unsafe.go
-[36m2018-06-06 10:52:43.231 UTC [container] WriteFileToPackage -> DEBU 0a2[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/properties.go
-[36m2018-06-06 10:52:43.235 UTC [container] WriteFileToPackage -> DEBU 0a3[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/text.go
-[36m2018-06-06 10:52:43.239 UTC [container] WriteFileToPackage -> DEBU 0a4[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/text_parser.go
-[36m2018-06-06 10:52:43.243 UTC [container] WriteFileToPackage -> DEBU 0a5[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr/attrmgr.go
-[36m2018-06-06 10:52:43.249 UTC [container] WriteFileToPackage -> DEBU 0a6[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid/cid.go
-[36m2018-06-06 10:52:43.253 UTC [container] WriteFileToPackage -> DEBU 0a7[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid/interfaces.go
-[36m2018-06-06 10:52:43.256 UTC [container] WriteFileToPackage -> DEBU 0a8[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors/errors.go
-[36m2018-06-06 10:52:43.260 UTC [container] WriteFileToPackage -> DEBU 0a9[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors/stack.go
-[36m2018-06-06 10:52:43.265 UTC [msp/identity] Sign -> DEBU 0aa[0m Sign: plaintext: 0AC9090A5B08031A0B08FBF9DED80510...8CCFFF0F0000FFFF804F00E800600400 
-[36m2018-06-06 10:52:43.265 UTC [msp/identity] Sign -> DEBU 0ab[0m Sign: digest: 54BDC4645971FDEAE26C9465E3A508DEE3CB4A414C78B9AB31D4D0DA867F3EE5 
-[36m2018-06-06 10:52:43.294 UTC [chaincodeCmd] install -> DEBU 0ac[0m Installed remotely response:<status:200 payload:"OK" > 
-2018-06-06 10:52:43.294 UTC [main] main -> INFO 0ad[0m Exiting.....
+[33m2018-06-07 07:33:08.973 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem: no pem content for file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem
+[36m2018-06-07 07:33:09.022 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:33:09.022 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:33:09.022 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 004[0m Using default escc
+2018-06-07 07:33:09.022 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 005[0m Using default vscc
+[36m2018-06-07 07:33:09.022 UTC [chaincodeCmd] getChaincodeSpec -> DEBU 006[0m java chaincode disabled
+[36m2018-06-07 07:33:09.087 UTC [golang-platform] getCodeFromFS -> DEBU 007[0m getCodeFromFS github.com/hyperledger/fabric-samples/chaincode/abac/go
+[36m2018-06-07 07:33:09.382 UTC [golang-platform] func1 -> DEBU 008[0m Discarding GOROOT package fmt
+[36m2018-06-07 07:33:09.382 UTC [golang-platform] func1 -> DEBU 009[0m Accepting import: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid
+[36m2018-06-07 07:33:09.382 UTC [golang-platform] func1 -> DEBU 00a[0m Discarding provided package github.com/hyperledger/fabric/core/chaincode/shim
+[36m2018-06-07 07:33:09.382 UTC [golang-platform] func1 -> DEBU 00b[0m Discarding provided package github.com/hyperledger/fabric/protos/peer
+[36m2018-06-07 07:33:09.382 UTC [golang-platform] func1 -> DEBU 00c[0m Discarding GOROOT package strconv
+[36m2018-06-07 07:33:09.575 UTC [golang-platform] func1 -> DEBU 00d[0m skipping dir: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor
+[36m2018-06-07 07:33:09.575 UTC [golang-platform] GetDeploymentPayload -> DEBU 00e[0m processing dep: internal/race
+[36m2018-06-07 07:33:09.575 UTC [golang-platform] GetDeploymentPayload -> DEBU 00f[0m checking: /opt/gopath/src/internal/race exists: false
+[36m2018-06-07 07:33:09.575 UTC [golang-platform] GetDeploymentPayload -> DEBU 010[0m processing dep: math/bits
+[36m2018-06-07 07:33:09.575 UTC [golang-platform] GetDeploymentPayload -> DEBU 011[0m checking: /opt/gopath/src/math/bits exists: false
+[36m2018-06-07 07:33:09.575 UTC [golang-platform] GetDeploymentPayload -> DEBU 012[0m processing dep: crypto/ecdsa
+[36m2018-06-07 07:33:09.575 UTC [golang-platform] GetDeploymentPayload -> DEBU 013[0m checking: /opt/gopath/src/crypto/ecdsa exists: false
+[36m2018-06-07 07:33:09.575 UTC [golang-platform] GetDeploymentPayload -> DEBU 014[0m processing dep: crypto/internal/cipherhw
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 015[0m checking: /opt/gopath/src/crypto/internal/cipherhw exists: false
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 016[0m processing dep: crypto/md5
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 017[0m checking: /opt/gopath/src/crypto/md5 exists: false
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 018[0m processing dep: crypto/sha256
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 019[0m checking: /opt/gopath/src/crypto/sha256 exists: false
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 01a[0m processing dep: encoding/binary
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 01b[0m checking: /opt/gopath/src/encoding/binary exists: false
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 01c[0m processing dep: internal/poll
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 01d[0m checking: /opt/gopath/src/internal/poll exists: false
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 01e[0m processing dep: crypto/sha512
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 01f[0m checking: /opt/gopath/src/crypto/sha512 exists: false
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 020[0m processing dep: unicode
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 021[0m checking: /opt/gopath/src/unicode exists: false
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 022[0m processing dep: unsafe
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 023[0m checking: /opt/gopath/src/unsafe exists: false
+[36m2018-06-07 07:33:09.576 UTC [golang-platform] GetDeploymentPayload -> DEBU 024[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid
+[36m2018-06-07 07:33:09.583 UTC [golang-platform] GetDeploymentPayload -> DEBU 025[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid exists: true
+[36m2018-06-07 07:33:09.587 UTC [golang-platform] GetDeploymentPayload -> DEBU 026[0m processing dep: runtime/cgo
+[36m2018-06-07 07:33:09.588 UTC [golang-platform] GetDeploymentPayload -> DEBU 027[0m checking: /opt/gopath/src/runtime/cgo exists: false
+[36m2018-06-07 07:33:09.588 UTC [golang-platform] GetDeploymentPayload -> DEBU 028[0m processing dep: unicode/utf8
+[36m2018-06-07 07:33:09.588 UTC [golang-platform] GetDeploymentPayload -> DEBU 029[0m checking: /opt/gopath/src/unicode/utf8 exists: false
+[36m2018-06-07 07:33:09.588 UTC [golang-platform] GetDeploymentPayload -> DEBU 02a[0m processing dep: crypto
+[36m2018-06-07 07:33:09.588 UTC [golang-platform] GetDeploymentPayload -> DEBU 02b[0m checking: /opt/gopath/src/crypto exists: false
+[36m2018-06-07 07:33:09.588 UTC [golang-platform] GetDeploymentPayload -> DEBU 02c[0m processing dep: internal/syscall/unix
+[36m2018-06-07 07:33:09.588 UTC [golang-platform] GetDeploymentPayload -> DEBU 02d[0m checking: /opt/gopath/src/internal/syscall/unix exists: false
+[36m2018-06-07 07:33:09.588 UTC [golang-platform] GetDeploymentPayload -> DEBU 02e[0m processing dep: crypto/des
+[36m2018-06-07 07:33:09.588 UTC [golang-platform] GetDeploymentPayload -> DEBU 02f[0m checking: /opt/gopath/src/crypto/des exists: false
+[36m2018-06-07 07:33:09.588 UTC [golang-platform] GetDeploymentPayload -> DEBU 030[0m processing dep: encoding/base64
+[36m2018-06-07 07:33:09.588 UTC [golang-platform] GetDeploymentPayload -> DEBU 031[0m checking: /opt/gopath/src/encoding/base64 exists: false
+[36m2018-06-07 07:33:09.588 UTC [golang-platform] GetDeploymentPayload -> DEBU 032[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr
+[36m2018-06-07 07:33:09.590 UTC [golang-platform] GetDeploymentPayload -> DEBU 033[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr exists: true
+[36m2018-06-07 07:33:09.592 UTC [golang-platform] GetDeploymentPayload -> DEBU 034[0m processing dep: hash
+[36m2018-06-07 07:33:09.592 UTC [golang-platform] GetDeploymentPayload -> DEBU 035[0m checking: /opt/gopath/src/hash exists: false
+[36m2018-06-07 07:33:09.593 UTC [golang-platform] GetDeploymentPayload -> DEBU 036[0m processing dep: sort
+[36m2018-06-07 07:33:09.593 UTC [golang-platform] GetDeploymentPayload -> DEBU 037[0m checking: /opt/gopath/src/sort exists: false
+[36m2018-06-07 07:33:09.593 UTC [golang-platform] GetDeploymentPayload -> DEBU 038[0m processing dep: crypto/elliptic
+[36m2018-06-07 07:33:09.593 UTC [golang-platform] GetDeploymentPayload -> DEBU 039[0m checking: /opt/gopath/src/crypto/elliptic exists: false
+[36m2018-06-07 07:33:09.594 UTC [golang-platform] GetDeploymentPayload -> DEBU 03a[0m processing dep: crypto/sha1
+[36m2018-06-07 07:33:09.594 UTC [golang-platform] GetDeploymentPayload -> DEBU 03b[0m checking: /opt/gopath/src/crypto/sha1 exists: false
+[36m2018-06-07 07:33:09.594 UTC [golang-platform] GetDeploymentPayload -> DEBU 03c[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto
+[36m2018-06-07 07:33:09.598 UTC [golang-platform] GetDeploymentPayload -> DEBU 03d[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto exists: true
+[36m2018-06-07 07:33:09.624 UTC [golang-platform] GetDeploymentPayload -> DEBU 03e[0m processing dep: unicode/utf16
+[36m2018-06-07 07:33:09.624 UTC [golang-platform] GetDeploymentPayload -> DEBU 03f[0m checking: /opt/gopath/src/unicode/utf16 exists: false
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 040[0m processing dep: path
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 041[0m checking: /opt/gopath/src/path exists: false
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 042[0m processing dep: crypto/aes
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 043[0m checking: /opt/gopath/src/crypto/aes exists: false
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 044[0m processing dep: crypto/x509/pkix
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 045[0m checking: /opt/gopath/src/crypto/x509/pkix exists: false
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 046[0m processing dep: encoding
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 047[0m checking: /opt/gopath/src/encoding exists: false
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 048[0m processing dep: encoding/asn1
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 049[0m checking: /opt/gopath/src/encoding/asn1 exists: false
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 04a[0m processing dep: internal/nettrace
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 04b[0m checking: /opt/gopath/src/internal/nettrace exists: false
+[36m2018-06-07 07:33:09.625 UTC [golang-platform] GetDeploymentPayload -> DEBU 04c[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors
+[36m2018-06-07 07:33:09.628 UTC [golang-platform] GetDeploymentPayload -> DEBU 04d[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors exists: true
+[36m2018-06-07 07:33:09.636 UTC [golang-platform] GetDeploymentPayload -> DEBU 04e[0m processing dep: github.com/hyperledger/fabric/protos/msp
+[36m2018-06-07 07:33:09.636 UTC [golang-platform] GetDeploymentPayload -> DEBU 04f[0m checking: /opt/gopath/src/github.com/hyperledger/fabric/protos/msp exists: false
+[36m2018-06-07 07:33:09.636 UTC [golang-platform] GetDeploymentPayload -> DEBU 050[0m processing dep: math/big
+[36m2018-06-07 07:33:09.636 UTC [golang-platform] GetDeploymentPayload -> DEBU 051[0m checking: /opt/gopath/src/math/big exists: false
+[36m2018-06-07 07:33:09.636 UTC [golang-platform] GetDeploymentPayload -> DEBU 052[0m processing dep: strconv
+[36m2018-06-07 07:33:09.637 UTC [golang-platform] GetDeploymentPayload -> DEBU 053[0m checking: /opt/gopath/src/strconv exists: false
+[36m2018-06-07 07:33:09.637 UTC [golang-platform] GetDeploymentPayload -> DEBU 054[0m processing dep: strings
+[36m2018-06-07 07:33:09.637 UTC [golang-platform] GetDeploymentPayload -> DEBU 055[0m checking: /opt/gopath/src/strings exists: false
+[36m2018-06-07 07:33:09.637 UTC [golang-platform] GetDeploymentPayload -> DEBU 056[0m processing dep: math
+[36m2018-06-07 07:33:09.637 UTC [golang-platform] GetDeploymentPayload -> DEBU 057[0m checking: /opt/gopath/src/math exists: false
+[36m2018-06-07 07:33:09.637 UTC [golang-platform] GetDeploymentPayload -> DEBU 058[0m processing dep: time
+[36m2018-06-07 07:33:09.638 UTC [golang-platform] GetDeploymentPayload -> DEBU 059[0m checking: /opt/gopath/src/time exists: false
+[36m2018-06-07 07:33:09.638 UTC [golang-platform] GetDeploymentPayload -> DEBU 05a[0m processing dep: os
+[36m2018-06-07 07:33:09.638 UTC [golang-platform] GetDeploymentPayload -> DEBU 05b[0m checking: /opt/gopath/src/os exists: false
+[36m2018-06-07 07:33:09.638 UTC [golang-platform] GetDeploymentPayload -> DEBU 05c[0m processing dep: bufio
+[36m2018-06-07 07:33:09.638 UTC [golang-platform] GetDeploymentPayload -> DEBU 05d[0m checking: /opt/gopath/src/bufio exists: false
+[36m2018-06-07 07:33:09.639 UTC [golang-platform] GetDeploymentPayload -> DEBU 05e[0m processing dep: bytes
+[36m2018-06-07 07:33:09.639 UTC [golang-platform] GetDeploymentPayload -> DEBU 05f[0m checking: /opt/gopath/src/bytes exists: false
+[36m2018-06-07 07:33:09.639 UTC [golang-platform] GetDeploymentPayload -> DEBU 060[0m processing dep: errors
+[36m2018-06-07 07:33:09.639 UTC [golang-platform] GetDeploymentPayload -> DEBU 061[0m checking: /opt/gopath/src/errors exists: false
+[36m2018-06-07 07:33:09.639 UTC [golang-platform] GetDeploymentPayload -> DEBU 062[0m processing dep: internal/singleflight
+[36m2018-06-07 07:33:09.639 UTC [golang-platform] GetDeploymentPayload -> DEBU 063[0m checking: /opt/gopath/src/internal/singleflight exists: false
+[36m2018-06-07 07:33:09.639 UTC [golang-platform] GetDeploymentPayload -> DEBU 064[0m processing dep: io/ioutil
+[36m2018-06-07 07:33:09.639 UTC [golang-platform] GetDeploymentPayload -> DEBU 065[0m checking: /opt/gopath/src/io/ioutil exists: false
+[36m2018-06-07 07:33:09.639 UTC [golang-platform] GetDeploymentPayload -> DEBU 066[0m processing dep: crypto/dsa
+[36m2018-06-07 07:33:09.640 UTC [golang-platform] GetDeploymentPayload -> DEBU 067[0m checking: /opt/gopath/src/crypto/dsa exists: false
+[36m2018-06-07 07:33:09.640 UTC [golang-platform] GetDeploymentPayload -> DEBU 068[0m processing dep: sync
+[36m2018-06-07 07:33:09.640 UTC [golang-platform] GetDeploymentPayload -> DEBU 069[0m checking: /opt/gopath/src/sync exists: false
+[36m2018-06-07 07:33:09.640 UTC [golang-platform] GetDeploymentPayload -> DEBU 06a[0m processing dep: encoding/hex
+[36m2018-06-07 07:33:09.641 UTC [golang-platform] GetDeploymentPayload -> DEBU 06b[0m checking: /opt/gopath/src/encoding/hex exists: false
+[36m2018-06-07 07:33:09.641 UTC [golang-platform] GetDeploymentPayload -> DEBU 06c[0m processing dep: path/filepath
+[36m2018-06-07 07:33:09.641 UTC [golang-platform] GetDeploymentPayload -> DEBU 06d[0m checking: /opt/gopath/src/path/filepath exists: false
+[36m2018-06-07 07:33:09.641 UTC [golang-platform] GetDeploymentPayload -> DEBU 06e[0m processing dep: internal/cpu
+[36m2018-06-07 07:33:09.641 UTC [golang-platform] GetDeploymentPayload -> DEBU 06f[0m checking: /opt/gopath/src/internal/cpu exists: false
+[36m2018-06-07 07:33:09.641 UTC [golang-platform] GetDeploymentPayload -> DEBU 070[0m processing dep: math/rand
+[36m2018-06-07 07:33:09.642 UTC [golang-platform] GetDeploymentPayload -> DEBU 071[0m checking: /opt/gopath/src/math/rand exists: false
+[36m2018-06-07 07:33:09.642 UTC [golang-platform] GetDeploymentPayload -> DEBU 072[0m processing dep: net
+[36m2018-06-07 07:33:09.642 UTC [golang-platform] GetDeploymentPayload -> DEBU 073[0m checking: /opt/gopath/src/net exists: false
+[36m2018-06-07 07:33:09.642 UTC [golang-platform] GetDeploymentPayload -> DEBU 074[0m processing dep: context
+[36m2018-06-07 07:33:09.642 UTC [golang-platform] GetDeploymentPayload -> DEBU 075[0m checking: /opt/gopath/src/context exists: false
+[36m2018-06-07 07:33:09.642 UTC [golang-platform] GetDeploymentPayload -> DEBU 076[0m processing dep: crypto/cipher
+[36m2018-06-07 07:33:09.643 UTC [golang-platform] GetDeploymentPayload -> DEBU 077[0m checking: /opt/gopath/src/crypto/cipher exists: false
+[36m2018-06-07 07:33:09.643 UTC [golang-platform] GetDeploymentPayload -> DEBU 078[0m processing dep: crypto/subtle
+[36m2018-06-07 07:33:09.643 UTC [golang-platform] GetDeploymentPayload -> DEBU 079[0m checking: /opt/gopath/src/crypto/subtle exists: false
+[36m2018-06-07 07:33:09.643 UTC [golang-platform] GetDeploymentPayload -> DEBU 07a[0m processing dep: encoding/pem
+[36m2018-06-07 07:33:09.643 UTC [golang-platform] GetDeploymentPayload -> DEBU 07b[0m checking: /opt/gopath/src/encoding/pem exists: false
+[36m2018-06-07 07:33:09.643 UTC [golang-platform] GetDeploymentPayload -> DEBU 07c[0m processing dep: fmt
+[36m2018-06-07 07:33:09.643 UTC [golang-platform] GetDeploymentPayload -> DEBU 07d[0m checking: /opt/gopath/src/fmt exists: false
+[36m2018-06-07 07:33:09.643 UTC [golang-platform] GetDeploymentPayload -> DEBU 07e[0m processing dep: runtime/internal/atomic
+[36m2018-06-07 07:33:09.644 UTC [golang-platform] GetDeploymentPayload -> DEBU 07f[0m checking: /opt/gopath/src/runtime/internal/atomic exists: false
+[36m2018-06-07 07:33:09.644 UTC [golang-platform] GetDeploymentPayload -> DEBU 080[0m processing dep: runtime/internal/sys
+[36m2018-06-07 07:33:09.644 UTC [golang-platform] GetDeploymentPayload -> DEBU 081[0m checking: /opt/gopath/src/runtime/internal/sys exists: false
+[36m2018-06-07 07:33:09.645 UTC [golang-platform] GetDeploymentPayload -> DEBU 082[0m processing dep: syscall
+[36m2018-06-07 07:33:09.645 UTC [golang-platform] GetDeploymentPayload -> DEBU 083[0m checking: /opt/gopath/src/syscall exists: false
+[36m2018-06-07 07:33:09.645 UTC [golang-platform] GetDeploymentPayload -> DEBU 084[0m processing dep: log
+[36m2018-06-07 07:33:09.645 UTC [golang-platform] GetDeploymentPayload -> DEBU 085[0m checking: /opt/gopath/src/log exists: false
+[36m2018-06-07 07:33:09.645 UTC [golang-platform] GetDeploymentPayload -> DEBU 086[0m processing dep: reflect
+[36m2018-06-07 07:33:09.645 UTC [golang-platform] GetDeploymentPayload -> DEBU 087[0m checking: /opt/gopath/src/reflect exists: false
+[36m2018-06-07 07:33:09.645 UTC [golang-platform] GetDeploymentPayload -> DEBU 088[0m processing dep: runtime
+[36m2018-06-07 07:33:09.646 UTC [golang-platform] GetDeploymentPayload -> DEBU 089[0m checking: /opt/gopath/src/runtime exists: false
+[36m2018-06-07 07:33:09.646 UTC [golang-platform] GetDeploymentPayload -> DEBU 08a[0m processing dep: crypto/rand
+[36m2018-06-07 07:33:09.646 UTC [golang-platform] GetDeploymentPayload -> DEBU 08b[0m checking: /opt/gopath/src/crypto/rand exists: false
+[36m2018-06-07 07:33:09.646 UTC [golang-platform] GetDeploymentPayload -> DEBU 08c[0m processing dep: crypto/rsa
+[36m2018-06-07 07:33:09.647 UTC [golang-platform] GetDeploymentPayload -> DEBU 08d[0m checking: /opt/gopath/src/crypto/rsa exists: false
+[36m2018-06-07 07:33:09.647 UTC [golang-platform] GetDeploymentPayload -> DEBU 08e[0m processing dep: crypto/x509
+[36m2018-06-07 07:33:09.647 UTC [golang-platform] GetDeploymentPayload -> DEBU 08f[0m checking: /opt/gopath/src/crypto/x509 exists: false
+[36m2018-06-07 07:33:09.647 UTC [golang-platform] GetDeploymentPayload -> DEBU 090[0m processing dep: encoding/json
+[36m2018-06-07 07:33:09.647 UTC [golang-platform] GetDeploymentPayload -> DEBU 091[0m checking: /opt/gopath/src/encoding/json exists: false
+[36m2018-06-07 07:33:09.648 UTC [golang-platform] GetDeploymentPayload -> DEBU 092[0m processing dep: io
+[36m2018-06-07 07:33:09.648 UTC [golang-platform] GetDeploymentPayload -> DEBU 093[0m checking: /opt/gopath/src/io exists: false
+[36m2018-06-07 07:33:09.649 UTC [golang-platform] GetDeploymentPayload -> DEBU 094[0m processing dep: sync/atomic
+[36m2018-06-07 07:33:09.649 UTC [golang-platform] GetDeploymentPayload -> DEBU 095[0m checking: /opt/gopath/src/sync/atomic exists: false
+[36m2018-06-07 07:33:09.649 UTC [golang-platform] GetDeploymentPayload -> DEBU 096[0m done
+[36m2018-06-07 07:33:09.651 UTC [container] WriteFileToPackage -> DEBU 097[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/abac.go
+[36m2018-06-07 07:33:09.670 UTC [container] WriteFileToPackage -> DEBU 098[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/clone.go
+[36m2018-06-07 07:33:09.676 UTC [container] WriteFileToPackage -> DEBU 099[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/decode.go
+[36m2018-06-07 07:33:09.680 UTC [container] WriteFileToPackage -> DEBU 09a[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/discard.go
+[36m2018-06-07 07:33:09.683 UTC [container] WriteFileToPackage -> DEBU 09b[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/encode.go
+[36m2018-06-07 07:33:09.689 UTC [container] WriteFileToPackage -> DEBU 09c[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/equal.go
+[36m2018-06-07 07:33:09.693 UTC [container] WriteFileToPackage -> DEBU 09d[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/extensions.go
+[36m2018-06-07 07:33:09.699 UTC [container] WriteFileToPackage -> DEBU 09e[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/lib.go
+[36m2018-06-07 07:33:09.704 UTC [container] WriteFileToPackage -> DEBU 09f[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/message_set.go
+[36m2018-06-07 07:33:09.713 UTC [container] WriteFileToPackage -> DEBU 0a0[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/pointer_reflect.go
+[36m2018-06-07 07:33:09.719 UTC [container] WriteFileToPackage -> DEBU 0a1[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/pointer_unsafe.go
+[36m2018-06-07 07:33:09.724 UTC [container] WriteFileToPackage -> DEBU 0a2[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/properties.go
+[36m2018-06-07 07:33:09.730 UTC [container] WriteFileToPackage -> DEBU 0a3[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/text.go
+[36m2018-06-07 07:33:09.734 UTC [container] WriteFileToPackage -> DEBU 0a4[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/text_parser.go
+[36m2018-06-07 07:33:09.741 UTC [container] WriteFileToPackage -> DEBU 0a5[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr/attrmgr.go
+[36m2018-06-07 07:33:09.748 UTC [container] WriteFileToPackage -> DEBU 0a6[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid/cid.go
+[36m2018-06-07 07:33:09.753 UTC [container] WriteFileToPackage -> DEBU 0a7[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid/interfaces.go
+[36m2018-06-07 07:33:09.759 UTC [container] WriteFileToPackage -> DEBU 0a8[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors/errors.go
+[36m2018-06-07 07:33:09.768 UTC [container] WriteFileToPackage -> DEBU 0a9[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors/stack.go
+[36m2018-06-07 07:33:09.771 UTC [msp/identity] Sign -> DEBU 0aa[0m Sign: plaintext: 0ACA090A5C08031A0C08B5BFE3D80510...8CCFFF0F0000FFFF804F00E800600400 
+[36m2018-06-07 07:33:09.772 UTC [msp/identity] Sign -> DEBU 0ab[0m Sign: digest: EB8167649014A45203961201A3E37B8937CA69DB59BF5810DFC3A0AFDEE2F381 
+[36m2018-06-07 07:33:09.826 UTC [chaincodeCmd] install -> DEBU 0ac[0m Installed remotely response:<status:200 payload:"OK" > 
+2018-06-07 07:33:09.829 UTC [main] main -> INFO 0ad[0m Exiting.....
 Install chaincode on the 1st peers completed.......
 Instantiate chaincode on the 1st peer of the 2nd org
 policy: OR('org-rockontrolMSP.member','org-weihaiMSP.member')
 Instantiating chaincode on peer1-org-weihai ...
-[33m2018-06-06 10:52:43.344 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem: no pem content for file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem
-[36m2018-06-06 10:52:43.376 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
-[36m2018-06-06 10:52:43.377 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
-2018-06-06 10:52:43.388 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 004[0m Using default escc
-2018-06-06 10:52:43.388 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 005[0m Using default vscc
-[36m2018-06-06 10:52:43.396 UTC [chaincodeCmd] getChaincodeSpec -> DEBU 006[0m java chaincode disabled
-[36m2018-06-06 10:52:43.398 UTC [msp/identity] Sign -> DEBU 007[0m Sign: plaintext: 0AD5090A6708031A0C08FBF9DED80510...694D53500A04657363630A0476736363 
-[36m2018-06-06 10:52:43.398 UTC [msp/identity] Sign -> DEBU 008[0m Sign: digest: 67CB34E3C856224E3759AD7C93321E8F74F3DA7064033BA68783F6427453B6DA 
-[36m2018-06-06 10:53:41.048 UTC [msp/identity] Sign -> DEBU 009[0m Sign: plaintext: 0AD5090A6708031A0C08FBF9DED80510...B43376131D6E0D6CC01C9B41618E29E9 
-[36m2018-06-06 10:53:41.055 UTC [msp/identity] Sign -> DEBU 00a[0m Sign: digest: 4519B7CDCE43EEC6C5819A97AA0D32A3D50C969BFDBDE736AE385D8B5340700E 
-2018-06-06 10:53:41.147 UTC [main] main -> INFO 00b[0m Exiting.....
+[33m2018-06-07 07:33:14.870 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem: no pem content for file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem
+[36m2018-06-07 07:33:14.902 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:33:14.902 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:33:14.913 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 004[0m Using default escc
+2018-06-07 07:33:14.913 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 005[0m Using default vscc
+[36m2018-06-07 07:33:14.915 UTC [chaincodeCmd] getChaincodeSpec -> DEBU 006[0m java chaincode disabled
+[36m2018-06-07 07:33:14.917 UTC [msp/identity] Sign -> DEBU 007[0m Sign: plaintext: 0AD5090A6708031A0C08BABFE3D80510...694D53500A04657363630A0476736363 
+[36m2018-06-07 07:33:14.917 UTC [msp/identity] Sign -> DEBU 008[0m Sign: digest: 5D9F13793B3B8624DC2D7ABBC49CDFC0E2C66553B1A63FB2D93FE86607ADF36E 
+[36m2018-06-07 07:33:33.141 UTC [msp/identity] Sign -> DEBU 009[0m Sign: plaintext: 0AD5090A6708031A0C08BABFE3D80510...062EE8CB00CCB50E6A0605B58705F02F 
+[36m2018-06-07 07:33:33.143 UTC [msp/identity] Sign -> DEBU 00a[0m Sign: digest: ED96FD8BAD8DE54868C082FA28A51421631F6519F54BDC0E0F09F2B0B5E1B7C1 
+2018-06-07 07:33:33.165 UTC [main] main -> INFO 00b[0m Exiting.....
 Instantiate chaincode on the 1st peer of the 2nd org completed.......
-Tests did not complete successfully; see data/logs/run.log for more details
+Query chaincode from the 1st peer of the 1st org
+
+Enrolling user for organization org-rockontrol with home directory /etc/hyperledger/fabric/orgs/org-rockontrol/user ...
+2018/06/07 07:33:38 [DEBUG] Home directory: /etc/hyperledger/fabric/orgs/org-rockontrol/user
+2018/06/07 07:33:38 [INFO] Created a default configuration file at /etc/hyperledger/fabric/orgs/org-rockontrol/user/fabric-ca-client-config.yaml
+2018/06/07 07:33:38 [DEBUG] Client configuration settings: &{URL:http://user-org-rockontrol:user-org-rockontrolpw@ca-org-rockontrol:7054 MSPDir:msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:user-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[f800e16b34b4] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name: Type:client Secret: MaxEnrollments:0 Affiliation: Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201ace10}
+2018/06/07 07:33:38 [DEBUG] Entered runEnroll
+2018/06/07 07:33:38 [DEBUG] Enrolling { Name:user-org-rockontrol Secret:**** Profile: Label: CSR:&{user-org-rockontrol [{US North Carolina  Hyperledger Fabric }] [f800e16b34b4] <nil> <nil> } CAName: AttrReqs:[]  }
+2018/06/07 07:33:38 [DEBUG] Initializing client with config: &{URL:http://ca-org-rockontrol:7054 MSPDir:msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name:user-org-rockontrol Secret:**** Profile: Label: CSR:&{user-org-rockontrol [{US North Carolina  Hyperledger Fabric }] [f800e16b34b4] <nil> <nil> } CAName: AttrReqs:[]  } CSR:{CN:user-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[f800e16b34b4] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name: Type:client Secret: MaxEnrollments:0 Affiliation: Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201ace10}
+2018/06/07 07:33:38 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4201ace70 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/06/07 07:33:38 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4201c0e90 DummyKeystore:<nil>}
+2018/06/07 07:33:38 [DEBUG] GenCSR &{CN:user-org-rockontrol Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[f800e16b34b4] KeyRequest:<nil> CA:<nil> SerialNumber:}
+2018/06/07 07:33:38 [INFO] generating key: &{A:ecdsa S:256}
+2018/06/07 07:33:38 [DEBUG] generate key from request: algo=ecdsa, size=256
+2018/06/07 07:33:38 [INFO] encoded CSR
+2018/06/07 07:33:38 [DEBUG] Sending request
+POST http://ca-org-rockontrol:7054/enroll
+{"hosts":["f800e16b34b4"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBUDCB9wIBADBrMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp\nbmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxHDAaBgNV\nBAMTE3VzZXItb3JnLXJvY2tvbnRyb2wwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNC\nAASmrxTkxQmvxpPQ1dlaOZEV+pPniVxaLkUQGJOvpApWmT1LDX+KO3hUbMh683Bb\n/o6WT3mT0/Zh3XNdLVIxasdLoCowKAYJKoZIhvcNAQkOMRswGTAXBgNVHREEEDAO\nggxmODAwZTE2YjM0YjQwCgYIKoZIzj0EAwIDSAAwRQIhAIhh5rmbVOK9WBzaK5xb\nmZew4DHR/f72U/cKSvMExYg6AiBaVvi36r6D3n57q4ws4hjsoMJUzqae91MqOIaZ\n3b0LEA==\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","NotBefore":"0001-01-01T00:00:00Z","NotAfter":"0001-01-01T00:00:00Z","CAName":""}
+2018/06/07 07:33:38 [DEBUG] Received response
+statusCode=201 (201 Created)
+2018/06/07 07:33:38 [DEBUG] Response body result: map[Cert:LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMyekNDQW9HZ0F3SUJBZ0lVVUFKaGpSMW45QTZ1dXpZVEUvOWFucThXZ3hnd0NnWUlLb1pJemowRUF3SXcKYVRFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJvd0dBWURWUVFERXhGallTMXZjbWN0CmNtOWphMjl1ZEhKdmJEQWVGdzB4T0RBMk1EY3dOekk1TURCYUZ3MHhPVEEyTURjd056TTBNREJhTUlHQU1Rc3cKQ1FZRFZRUUdFd0pWVXpFWE1CVUdBMVVFQ0JNT1RtOXlkR2dnUTJGeWIyeHBibUV4RkRBU0JnTlZCQW9UQzBoNQpjR1Z5YkdWa1oyVnlNU1F3Q3dZRFZRUUxFd1IxYzJWeU1CVUdBMVVFQ3hNT2IzSm5MWEp2WTJ0dmJuUnliMnd4CkhEQWFCZ05WQkFNVEUzVnpaWEl0YjNKbkxYSnZZMnR2Ym5SeWIyd3dXVEFUQmdjcWhrak9QUUlCQmdncWhrak8KUFFNQkJ3TkNBQVNtcnhUa3hRbXZ4cFBRMWRsYU9aRVYrcFBuaVZ4YUxrVVFHSk92cEFwV21UMUxEWCtLTzNoVQpiTWg2ODNCYi9vNldUM21UMC9aaDNYTmRMVkl4YXNkTG80SHVNSUhyTUE0R0ExVWREd0VCL3dRRUF3SUhnREFNCkJnTlZIUk1CQWY4RUFqQUFNQjBHQTFVZERnUVdCQlNkbERqUGk4ZTl6dGhnVkRPTWZkSFB6bmtpTVRBZkJnTlYKSFNNRUdEQVdnQlRXd1l3TWFKSHZOaDE2M29hQXlSNTg4QmdmVXpBWEJnTlZIUkVFRURBT2dneG1PREF3WlRFMgpZak0wWWpRd2NnWUlLZ01FQlFZSENBRUVabnNpWVhSMGNuTWlPbnNpYUdZdVFXWm1hV3hwWVhScGIyNGlPaUp2CmNtY3RjbTlqYTI5dWRISnZiQ0lzSW1obUxrVnVjbTlzYkcxbGJuUkpSQ0k2SW5WelpYSXRiM0puTFhKdlkydHYKYm5SeWIyd2lMQ0pvWmk1VWVYQmxJam9pZFhObGNpSjlmVEFLQmdncWhrak9QUVFEQWdOSUFEQkZBaUVBM2d4Ywo4cklDZ0lnemxuRXBFSG9INzZwQnJnVWFOcEdHbXhkSFRSK29Qd29DSUhoSVhLUFY3dzBSTU9aeUtzNW5WRGRaCkRPblU4aHQwL0hmWU4zKzRQL3ltCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K ServerInfo:map[CAName: CAChain:LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNHVENDQWIrZ0F3SUJBZ0lVZDk0RVJpK1I1T1RqSzAwU2FCS29BVWYwSTNRd0NnWUlLb1pJemowRUF3SXcKYVRFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJvd0dBWURWUVFERXhGallTMXZjbWN0CmNtOWphMjl1ZEhKdmJEQWVGdzB4T0RBMk1EY3dOekk0TURCYUZ3MHpNekEyTURNd056STRNREJhTUdreEN6QUoKQmdOVkJBWVRBbFZUTVJjd0ZRWURWUVFJRXc1T2IzSjBhQ0JEWVhKdmJHbHVZVEVVTUJJR0ExVUVDaE1MU0hsdwpaWEpzWldSblpYSXhEekFOQmdOVkJBc1RCa1poWW5KcFl6RWFNQmdHQTFVRUF4TVJZMkV0YjNKbkxYSnZZMnR2CmJuUnliMnd3V1RBVEJnY3Foa2pPUFFJQkJnZ3Foa2pPUFFNQkJ3TkNBQVRsQmNCUE92M2wwQTM2N0tNNzkyazgKZEtkVEdyaERxSHgrc0hnOW1Xc2Z3TEp4SXUyZERpcjdJSzZPNWdtNmlXbEt4MURud3FaNXUrd2gvbzduOHZqOQpvMFV3UXpBT0JnTlZIUThCQWY4RUJBTUNBUVl3RWdZRFZSMFRBUUgvQkFnd0JnRUIvd0lCQVRBZEJnTlZIUTRFCkZnUVUxc0dNREdpUjd6WWRldDZHZ01rZWZQQVlIMU13Q2dZSUtvWkl6ajBFQXdJRFNBQXdSUUloQU5iWiswVVMKcXZTL1ZWSEZJZUVTVmhIRUN4aVp1R2lsU0VUeXdtZkgzWkE2QWlCOVVwVXJJQTA0MjVsZDR2eVNHM0FpZ1FPNwp2TkhKTkFUVFlFZEt4Q0E1dUE9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg== Version:]]
+2018/06/07 07:33:38 [DEBUG] newEnrollmentResponse user-org-rockontrol
+2018/06/07 07:33:38 [INFO] Stored client certificate at /etc/hyperledger/fabric/orgs/org-rockontrol/user/msp/signcerts/cert.pem
+2018/06/07 07:33:38 [INFO] Stored root CA certificate at /etc/hyperledger/fabric/orgs/org-rockontrol/user/msp/cacerts/ca-org-rockontrol-7054.pem
+2018/06/07 07:33:38 [INFO] Stored intermediate CA certificates at /etc/hyperledger/fabric/orgs/org-rockontrol/user/msp/intermediatecerts/ca-org-rockontrol-7054.pem
+Querying chaincode in the channel 'mychannel' on the peer 'peer1-org-rockontrol' ...
+Query of channel 'mychannel' on peer 'peer1-org-rockontrol' was successful
+Query chaincode from the 1st peer of the 1st org completed......
+Invoke chaincode on the 1st peer of the 1st org
+Sending invoke transaction to peer1-org-rockontrol ...
+[33m2018-06-07 07:34:01.821 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /etc/hyperledger/fabric/orgs/org-rockontrol/user/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /etc/hyperledger/fabric/orgs/org-rockontrol/user/msp/intermediatecerts/ca-org-rockontrol-7054.pem
+[36m2018-06-07 07:34:01.856 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:34:01.856 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:34:01.904 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 004[0m Using default escc
+2018-06-07 07:34:01.905 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 005[0m Using default vscc
+[36m2018-06-07 07:34:01.907 UTC [chaincodeCmd] getChaincodeSpec -> DEBU 006[0m java chaincode disabled
+[36m2018-06-07 07:34:01.909 UTC [msp/identity] Sign -> DEBU 007[0m Sign: plaintext: 0AB9090A6708031A0C08E9BFE3D80510...696E766F6B650A01610A01620A023130 
+[36m2018-06-07 07:34:01.910 UTC [msp/identity] Sign -> DEBU 008[0m Sign: digest: 15B575BC47A50E03A481844018F1E33DBB1823ED93F8F039A2CC65157CB31379 
+[36m2018-06-07 07:34:01.973 UTC [msp/identity] Sign -> DEBU 009[0m Sign: plaintext: 0AB9090A6708031A0C08E9BFE3D80510...C9BF0EE0191DB2BDD7CDB83987E1131D 
+[36m2018-06-07 07:34:01.973 UTC [msp/identity] Sign -> DEBU 00a[0m Sign: digest: F4CA9B98B49C42B4765E345799B644D6B969A3FF37894199C55A02245471C4EF 
+[36m2018-06-07 07:34:01.983 UTC [chaincodeCmd] chaincodeInvokeOrQuery -> DEBU 00b[0m ESCC invoke result: version:1 response:<status:200 message:"OK" > payload:"\n \013\017\033\355\n\034D\013\3235\243\3041\372r~\333ha\242*\215=\253\332k5MQ\010\271\034\022Y\nE\022\024\n\004lscc\022\014\n\n\n\004mycc\022\002\010\003\022-\n\004mycc\022%\n\007\n\001a\022\002\010\003\n\007\n\001b\022\002\010\003\032\007\n\001a\032\00290\032\010\n\001b\032\003210\032\003\010\310\001\"\013\022\004mycc\032\0031.0" endorsement:<endorser:"\n\021org-rockontrolMSP\022\236\010-----BEGIN CERTIFICATE-----\nMIIC3TCCAoOgAwIBAgIUFHNK4zHEi1Np7IyePHx3krg9n64wCgYIKoZIzj0EAwIw\naTELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMRQwEgYDVQQK\nEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFicmljMRowGAYDVQQDExFjYS1vcmct\ncm9ja29udHJvbDAeFw0xODA2MDcwNzI4MDBaFw0xOTA2MDcwNzMzMDBaMIGBMQsw\nCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExFDASBgNVBAoTC0h5\ncGVybGVkZ2VyMSQwCwYDVQQLEwRwZWVyMBUGA1UECxMOb3JnLXJvY2tvbnRyb2wx\nHTAbBgNVBAMTFHBlZXIxLW9yZy1yb2Nrb250cm9sMFkwEwYHKoZIzj0CAQYIKoZI\nzj0DAQcDQgAEB7OjPjeE8HQx1KaPcan2x54D5y6Ayfiefe9w/iWnYKdTdr6T3TTH\nVsPNaYIvWgbxBExmmDLVMa+xlYlxBPG8n6OB7zCB7DAOBgNVHQ8BAf8EBAMCB4Aw\nDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUF73gfLGmtpJLta1uzJCqoAd7NFUwHwYD\nVR0jBBgwFoAU1sGMDGiR7zYdet6GgMkefPAYH1MwFwYDVR0RBBAwDoIMMzMyZDc2\nYjhmMmUxMHMGCCoDBAUGBwgBBGd7ImF0dHJzIjp7ImhmLkFmZmlsaWF0aW9uIjoi\nb3JnLXJvY2tvbnRyb2wiLCJoZi5FbnJvbGxtZW50SUQiOiJwZWVyMS1vcmctcm9j\na29udHJvbCIsImhmLlR5cGUiOiJwZWVyIn19MAoGCCqGSM49BAMCA0gAMEUCIQDD\nW6ah9wmz6stRlqqVw9MLL4SSUJ/DY+yleD+oYpVXlAIgbZf+cTmZuyJK6JFRC0w3\nwTDpRlhu/yb88GASNTyQdrY=\n-----END CERTIFICATE-----\n" signature:"0D\002 /\271'\357\221n_\214$\211Q\311^V\177\375;\002\226\304\211\0312\306\026\341D\306e'\000\037\002 &\352[aM\342>\247[\264\216\254\216O#\253\311\277\016\340\031\035\262\275\327\315\2709\207\341\023\035" > 
+2018-06-07 07:34:02.000 UTC [chaincodeCmd] chaincodeInvokeOrQuery -> INFO 00c[0m Chaincode invoke successful. result: status:200 
+2018-06-07 07:34:02.000 UTC [main] main -> INFO 00d[0m Exiting.....
+Invoke chaincode on the 1st peer of the 1st org completed......
+Install chaincode on 2nd peer of 2nd org
+Installing chaincode on peer2-org-weihai ...
+[33m2018-06-07 07:34:07.057 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem: no pem content for file /data/orgs/org-weihai/admin/msp/intermediatecerts/ca-org-weihai-7054.pem
+[36m2018-06-07 07:34:07.099 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:34:07.099 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:34:07.100 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 004[0m Using default escc
+2018-06-07 07:34:07.100 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 005[0m Using default vscc
+[36m2018-06-07 07:34:07.100 UTC [chaincodeCmd] getChaincodeSpec -> DEBU 006[0m java chaincode disabled
+[36m2018-06-07 07:34:07.188 UTC [golang-platform] getCodeFromFS -> DEBU 007[0m getCodeFromFS github.com/hyperledger/fabric-samples/chaincode/abac/go
+[36m2018-06-07 07:34:07.632 UTC [golang-platform] func1 -> DEBU 008[0m Discarding GOROOT package fmt
+[36m2018-06-07 07:34:07.633 UTC [golang-platform] func1 -> DEBU 009[0m Accepting import: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid
+[36m2018-06-07 07:34:07.633 UTC [golang-platform] func1 -> DEBU 00a[0m Discarding provided package github.com/hyperledger/fabric/core/chaincode/shim
+[36m2018-06-07 07:34:07.633 UTC [golang-platform] func1 -> DEBU 00b[0m Discarding provided package github.com/hyperledger/fabric/protos/peer
+[36m2018-06-07 07:34:07.634 UTC [golang-platform] func1 -> DEBU 00c[0m Discarding GOROOT package strconv
+[36m2018-06-07 07:34:07.792 UTC [golang-platform] func1 -> DEBU 00d[0m skipping dir: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor
+[36m2018-06-07 07:34:07.792 UTC [golang-platform] GetDeploymentPayload -> DEBU 00e[0m processing dep: strings
+[36m2018-06-07 07:34:07.792 UTC [golang-platform] GetDeploymentPayload -> DEBU 00f[0m checking: /opt/gopath/src/strings exists: false
+[36m2018-06-07 07:34:07.792 UTC [golang-platform] GetDeploymentPayload -> DEBU 010[0m processing dep: crypto/x509
+[36m2018-06-07 07:34:07.793 UTC [golang-platform] GetDeploymentPayload -> DEBU 011[0m checking: /opt/gopath/src/crypto/x509 exists: false
+[36m2018-06-07 07:34:07.793 UTC [golang-platform] GetDeploymentPayload -> DEBU 012[0m processing dep: encoding
+[36m2018-06-07 07:34:07.793 UTC [golang-platform] GetDeploymentPayload -> DEBU 013[0m checking: /opt/gopath/src/encoding exists: false
+[36m2018-06-07 07:34:07.793 UTC [golang-platform] GetDeploymentPayload -> DEBU 014[0m processing dep: log
+[36m2018-06-07 07:34:07.793 UTC [golang-platform] GetDeploymentPayload -> DEBU 015[0m checking: /opt/gopath/src/log exists: false
+[36m2018-06-07 07:34:07.794 UTC [golang-platform] GetDeploymentPayload -> DEBU 016[0m processing dep: unicode
+[36m2018-06-07 07:34:07.794 UTC [golang-platform] GetDeploymentPayload -> DEBU 017[0m checking: /opt/gopath/src/unicode exists: false
+[36m2018-06-07 07:34:07.794 UTC [golang-platform] GetDeploymentPayload -> DEBU 018[0m processing dep: unsafe
+[36m2018-06-07 07:34:07.795 UTC [golang-platform] GetDeploymentPayload -> DEBU 019[0m checking: /opt/gopath/src/unsafe exists: false
+[36m2018-06-07 07:34:07.795 UTC [golang-platform] GetDeploymentPayload -> DEBU 01a[0m processing dep: crypto/rsa
+[36m2018-06-07 07:34:07.795 UTC [golang-platform] GetDeploymentPayload -> DEBU 01b[0m checking: /opt/gopath/src/crypto/rsa exists: false
+[36m2018-06-07 07:34:07.795 UTC [golang-platform] GetDeploymentPayload -> DEBU 01c[0m processing dep: encoding/base64
+[36m2018-06-07 07:34:07.795 UTC [golang-platform] GetDeploymentPayload -> DEBU 01d[0m checking: /opt/gopath/src/encoding/base64 exists: false
+[36m2018-06-07 07:34:07.795 UTC [golang-platform] GetDeploymentPayload -> DEBU 01e[0m processing dep: math
+[36m2018-06-07 07:34:07.796 UTC [golang-platform] GetDeploymentPayload -> DEBU 01f[0m checking: /opt/gopath/src/math exists: false
+[36m2018-06-07 07:34:07.797 UTC [golang-platform] GetDeploymentPayload -> DEBU 020[0m processing dep: runtime/internal/atomic
+[36m2018-06-07 07:34:07.797 UTC [golang-platform] GetDeploymentPayload -> DEBU 021[0m checking: /opt/gopath/src/runtime/internal/atomic exists: false
+[36m2018-06-07 07:34:07.797 UTC [golang-platform] GetDeploymentPayload -> DEBU 022[0m processing dep: math/big
+[36m2018-06-07 07:34:07.797 UTC [golang-platform] GetDeploymentPayload -> DEBU 023[0m checking: /opt/gopath/src/math/big exists: false
+[36m2018-06-07 07:34:07.797 UTC [golang-platform] GetDeploymentPayload -> DEBU 024[0m processing dep: net
+[36m2018-06-07 07:34:07.797 UTC [golang-platform] GetDeploymentPayload -> DEBU 025[0m checking: /opt/gopath/src/net exists: false
+[36m2018-06-07 07:34:07.797 UTC [golang-platform] GetDeploymentPayload -> DEBU 026[0m processing dep: reflect
+[36m2018-06-07 07:34:07.798 UTC [golang-platform] GetDeploymentPayload -> DEBU 027[0m checking: /opt/gopath/src/reflect exists: false
+[36m2018-06-07 07:34:07.798 UTC [golang-platform] GetDeploymentPayload -> DEBU 028[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors
+[36m2018-06-07 07:34:07.801 UTC [golang-platform] GetDeploymentPayload -> DEBU 029[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors exists: true
+[36m2018-06-07 07:34:07.806 UTC [golang-platform] GetDeploymentPayload -> DEBU 02a[0m processing dep: os
+[36m2018-06-07 07:34:07.806 UTC [golang-platform] GetDeploymentPayload -> DEBU 02b[0m checking: /opt/gopath/src/os exists: false
+[36m2018-06-07 07:34:07.807 UTC [golang-platform] GetDeploymentPayload -> DEBU 02c[0m processing dep: crypto/des
+[36m2018-06-07 07:34:07.807 UTC [golang-platform] GetDeploymentPayload -> DEBU 02d[0m checking: /opt/gopath/src/crypto/des exists: false
+[36m2018-06-07 07:34:07.807 UTC [golang-platform] GetDeploymentPayload -> DEBU 02e[0m processing dep: crypto/elliptic
+[36m2018-06-07 07:34:07.807 UTC [golang-platform] GetDeploymentPayload -> DEBU 02f[0m checking: /opt/gopath/src/crypto/elliptic exists: false
+[36m2018-06-07 07:34:07.807 UTC [golang-platform] GetDeploymentPayload -> DEBU 030[0m processing dep: internal/syscall/unix
+[36m2018-06-07 07:34:07.807 UTC [golang-platform] GetDeploymentPayload -> DEBU 031[0m checking: /opt/gopath/src/internal/syscall/unix exists: false
+[36m2018-06-07 07:34:07.807 UTC [golang-platform] GetDeploymentPayload -> DEBU 032[0m processing dep: runtime/cgo
+[36m2018-06-07 07:34:07.807 UTC [golang-platform] GetDeploymentPayload -> DEBU 033[0m checking: /opt/gopath/src/runtime/cgo exists: false
+[36m2018-06-07 07:34:07.807 UTC [golang-platform] GetDeploymentPayload -> DEBU 034[0m processing dep: syscall
+[36m2018-06-07 07:34:07.808 UTC [golang-platform] GetDeploymentPayload -> DEBU 035[0m checking: /opt/gopath/src/syscall exists: false
+[36m2018-06-07 07:34:07.808 UTC [golang-platform] GetDeploymentPayload -> DEBU 036[0m processing dep: bufio
+[36m2018-06-07 07:34:07.808 UTC [golang-platform] GetDeploymentPayload -> DEBU 037[0m checking: /opt/gopath/src/bufio exists: false
+[36m2018-06-07 07:34:07.808 UTC [golang-platform] GetDeploymentPayload -> DEBU 038[0m processing dep: bytes
+[36m2018-06-07 07:34:07.808 UTC [golang-platform] GetDeploymentPayload -> DEBU 039[0m checking: /opt/gopath/src/bytes exists: false
+[36m2018-06-07 07:34:07.808 UTC [golang-platform] GetDeploymentPayload -> DEBU 03a[0m processing dep: crypto
+[36m2018-06-07 07:34:07.808 UTC [golang-platform] GetDeploymentPayload -> DEBU 03b[0m checking: /opt/gopath/src/crypto exists: false
+[36m2018-06-07 07:34:07.808 UTC [golang-platform] GetDeploymentPayload -> DEBU 03c[0m processing dep: unicode/utf8
+[36m2018-06-07 07:34:07.808 UTC [golang-platform] GetDeploymentPayload -> DEBU 03d[0m checking: /opt/gopath/src/unicode/utf8 exists: false
+[36m2018-06-07 07:34:07.809 UTC [golang-platform] GetDeploymentPayload -> DEBU 03e[0m processing dep: crypto/x509/pkix
+[36m2018-06-07 07:34:07.809 UTC [golang-platform] GetDeploymentPayload -> DEBU 03f[0m checking: /opt/gopath/src/crypto/x509/pkix exists: false
+[36m2018-06-07 07:34:07.809 UTC [golang-platform] GetDeploymentPayload -> DEBU 040[0m processing dep: internal/race
+[36m2018-06-07 07:34:07.809 UTC [golang-platform] GetDeploymentPayload -> DEBU 041[0m checking: /opt/gopath/src/internal/race exists: false
+[36m2018-06-07 07:34:07.810 UTC [golang-platform] GetDeploymentPayload -> DEBU 042[0m processing dep: runtime/internal/sys
+[36m2018-06-07 07:34:07.810 UTC [golang-platform] GetDeploymentPayload -> DEBU 043[0m checking: /opt/gopath/src/runtime/internal/sys exists: false
+[36m2018-06-07 07:34:07.810 UTC [golang-platform] GetDeploymentPayload -> DEBU 044[0m processing dep: strconv
+[36m2018-06-07 07:34:07.810 UTC [golang-platform] GetDeploymentPayload -> DEBU 045[0m checking: /opt/gopath/src/strconv exists: false
+[36m2018-06-07 07:34:07.810 UTC [golang-platform] GetDeploymentPayload -> DEBU 046[0m processing dep: encoding/json
+[36m2018-06-07 07:34:07.811 UTC [golang-platform] GetDeploymentPayload -> DEBU 047[0m checking: /opt/gopath/src/encoding/json exists: false
+[36m2018-06-07 07:34:07.811 UTC [golang-platform] GetDeploymentPayload -> DEBU 048[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr
+[36m2018-06-07 07:34:07.813 UTC [golang-platform] GetDeploymentPayload -> DEBU 049[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr exists: true
+[36m2018-06-07 07:34:07.816 UTC [golang-platform] GetDeploymentPayload -> DEBU 04a[0m processing dep: io
+[36m2018-06-07 07:34:07.816 UTC [golang-platform] GetDeploymentPayload -> DEBU 04b[0m checking: /opt/gopath/src/io exists: false
+[36m2018-06-07 07:34:07.817 UTC [golang-platform] GetDeploymentPayload -> DEBU 04c[0m processing dep: sort
+[36m2018-06-07 07:34:07.817 UTC [golang-platform] GetDeploymentPayload -> DEBU 04d[0m checking: /opt/gopath/src/sort exists: false
+[36m2018-06-07 07:34:07.817 UTC [golang-platform] GetDeploymentPayload -> DEBU 04e[0m processing dep: unicode/utf16
+[36m2018-06-07 07:34:07.817 UTC [golang-platform] GetDeploymentPayload -> DEBU 04f[0m checking: /opt/gopath/src/unicode/utf16 exists: false
+[36m2018-06-07 07:34:07.817 UTC [golang-platform] GetDeploymentPayload -> DEBU 050[0m processing dep: crypto/md5
+[36m2018-06-07 07:34:07.817 UTC [golang-platform] GetDeploymentPayload -> DEBU 051[0m checking: /opt/gopath/src/crypto/md5 exists: false
+[36m2018-06-07 07:34:07.817 UTC [golang-platform] GetDeploymentPayload -> DEBU 052[0m processing dep: crypto/sha512
+[36m2018-06-07 07:34:07.817 UTC [golang-platform] GetDeploymentPayload -> DEBU 053[0m checking: /opt/gopath/src/crypto/sha512 exists: false
+[36m2018-06-07 07:34:07.818 UTC [golang-platform] GetDeploymentPayload -> DEBU 054[0m processing dep: runtime
+[36m2018-06-07 07:34:07.818 UTC [golang-platform] GetDeploymentPayload -> DEBU 055[0m checking: /opt/gopath/src/runtime exists: false
+[36m2018-06-07 07:34:07.818 UTC [golang-platform] GetDeploymentPayload -> DEBU 056[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto
+[36m2018-06-07 07:34:07.819 UTC [golang-platform] GetDeploymentPayload -> DEBU 057[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto exists: true
+[36m2018-06-07 07:34:07.828 UTC [golang-platform] GetDeploymentPayload -> DEBU 058[0m processing dep: github.com/hyperledger/fabric/protos/msp
+[36m2018-06-07 07:34:07.828 UTC [golang-platform] GetDeploymentPayload -> DEBU 059[0m checking: /opt/gopath/src/github.com/hyperledger/fabric/protos/msp exists: false
+[36m2018-06-07 07:34:07.829 UTC [golang-platform] GetDeploymentPayload -> DEBU 05a[0m processing dep: internal/nettrace
+[36m2018-06-07 07:34:07.829 UTC [golang-platform] GetDeploymentPayload -> DEBU 05b[0m checking: /opt/gopath/src/internal/nettrace exists: false
+[36m2018-06-07 07:34:07.829 UTC [golang-platform] GetDeploymentPayload -> DEBU 05c[0m processing dep: math/bits
+[36m2018-06-07 07:34:07.829 UTC [golang-platform] GetDeploymentPayload -> DEBU 05d[0m checking: /opt/gopath/src/math/bits exists: false
+[36m2018-06-07 07:34:07.829 UTC [golang-platform] GetDeploymentPayload -> DEBU 05e[0m processing dep: crypto/rand
+[36m2018-06-07 07:34:07.829 UTC [golang-platform] GetDeploymentPayload -> DEBU 05f[0m checking: /opt/gopath/src/crypto/rand exists: false
+[36m2018-06-07 07:34:07.829 UTC [golang-platform] GetDeploymentPayload -> DEBU 060[0m processing dep: crypto/sha256
+[36m2018-06-07 07:34:07.829 UTC [golang-platform] GetDeploymentPayload -> DEBU 061[0m checking: /opt/gopath/src/crypto/sha256 exists: false
+[36m2018-06-07 07:34:07.829 UTC [golang-platform] GetDeploymentPayload -> DEBU 062[0m processing dep: encoding/asn1
+[36m2018-06-07 07:34:07.829 UTC [golang-platform] GetDeploymentPayload -> DEBU 063[0m checking: /opt/gopath/src/encoding/asn1 exists: false
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 064[0m processing dep: encoding/pem
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 065[0m checking: /opt/gopath/src/encoding/pem exists: false
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 066[0m processing dep: hash
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 067[0m checking: /opt/gopath/src/hash exists: false
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 068[0m processing dep: internal/singleflight
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 069[0m checking: /opt/gopath/src/internal/singleflight exists: false
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 06a[0m processing dep: path
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 06b[0m checking: /opt/gopath/src/path exists: false
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 06c[0m processing dep: crypto/ecdsa
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 06d[0m checking: /opt/gopath/src/crypto/ecdsa exists: false
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 06e[0m processing dep: crypto/sha1
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 06f[0m checking: /opt/gopath/src/crypto/sha1 exists: false
+[36m2018-06-07 07:34:07.830 UTC [golang-platform] GetDeploymentPayload -> DEBU 070[0m processing dep: crypto/subtle
+[36m2018-06-07 07:34:07.831 UTC [golang-platform] GetDeploymentPayload -> DEBU 071[0m checking: /opt/gopath/src/crypto/subtle exists: false
+[36m2018-06-07 07:34:07.831 UTC [golang-platform] GetDeploymentPayload -> DEBU 072[0m processing dep: internal/poll
+[36m2018-06-07 07:34:07.831 UTC [golang-platform] GetDeploymentPayload -> DEBU 073[0m checking: /opt/gopath/src/internal/poll exists: false
+[36m2018-06-07 07:34:07.831 UTC [golang-platform] GetDeploymentPayload -> DEBU 074[0m processing dep: io/ioutil
+[36m2018-06-07 07:34:07.831 UTC [golang-platform] GetDeploymentPayload -> DEBU 075[0m checking: /opt/gopath/src/io/ioutil exists: false
+[36m2018-06-07 07:34:07.832 UTC [golang-platform] GetDeploymentPayload -> DEBU 076[0m processing dep: time
+[36m2018-06-07 07:34:07.832 UTC [golang-platform] GetDeploymentPayload -> DEBU 077[0m checking: /opt/gopath/src/time exists: false
+[36m2018-06-07 07:34:07.832 UTC [golang-platform] GetDeploymentPayload -> DEBU 078[0m processing dep: crypto/aes
+[36m2018-06-07 07:34:07.832 UTC [golang-platform] GetDeploymentPayload -> DEBU 079[0m checking: /opt/gopath/src/crypto/aes exists: false
+[36m2018-06-07 07:34:07.832 UTC [golang-platform] GetDeploymentPayload -> DEBU 07a[0m processing dep: errors
+[36m2018-06-07 07:34:07.832 UTC [golang-platform] GetDeploymentPayload -> DEBU 07b[0m checking: /opt/gopath/src/errors exists: false
+[36m2018-06-07 07:34:07.832 UTC [golang-platform] GetDeploymentPayload -> DEBU 07c[0m processing dep: fmt
+[36m2018-06-07 07:34:07.832 UTC [golang-platform] GetDeploymentPayload -> DEBU 07d[0m checking: /opt/gopath/src/fmt exists: false
+[36m2018-06-07 07:34:07.832 UTC [golang-platform] GetDeploymentPayload -> DEBU 07e[0m processing dep: sync
+[36m2018-06-07 07:34:07.832 UTC [golang-platform] GetDeploymentPayload -> DEBU 07f[0m checking: /opt/gopath/src/sync exists: false
+[36m2018-06-07 07:34:07.832 UTC [golang-platform] GetDeploymentPayload -> DEBU 080[0m processing dep: crypto/cipher
+[36m2018-06-07 07:34:07.833 UTC [golang-platform] GetDeploymentPayload -> DEBU 081[0m checking: /opt/gopath/src/crypto/cipher exists: false
+[36m2018-06-07 07:34:07.833 UTC [golang-platform] GetDeploymentPayload -> DEBU 082[0m processing dep: encoding/binary
+[36m2018-06-07 07:34:07.833 UTC [golang-platform] GetDeploymentPayload -> DEBU 083[0m checking: /opt/gopath/src/encoding/binary exists: false
+[36m2018-06-07 07:34:07.833 UTC [golang-platform] GetDeploymentPayload -> DEBU 084[0m processing dep: path/filepath
+[36m2018-06-07 07:34:07.833 UTC [golang-platform] GetDeploymentPayload -> DEBU 085[0m checking: /opt/gopath/src/path/filepath exists: false
+[36m2018-06-07 07:34:07.833 UTC [golang-platform] GetDeploymentPayload -> DEBU 086[0m processing dep: crypto/internal/cipherhw
+[36m2018-06-07 07:34:07.833 UTC [golang-platform] GetDeploymentPayload -> DEBU 087[0m checking: /opt/gopath/src/crypto/internal/cipherhw exists: false
+[36m2018-06-07 07:34:07.833 UTC [golang-platform] GetDeploymentPayload -> DEBU 088[0m processing dep: encoding/hex
+[36m2018-06-07 07:34:07.833 UTC [golang-platform] GetDeploymentPayload -> DEBU 089[0m checking: /opt/gopath/src/encoding/hex exists: false
+[36m2018-06-07 07:34:07.833 UTC [golang-platform] GetDeploymentPayload -> DEBU 08a[0m processing dep: sync/atomic
+[36m2018-06-07 07:34:07.833 UTC [golang-platform] GetDeploymentPayload -> DEBU 08b[0m checking: /opt/gopath/src/sync/atomic exists: false
+[36m2018-06-07 07:34:07.833 UTC [golang-platform] GetDeploymentPayload -> DEBU 08c[0m processing dep: github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid
+[36m2018-06-07 07:34:07.840 UTC [golang-platform] GetDeploymentPayload -> DEBU 08d[0m checking: /opt/gopath/src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid exists: true
+[36m2018-06-07 07:34:07.846 UTC [golang-platform] GetDeploymentPayload -> DEBU 08e[0m processing dep: context
+[36m2018-06-07 07:34:07.846 UTC [golang-platform] GetDeploymentPayload -> DEBU 08f[0m checking: /opt/gopath/src/context exists: false
+[36m2018-06-07 07:34:07.847 UTC [golang-platform] GetDeploymentPayload -> DEBU 090[0m processing dep: math/rand
+[36m2018-06-07 07:34:07.847 UTC [golang-platform] GetDeploymentPayload -> DEBU 091[0m checking: /opt/gopath/src/math/rand exists: false
+[36m2018-06-07 07:34:07.847 UTC [golang-platform] GetDeploymentPayload -> DEBU 092[0m processing dep: crypto/dsa
+[36m2018-06-07 07:34:07.848 UTC [golang-platform] GetDeploymentPayload -> DEBU 093[0m checking: /opt/gopath/src/crypto/dsa exists: false
+[36m2018-06-07 07:34:07.849 UTC [golang-platform] GetDeploymentPayload -> DEBU 094[0m processing dep: internal/cpu
+[36m2018-06-07 07:34:07.851 UTC [golang-platform] GetDeploymentPayload -> DEBU 095[0m checking: /opt/gopath/src/internal/cpu exists: false
+[36m2018-06-07 07:34:07.851 UTC [golang-platform] GetDeploymentPayload -> DEBU 096[0m done
+[36m2018-06-07 07:34:07.851 UTC [container] WriteFileToPackage -> DEBU 097[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/abac.go
+[36m2018-06-07 07:34:07.860 UTC [container] WriteFileToPackage -> DEBU 098[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/clone.go
+[36m2018-06-07 07:34:07.864 UTC [container] WriteFileToPackage -> DEBU 099[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/decode.go
+[36m2018-06-07 07:34:07.868 UTC [container] WriteFileToPackage -> DEBU 09a[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/discard.go
+[36m2018-06-07 07:34:07.871 UTC [container] WriteFileToPackage -> DEBU 09b[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/encode.go
+[36m2018-06-07 07:34:07.875 UTC [container] WriteFileToPackage -> DEBU 09c[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/equal.go
+[36m2018-06-07 07:34:07.881 UTC [container] WriteFileToPackage -> DEBU 09d[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/extensions.go
+[36m2018-06-07 07:34:07.885 UTC [container] WriteFileToPackage -> DEBU 09e[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/lib.go
+[36m2018-06-07 07:34:07.889 UTC [container] WriteFileToPackage -> DEBU 09f[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/message_set.go
+[36m2018-06-07 07:34:07.892 UTC [container] WriteFileToPackage -> DEBU 0a0[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/pointer_reflect.go
+[36m2018-06-07 07:34:07.897 UTC [container] WriteFileToPackage -> DEBU 0a1[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/pointer_unsafe.go
+[36m2018-06-07 07:34:07.901 UTC [container] WriteFileToPackage -> DEBU 0a2[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/properties.go
+[36m2018-06-07 07:34:07.905 UTC [container] WriteFileToPackage -> DEBU 0a3[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/text.go
+[36m2018-06-07 07:34:07.909 UTC [container] WriteFileToPackage -> DEBU 0a4[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/golang/protobuf/proto/text_parser.go
+[36m2018-06-07 07:34:07.916 UTC [container] WriteFileToPackage -> DEBU 0a5[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/common/attrmgr/attrmgr.go
+[36m2018-06-07 07:34:07.923 UTC [container] WriteFileToPackage -> DEBU 0a6[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid/cid.go
+[36m2018-06-07 07:34:07.926 UTC [container] WriteFileToPackage -> DEBU 0a7[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/hyperledger/fabric/core/chaincode/lib/cid/interfaces.go
+[36m2018-06-07 07:34:07.929 UTC [container] WriteFileToPackage -> DEBU 0a8[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors/errors.go
+[36m2018-06-07 07:34:07.932 UTC [container] WriteFileToPackage -> DEBU 0a9[0m Writing file to tarball: src/github.com/hyperledger/fabric-samples/chaincode/abac/go/vendor/github.com/pkg/errors/stack.go
+[36m2018-06-07 07:34:07.935 UTC [msp/identity] Sign -> DEBU 0aa[0m Sign: plaintext: 0ACA090A5C08031A0C08EFBFE3D80510...8CCFFF0F0000FFFF804F00E800600400 
+[36m2018-06-07 07:34:07.935 UTC [msp/identity] Sign -> DEBU 0ab[0m Sign: digest: 4F7A70F1343F92E19D5D60E30364794A1358A4FE2B243EE680BF6428AEA7C50C 
+[36m2018-06-07 07:34:07.953 UTC [chaincodeCmd] install -> DEBU 0ac[0m Installed remotely response:<status:200 payload:"OK" > 
+2018-06-07 07:34:07.953 UTC [main] main -> INFO 0ad[0m Exiting.....
+Install chaincode on 2nd peer of 2nd org completed......
+Query chaincode on 2nd peer of 2nd org
+
+Enrolling user for organization org-weihai with home directory /etc/hyperledger/fabric/orgs/org-weihai/user ...
+2018/06/07 07:34:12 [DEBUG] Home directory: /etc/hyperledger/fabric/orgs/org-weihai/user
+2018/06/07 07:34:13 [INFO] Created a default configuration file at /etc/hyperledger/fabric/orgs/org-weihai/user/fabric-ca-client-config.yaml
+2018/06/07 07:34:13 [DEBUG] Client configuration settings: &{URL:http://user-org-weihai:user-org-weihaipw@ca-org-weihai:7054 MSPDir:msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:user-org-weihai Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[f800e16b34b4] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name: Type:client Secret: MaxEnrollments:0 Affiliation: Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201b2db0}
+2018/06/07 07:34:13 [DEBUG] Entered runEnroll
+2018/06/07 07:34:13 [DEBUG] Enrolling { Name:user-org-weihai Secret:**** Profile: Label: CSR:&{user-org-weihai [{US North Carolina  Hyperledger Fabric }] [f800e16b34b4] <nil> <nil> } CAName: AttrReqs:[]  }
+2018/06/07 07:34:13 [DEBUG] Initializing client with config: &{URL:http://ca-org-weihai:7054 MSPDir:msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name:user-org-weihai Secret:**** Profile: Label: CSR:&{user-org-weihai [{US North Carolina  Hyperledger Fabric }] [f800e16b34b4] <nil> <nil> } CAName: AttrReqs:[]  } CSR:{CN:user-org-weihai Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[f800e16b34b4] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name: Type:client Secret: MaxEnrollments:0 Affiliation: Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201b2db0}
+2018/06/07 07:34:13 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4201b2e10 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/06/07 07:34:13 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4201c6aa0 DummyKeystore:<nil>}
+2018/06/07 07:34:13 [DEBUG] GenCSR &{CN:user-org-weihai Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[f800e16b34b4] KeyRequest:<nil> CA:<nil> SerialNumber:}
+2018/06/07 07:34:13 [INFO] generating key: &{A:ecdsa S:256}
+2018/06/07 07:34:13 [DEBUG] generate key from request: algo=ecdsa, size=256
+2018/06/07 07:34:13 [INFO] encoded CSR
+2018/06/07 07:34:13 [DEBUG] Sending request
+POST http://ca-org-weihai:7054/enroll
+{"hosts":["f800e16b34b4"],"certificate_request":"-----BEGIN CERTIFICATE REQUEST-----\nMIIBTDCB8wIBADBnMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xp\nbmExFDASBgNVBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMxGDAWBgNV\nBAMTD3VzZXItb3JnLXdlaWhhaTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABFyF\n29a9P3KDUfNBim8gzUGdPAvrMMM7kYzTP2Zh27rXHTG93iwRnPuqDJLJkqkpjsB9\n/a5fnUiUYIL6mkl/H2+gKjAoBgkqhkiG9w0BCQ4xGzAZMBcGA1UdEQQQMA6CDGY4\nMDBlMTZiMzRiNDAKBggqhkjOPQQDAgNIADBFAiEA5RD2pfhdiXdyrDby9mx4c43k\nFymP5SOUCL+TqfzT5d8CIEAlSXwONQRuRoawHnQH9GL2eqpcqWpHOJY0oxmOKxtz\n-----END CERTIFICATE REQUEST-----\n","profile":"","crl_override":"","label":"","NotBefore":"0001-01-01T00:00:00Z","NotAfter":"0001-01-01T00:00:00Z","CAName":""}
+2018/06/07 07:34:13 [DEBUG] Received response
+statusCode=201 (201 Created)
+2018/06/07 07:34:13 [DEBUG] Response body result: map[Cert:LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN4akNDQW15Z0F3SUJBZ0lVVzNpWnMvdHhubmFjMndaK3d4KzU5YytzQkVNd0NnWUlLb1pJemowRUF3SXcKWlRFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJZd0ZBWURWUVFERXcxallTMXZjbWN0CmQyVnBhR0ZwTUI0WERURTRNRFl3TnpBM01qa3dNRm9YRFRFNU1EWXdOekEzTXpRd01Gb3dlREVMTUFrR0ExVUUKQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRS0V3dEllWEJsY214bApaR2RsY2pFZ01Bc0dBMVVFQ3hNRWRYTmxjakFSQmdOVkJBc1RDbTl5WnkxM1pXbG9ZV2t4R0RBV0JnTlZCQU1UCkQzVnpaWEl0YjNKbkxYZGxhV2hoYVRCWk1CTUdCeXFHU000OUFnRUdDQ3FHU000OUF3RUhBMElBQkZ5RjI5YTkKUDNLRFVmTkJpbThnelVHZFBBdnJNTU03a1l6VFAyWmgyN3JYSFRHOTNpd1JuUHVxREpMSmtxa3Bqc0I5L2E1ZgpuVWlVWUlMNm1rbC9IMitqZ2VZd2dlTXdEZ1lEVlIwUEFRSC9CQVFEQWdlQU1Bd0dBMVVkRXdFQi93UUNNQUF3CkhRWURWUjBPQkJZRUZNR29qZHN5cFhaeUpKbyt1NWNRVXkvdC9XT0ZNQjhHQTFVZEl3UVlNQmFBRkNvR0JZR0QKcTRZWldGdXJJK0FIajJXV1ZNZ0dNQmNHQTFVZEVRUVFNQTZDREdZNE1EQmxNVFppTXpSaU5EQnFCZ2dxQXdRRgpCZ2NJQVFSZWV5SmhkSFJ5Y3lJNmV5Sm9aaTVCWm1acGJHbGhkR2x2YmlJNkltOXlaeTEzWldsb1lXa2lMQ0pvClppNUZibkp2Ykd4dFpXNTBTVVFpT2lKMWMyVnlMVzl5WnkxM1pXbG9ZV2tpTENKb1ppNVVlWEJsSWpvaWRYTmwKY2lKOWZUQUtCZ2dxaGtqT1BRUURBZ05JQURCRkFpRUFxWklQN09aZkFJeTZDQ0NtMUx0dUE1QmNheGh0Vjl4VAp2djRMYnliUkVXQUNJRFpKczBuS1RPT01YeTg4NXRscmYzbmV0VVNMbjM4Nk1XMEFVZkkyYjZUTAotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg== ServerInfo:map[CAName: CAChain:LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNFVENDQWJlZ0F3SUJBZ0lVUFNvRkxTRXJ0RkdkcGtRZ2hadkxkdlFDWEtZd0NnWUlLb1pJemowRUF3SXcKWlRFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJZd0ZBWURWUVFERXcxallTMXZjbWN0CmQyVnBhR0ZwTUI0WERURTRNRFl3TnpBM01qZ3dNRm9YRFRNek1EWXdNekEzTWpnd01Gb3daVEVMTUFrR0ExVUUKQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRS0V3dEllWEJsY214bApaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJZd0ZBWURWUVFERXcxallTMXZjbWN0ZDJWcGFHRnBNRmt3CkV3WUhLb1pJemowQ0FRWUlLb1pJemowREFRY0RRZ0FFZ2g4dWtaWnk3WEZpTm96R1RIdHkwUDQyNVh1bVVQclUKY0JnV0ZnQXR5R1ozWk9ONHQranA0dXZSdTZPV2R1Sm9yM1U2WjlDbjkyM0Ixd3JmdzdubTI2TkZNRU13RGdZRApWUjBQQVFIL0JBUURBZ0VHTUJJR0ExVWRFd0VCL3dRSU1BWUJBZjhDQVFFd0hRWURWUjBPQkJZRUZDb0dCWUdECnE0WVpXRnVySStBSGoyV1dWTWdHTUFvR0NDcUdTTTQ5QkFNQ0EwZ0FNRVVDSVFDZ2o3bC94a01mdE1CZ2c5OEQKa0lWU1IyY1ZVVDdZYUtTYldwQjhnbXcvMHdJZ0kwcnZvbkd6QTRSVWRmdVlkQXl5ckhIb2w3SzliVjlnR3VPYwpkcFl4UUFvPQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg== Version:]]
+2018/06/07 07:34:13 [DEBUG] newEnrollmentResponse user-org-weihai
+2018/06/07 07:34:13 [INFO] Stored client certificate at /etc/hyperledger/fabric/orgs/org-weihai/user/msp/signcerts/cert.pem
+2018/06/07 07:34:13 [INFO] Stored root CA certificate at /etc/hyperledger/fabric/orgs/org-weihai/user/msp/cacerts/ca-org-weihai-7054.pem
+2018/06/07 07:34:13 [INFO] Stored intermediate CA certificates at /etc/hyperledger/fabric/orgs/org-weihai/user/msp/intermediatecerts/ca-org-weihai-7054.pem
+Querying chaincode in the channel 'mychannel' on the peer 'peer2-org-weihai' ...
+Query of channel 'mychannel' on peer 'peer2-org-weihai' was successful
+Query chaincode on 2nd peer of 2nd org completed......
+Revoke the user and generate CRL using admin's credentials
+Revoking the user 'user-org-rockontrol' of the organization 'org-rockontrol' with Fabric CA Client home directory set to /data/orgs/org-rockontrol/admin and generating CRL ...
+2018/06/07 07:34:37 [DEBUG] Home directory: /data/orgs/org-rockontrol/admin
+2018/06/07 07:34:37 [INFO] Configuration file location: /data/orgs/org-rockontrol/admin/fabric-ca-client-config.yaml
+2018/06/07 07:34:37 [DEBUG] Checking for enrollment
+2018/06/07 07:34:37 [DEBUG] Initializing client with config: &{URL:http://ca-org-rockontrol:7054 MSPDir:msp TLS:{Enabled:false CertFiles:[/data/ca-org-order-cert.pem] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:org-rockontrol-admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[f54a38b56716] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name: Type:client Secret: MaxEnrollments:0 Affiliation: Attributes:[] CAName:} Revoke:{Name:user-org-rockontrol Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201b8b40}
+2018/06/07 07:34:37 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4201b8ba0 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/06/07 07:34:37 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4201c3ef0 DummyKeystore:<nil>}
+2018/06/07 07:34:37 [DEBUG] Client configuration settings: &{URL:http://ca-org-rockontrol:7054 MSPDir:/data/orgs/org-rockontrol/admin/msp TLS:{Enabled:false CertFiles:[/data/ca-org-order-cert.pem] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:org-rockontrol-admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[f54a38b56716] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name: Type:client Secret: MaxEnrollments:0 Affiliation: Attributes:[] CAName:} Revoke:{Name:user-org-rockontrol Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201b8b40}
+2018/06/07 07:34:37 [DEBUG] Entered runRevoke
+2018/06/07 07:34:37 [DEBUG] Initializing client with config: &{URL:http://ca-org-rockontrol:7054 MSPDir:/data/orgs/org-rockontrol/admin/msp TLS:{Enabled:false CertFiles:[/data/ca-org-order-cert.pem] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:org-rockontrol-admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[f54a38b56716] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name: Type:client Secret: MaxEnrollments:0 Affiliation: Attributes:[] CAName:} Revoke:{Name:user-org-rockontrol Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201b8b40}
+2018/06/07 07:34:37 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4201b8ba0 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/06/07 07:34:37 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4201c3ef0 DummyKeystore:<nil>}
+2018/06/07 07:34:37 [DEBUG] Loading identity: keyFile=/data/orgs/org-rockontrol/admin/msp/keystore/key.pem, certFile=/data/orgs/org-rockontrol/admin/msp/signcerts/cert.pem
+2018/06/07 07:34:37 [DEBUG] Entering identity.Revoke &{Name:user-org-rockontrol Serial: AKI: Reason: CAName: GenCRL:true}
+2018/06/07 07:34:37 [DEBUG] Adding token-based authorization header
+2018/06/07 07:34:37 [DEBUG] Sending request
+POST http://ca-org-rockontrol:7054/revoke
+{"id":"user-org-rockontrol","gencrl":true}
+2018/06/07 07:34:37 [DEBUG] Received response
+statusCode=200 (200 OK)
+2018/06/07 07:34:37 [DEBUG] Response body result: map[RevokedCerts:[map[Serial:5002618d1d67f40eaebb361313ff5a9eaf168318 AKI:d6c18c0c6891ef361d7ade8680c91e7cf0181f53]] CRL:LS0tLS1CRUdJTiBYNTA5IENSTC0tLS0tCk1JSUJQakNCNWdJQkFUQUtCZ2dxaGtqT1BRUURBakJwTVFzd0NRWURWUVFHRXdKVlV6RVhNQlVHQTFVRUNCTU8KVG05eWRHZ2dRMkZ5YjJ4cGJtRXhGREFTQmdOVkJBb1RDMGg1Y0dWeWJHVmtaMlZ5TVE4d0RRWURWUVFMRXdaRwpZV0p5YVdNeEdqQVlCZ05WQkFNVEVXTmhMVzl5WnkxeWIyTnJiMjUwY205c0Z3MHhPREEyTURjd056TTBNemRhCkZ3MHhPREEyTURnd056TTBNemRhTUNjd0pRSVVVQUpoalIxbjlBNnV1ellURS85YW5xOFdneGdYRFRFNE1EWXcKTnpBM016UXpOMXFnSXpBaE1COEdBMVVkSXdRWU1CYUFGTmJCakF4b2tlODJIWHJlaG9ESkhuendHQjlUTUFvRwpDQ3FHU000OUJBTUNBMGNBTUVRQ0lFMVZ3S2hTbVdnNTZxYmFvWnVrV0hKdjFYbmpFd00yUnpSc2NGVUw1eFJOCkFpQk1UUXA3ZE9YMzR1Qi9KMGw4U29kcXpxVjh1MFhsVURIRDFxVUsxaDFDTUE9PQotLS0tLUVORCBYNTA5IENSTC0tLS0tCg==]
+2018/06/07 07:34:37 [DEBUG] Successfully revoked certificates: &{Name:user-org-rockontrol Serial: AKI: Reason: CAName: GenCRL:true}
+2018/06/07 07:34:37 [INFO] Sucessfully revoked certificates: [{Serial:5002618d1d67f40eaebb361313ff5a9eaf168318 AKI:d6c18c0c6891ef361d7ade8680c91e7cf0181f53}]
+2018/06/07 07:34:37 [INFO] Successfully stored the CRL in the file %s/data/orgs/org-rockontrol/admin/msp/crls/crl.pem
+Revoke the user and generate CRL using admin's credentials completed...
+Fetch config block
+Fetching the configuration block of the channel 'mychannel'
+[33m2018-06-07 07:34:42.734 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
+[36m2018-06-07 07:34:42.763 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:34:42.763 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:34:42.834 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
+[36m2018-06-07 07:34:42.836 UTC [msp] GetLocalMSP -> DEBU 005[0m Returning existing local MSP
+[36m2018-06-07 07:34:42.837 UTC [msp] GetDefaultSigningIdentity -> DEBU 006[0m Obtaining default signing identity
+[36m2018-06-07 07:34:42.839 UTC [msp] GetLocalMSP -> DEBU 007[0m Returning existing local MSP
+[36m2018-06-07 07:34:42.840 UTC [msp] GetDefaultSigningIdentity -> DEBU 008[0m Obtaining default signing identity
+[36m2018-06-07 07:34:42.840 UTC [msp/identity] Sign -> DEBU 009[0m Sign: plaintext: 0AC6090A3708021A060892C0E3D80522...FB7DAC2964B812080A020A0012020A00 
+[36m2018-06-07 07:34:42.840 UTC [msp/identity] Sign -> DEBU 00a[0m Sign: digest: B442CBF9BB58D485C8A20FD89CEBA3CD5E23A710B6BB7C8E535B242840E393FE 
+[36m2018-06-07 07:34:42.875 UTC [channelCmd] readBlock -> DEBU 00b[0m Received block: 4
+[36m2018-06-07 07:34:42.876 UTC [msp] GetLocalMSP -> DEBU 00c[0m Returning existing local MSP
+[36m2018-06-07 07:34:42.876 UTC [msp] GetDefaultSigningIdentity -> DEBU 00d[0m Obtaining default signing identity
+[36m2018-06-07 07:34:42.877 UTC [msp] GetLocalMSP -> DEBU 00e[0m Returning existing local MSP
+[36m2018-06-07 07:34:42.878 UTC [msp] GetDefaultSigningIdentity -> DEBU 00f[0m Obtaining default signing identity
+[36m2018-06-07 07:34:42.878 UTC [msp/identity] Sign -> DEBU 010[0m Sign: plaintext: 0AC6090A3708021A060892C0E3D80522...D4CC120C0A041A02080212041A020802 
+[36m2018-06-07 07:34:42.879 UTC [msp/identity] Sign -> DEBU 011[0m Sign: digest: C9335A67E3BFFCCB78A191777E0C816A5D37A59DC22E0821982831CDBAD4FAF1 
+[36m2018-06-07 07:34:42.903 UTC [channelCmd] readBlock -> DEBU 012[0m Received block: 2
+2018-06-07 07:34:42.912 UTC [main] main -> INFO 013[0m Exiting.....
+Fetch config block completed......
+Create config update envelope with CRL and update the config block of the channel
+Creating config update payload with the generated CRL for the organization 'org-rockontrol'
+configtxlator_pid:299
+Sleeping 5 seconds for configtxlator to start...
+2018-06-07 07:34:48.002 UTC [configtxlator] startServer -> INFO 001[0m Serving HTTP requests on 0.0.0.0:7059
+/tmp /
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 52909    0 37010  100 15899  1492k   641k --:--:-- --:--:-- --:--:-- 1642k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 36324    0  9588  100 26736   754k  2103k --:--:-- --:--:-- --:--:-- 2175k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 37555    0 10078  100 27477  1309k  3570k --:--:-- --:--:-- --:--:-- 3833k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 23496    0  3354  100 20142  62410   366k --:--:-- --:--:-- --:--:--  371k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  8715    0  5361  100  3354  1809k  1132k --:--:-- --:--:-- --:--:-- 2617k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  8474    0  3380  100  5094   886k  1335k --:--:-- --:--:-- --:--:-- 1658k
+/
+Updating the configuration block of the channel 'mychannel'
+[33m2018-06-07 07:34:53.284 UTC [msp] getPemMaterialFromDir -> WARN 001[0m Failed reading file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem: no pem content for file /data/orgs/org-rockontrol/admin/msp/intermediatecerts/ca-org-rockontrol-7054.pem
+[36m2018-06-07 07:34:53.318 UTC [msp] GetLocalMSP -> DEBU 002[0m Returning existing local MSP
+[36m2018-06-07 07:34:53.318 UTC [msp] GetDefaultSigningIdentity -> DEBU 003[0m Obtaining default signing identity
+2018-06-07 07:34:53.334 UTC [channelCmd] InitCmdFactory -> INFO 004[0m Endorser and orderer connections initialized
+[36m2018-06-07 07:34:53.336 UTC [msp] GetLocalMSP -> DEBU 005[0m Returning existing local MSP
+[36m2018-06-07 07:34:53.336 UTC [msp] GetDefaultSigningIdentity -> DEBU 006[0m Obtaining default signing identity
+[36m2018-06-07 07:34:53.337 UTC [msp] GetLocalMSP -> DEBU 007[0m Returning existing local MSP
+[36m2018-06-07 07:34:53.338 UTC [msp] GetDefaultSigningIdentity -> DEBU 008[0m Obtaining default signing identity
+[36m2018-06-07 07:34:53.338 UTC [msp/identity] Sign -> DEBU 009[0m Sign: plaintext: 0AED080A116F72672D726F636B6F6E74...54452D2D2D2D2D0A1A0641646D696E73 
+[36m2018-06-07 07:34:53.339 UTC [msp/identity] Sign -> DEBU 00a[0m Sign: digest: A71B60F0168EE6FD1931E0BDE6D008356283CFD927D7F4487945607FEB7C67F0 
+[36m2018-06-07 07:34:53.340 UTC [msp] GetLocalMSP -> DEBU 00b[0m Returning existing local MSP
+[36m2018-06-07 07:34:53.340 UTC [msp] GetDefaultSigningIdentity -> DEBU 00c[0m Obtaining default signing identity
+[36m2018-06-07 07:34:53.342 UTC [msp] GetLocalMSP -> DEBU 00d[0m Returning existing local MSP
+[36m2018-06-07 07:34:53.342 UTC [msp] GetDefaultSigningIdentity -> DEBU 00e[0m Obtaining default signing identity
+[36m2018-06-07 07:34:53.343 UTC [msp/identity] Sign -> DEBU 00f[0m Sign: plaintext: 0AA4090A1508021A06089DC0E3D80522...D3F178804D6879C3413556EA323D69C7 
+[36m2018-06-07 07:34:53.343 UTC [msp/identity] Sign -> DEBU 010[0m Sign: digest: 93ED88D3286D0CDA8D6B0A46CD3F843A086B0E358F4F7F013561520D7C893CC9 
+2018-06-07 07:34:53.472 UTC [channelCmd] update -> INFO 011[0m Successfully submitted channel update
+2018-06-07 07:34:53.473 UTC [main] main -> INFO 012[0m Exiting.....
+/scripts/run-fabric.sh: line 267:   299 Terminated              configtxlator start
+Create config update envelope with CRL and update the config block of the channel completed......
+querying the chaincode should fail as the user is revoked
+Querying the chaincode in the channel 'mychannel' on the peer 'peer1-org-rockontrol' as revoked user 'user-org-rockontrol' ...
+Expected error occurred when the revoked user 'user-org-rockontrol' queried the chaincode in the channel 'mychannel'
+Congratulations! The tests ran successfully.
+See data/logs/run.log for more details
